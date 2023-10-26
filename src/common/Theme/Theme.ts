@@ -1,8 +1,9 @@
 import { palette } from "./Palette";
-import { spacing } from "./Units";
+import { fontSizes, spacing } from "./Units";
 
 const theme = {
     palette,
+    fontSizes,
     spacing,
 };
 
