@@ -1,13 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { palette } from './common/Theme/Palette';
+import { spacing } from './common/Theme/Units';
+import { ThemeProvider } from '@emotion/react';
+import styled from '@emotion/styled';
 import Navbar from './common/components/Navbar';
+
+const theme = {
+    palette,
+    spacing,
+};
 
 function App() {
   return (
-    <div>
-    <Navbar/>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Navbar/>
+    </ThemeProvider>
   );
 }
 
