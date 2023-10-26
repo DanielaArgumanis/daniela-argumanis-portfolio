@@ -1,13 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// @Components
 import Navbar from './common/components/Navbar';
+
+// @Theme
+import theme from './common/Theme/Theme';
+import { ThemeProvider } from '@emotion/react';
 
 function App() {
   return (
-    <div>
-    <Navbar/>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Navbar/>
+    </ThemeProvider>
   );
 }
 
