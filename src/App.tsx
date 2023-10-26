@@ -1,14 +1,11 @@
 import './App.css';
-import { palette } from './common/Theme/Palette';
-import { spacing } from './common/Theme/Units';
-import { ThemeProvider } from '@emotion/react';
-import styled from '@emotion/styled';
+
+// @Components
 import Navbar from './common/components/Navbar';
 
-const theme = {
-    palette,
-    spacing,
-};
+// @Theme
+import theme from './common/Theme/Theme';
+import { ThemeProvider } from '@emotion/react';
 
 function App() {
   return (
