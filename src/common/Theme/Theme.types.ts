@@ -15,6 +15,7 @@ export type PaletteType = {
   dark: string,
   white: string,
   accents: string[],
+  text: string
 };
 
 export type SpacingType = (value: number) => string;

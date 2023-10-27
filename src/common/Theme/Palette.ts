@@ -4,6 +4,7 @@ export const palette: PaletteType = {
   background: '#151515',
   disabled: '#b5b3b3',
   contrastText: '#141618',
+  text: '#a1a1aa',
   white: '#fff',
   dark: '#000',
   accents: [
