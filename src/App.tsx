@@ -20,13 +20,18 @@ const PortfolioContainer = styled('div')`
   padding: ${props => `0 ${props.theme.spacing(4)}`};
 `
 
+const HomeContainer = styled('div')`
+`
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <PortfolioLayout>
         <PortfolioContainer>
           <Navbar/>
-          <Home/>
+          <HomeContainer>
+            <Home/>
+          </HomeContainer>
         </PortfolioContainer>
       </PortfolioLayout>
     </ThemeProvider>
