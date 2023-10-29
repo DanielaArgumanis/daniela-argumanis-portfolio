@@ -1,23 +1,18 @@
-import styled from "@emotion/styled"
-
-// @Icons
-import GithubIcon from '../common/Icons/GithubIcon';
-import LinkedinIcon from '../common/Icons/LinkedinIcon';
-import HomeLabel from '../common/Icons/HomeLabelText';
 import { css, keyframes } from "@emotion/react";
+import styled from "@emotion/styled";
 
-const PortfolioHome = styled('div')`
+export const PortfolioHome = styled('div')`
     width: 40%;
     padding: ${props => `${props.theme.spacing(4)} 0`}; 
     display: flex;
     flex-direction: column;
 `
-const PortfolioTitle = styled('span')`
+export const PortfolioTitle = styled('span')`
     color: ${props => props.theme.palette.white};
     font-size: 34px;
     font-weight: 700;
 `
-const PortfolioDescription = styled('p')`
+export const PortfolioDescription = styled('p')`
     color: ${props => props.theme.palette.text};
     font-size: 18px;
     text-align: justify;
@@ -41,7 +36,7 @@ const getColorBorders = (accents: string[]) => keyframes`
   }
 `;
 
-const ContactSection = styled('div')`
+export const ContactSection = styled('div')`
     display: flex;
     gap: ${props => props.theme.spacing(6)};
     justify-content: center;
@@ -86,25 +81,8 @@ const ContactSection = styled('div')`
     }
 `
 
-const PortfolioTitleContainer = styled('div')`
+export const PortfolioTitleContainer = styled('div')`
     .label1 {
         fill: ${props => props.theme.palette.accents[0]};
     }
 `
-
-const Home = () => {
-    return <PortfolioHome>
-        <PortfolioTitleContainer>
-            <HomeLabel />
-        </PortfolioTitleContainer>
-        <PortfolioDescription>
-            I’m a Senior React Developer based in Peru. I craft user-friendly responsive websites and awesome component libraries.
-        </PortfolioDescription>
-        <ContactSection>
-            <GithubIcon />
-            <LinkedinIcon />
-        </ContactSection>
-    </PortfolioHome>
-}
-
-export default Home;

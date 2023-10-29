@@ -7,7 +7,7 @@ import Navbar from './common/components/Navbar/Navbar';
 // @Theme
 import theme from './common/Theme/Theme';
 import { ThemeProvider } from '@emotion/react';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 
 const PortfolioLayout = styled('div')`
   width: 100%;
@@ -20,18 +20,13 @@ const PortfolioContainer = styled('div')`
   padding: ${props => `0 ${props.theme.spacing(4)}`};
 `
 
-const HomeContainer = styled('div')`
-`
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <PortfolioLayout>
         <PortfolioContainer>
           <Navbar/>
-          <HomeContainer>
-            <Home/>
-          </HomeContainer>
+          <Home/>
         </PortfolioContainer>
       </PortfolioLayout>
     </ThemeProvider>
