@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 // @Components
 import Navbar from './common/components/Navbar/Navbar';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import Footer from './common/components/Footer/Footer';
 
 // @Theme
