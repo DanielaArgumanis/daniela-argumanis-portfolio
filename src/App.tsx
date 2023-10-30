@@ -1,23 +1,25 @@
 import './App.css';
+import { ThemeProvider } from '@emotion/react';
+import styled from '@emotion/styled';
 
 // @Components
-import styled from '@emotion/styled';
 import Navbar from './common/components/Navbar/Navbar';
+import Home from './components/Home';
+import Footer from './common/components/Footer/Footer';
 
 // @Theme
 import theme from './common/Theme/Theme';
-import { ThemeProvider } from '@emotion/react';
-import Home from './components/Home';
 
 const PortfolioLayout = styled('div')`
-  width: 100%;
   display: flex;
   justify-content: center;
+  height: 100vh;
 `
 
 const PortfolioContainer = styled('div')`
-  width: 1024px;
   padding: ${props => `0 ${props.theme.spacing(4)}`};
+  width: 1024px;
+  position: relative;
 `
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
         <PortfolioContainer>
           <Navbar/>
           <Home/>
+          <Footer/>
         </PortfolioContainer>
       </PortfolioLayout>
     </ThemeProvider>
