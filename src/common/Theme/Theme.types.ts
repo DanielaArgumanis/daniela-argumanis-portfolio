@@ -1,13 +1,3 @@
-export type FontSizes = {
-  xsmall: string,
-  small: string,
-  medium: string,
-  standard: string,
-  large: string,
-  xlarge: string,
-  xxlarge: string,
-};
-
 export type PaletteType = {
   background: string,
   disabled: string,
@@ -17,5 +7,10 @@ export type PaletteType = {
   accents: string[],
   text: string
 };
+
+export type TypographyType = {[key: string]: {
+  fontSize: string,
+  fontWeight?: number,
+}}
 
 export type SpacingType = (value: number) => string;

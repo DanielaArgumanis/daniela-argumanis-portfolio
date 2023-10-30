@@ -1,5 +1,6 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import Typography from "../Typography/Typography";
 
 export const PortfolioNavbar = styled('div')`
     background-color: ${props => props.theme.palette.background};
@@ -16,17 +17,13 @@ export const NavbarSection = styled('div')`
   gap: ${props => props.theme.spacing(4)};
 `
 
-export const NavbarButton = styled('a') <{ order: number }>`
+export const NavbarButton = styled(Typography) <{ order: number }>`
   position: relative;
   cursor: pointer;
   color: ${props => props.theme.palette.white};
-  font-size: ${props => props.theme.fontSizes.medium};
-  font-family: 'InriaSans', sans-serif;
-  font-weight: 700;
   top: 0;
 
   :hover {
-    /* color: ${props => props.theme.palette.accents[props.order]}; */
     transition: all 0.3s ease-in-out;
   }
 

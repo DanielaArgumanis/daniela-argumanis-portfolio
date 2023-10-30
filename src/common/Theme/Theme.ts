@@ -1,9 +1,10 @@
 import { palette } from "./Palette";
-import { fontSizes, spacing } from "./Units";
+import { spacing } from "./Spacing";
+import { typography } from "./TypographyStyles";
 
 const theme = {
     palette,
-    fontSizes,
+    typography,
     spacing,
 };
 

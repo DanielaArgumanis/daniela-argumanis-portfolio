@@ -1,21 +1,20 @@
-import styled from "@emotion/styled"
-
 // @Icons
 import GithubIcon from '../../common/Icons/GithubIcon';
 import LinkedinIcon from '../../common/Icons/LinkedinIcon';
 import HomeLabel from '../../common/Icons/HomeLabelText';
 
 // @Styles
-import { PortfolioHome, PortfolioTitleContainer, PortfolioDescription, ContactSection } from "./Home.styles";
+import { PortfolioHome, PortfolioTitleContainer, ContactSection } from "./Home.styles";
+import Typography from '../../common/components/Typography/Typography';
 
 const Home = () => {
     return <PortfolioHome>
         <PortfolioTitleContainer>
             <HomeLabel />
         </PortfolioTitleContainer>
-        <PortfolioDescription>
+        <Typography variant='body1' as="p">
             I’m a Senior React Developer based in Peru. I craft user-friendly responsive websites and awesome component libraries.
-        </PortfolioDescription>
+        </Typography>
         <ContactSection>
             <GithubIcon />
             <LinkedinIcon />
