@@ -13,13 +13,11 @@ export const NavbarSection = styled('div')`
   display: flex;
   align-items: center;
   display: flex;
-  gap: ${props => props.theme.spacing(2)};
+  gap: ${props => props.theme.spacing(4)};
 `
 
-export const NavbarButton = styled('button') <{ order: number }>`
+export const NavbarButton = styled('a') <{ order: number }>`
   position: relative;
-  background: none;
-  border: none;
   cursor: pointer;
   color: ${props => props.theme.palette.white};
   font-size: ${props => props.theme.fontSizes.medium};

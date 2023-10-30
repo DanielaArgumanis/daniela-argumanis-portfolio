@@ -7,7 +7,7 @@ import Navbar from './common/components/Navbar/Navbar';
 // @Theme
 import theme from './common/Theme/Theme';
 import { ThemeProvider } from '@emotion/react';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 
 const PortfolioLayout = styled('div')`
   width: 100%;
