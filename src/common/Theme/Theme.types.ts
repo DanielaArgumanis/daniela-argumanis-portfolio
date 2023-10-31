@@ -25,9 +25,9 @@ export enum Breakpoint {
 
 export type BreakpointsType = {
   values: Record<Breakpoint, number>;
-  up: (breakpoint: string) => string;
-  down: (breakpoint: string) => string;
-  between: (start: string, end: string) => string;
+  up: (breakpoint: Breakpoint) => string;
+  down: (breakpoint: Breakpoint) => string;
+  between: (start: Breakpoint, end: Breakpoint) => string;
 };
 
 export type ThemeType = {

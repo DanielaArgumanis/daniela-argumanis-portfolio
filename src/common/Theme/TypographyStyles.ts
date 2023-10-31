@@ -1,5 +1,9 @@
+// @Theme
 import { breakpoints } from "./Breakpoints";
 import { palette } from "./Palette";
+
+// @Types
+import { Breakpoint } from "./Theme.types";
 
 const fontSizes = {
     xsmall: '0.75rem', //12
@@ -16,21 +20,21 @@ export const typography = {
         fontSize: fontSizes.medium,
         fontWeight: 700,
         color: palette.white,
-        [breakpoints.down('mobileL')]: {
+        [breakpoints.down(Breakpoint.mobileL)]: {
             fontSize: fontSizes.xsmall,
         }
     },
     'body1': {
         fontSize: fontSizes.large,
         color: palette.text,
-        [breakpoints.down('mobileL')]: {
+        [breakpoints.down(Breakpoint.mobileL)]: {
             fontSize: fontSizes.xsmall,
         }
     },
     'body2': {
         fontSize: fontSizes.medium,
         color: palette.text,
-        [breakpoints.down('mobileL')]: {
+        [breakpoints.down(Breakpoint.mobileL)]: {
             fontSize: fontSizes.xsmall,
         }
     },
