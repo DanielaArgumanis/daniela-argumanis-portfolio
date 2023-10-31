@@ -17,9 +17,15 @@ const PortfolioLayout = styled('div')`
 `
 
 const PortfolioContainer = styled('div')`
-  padding: ${props => `0 ${props.theme.spacing(4)}`};
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   position: relative;
+  height: 100%;
+  padding: 0 ${props => props.theme.spacing(4)};
+  
+  ${props => props.theme.breakpoints.down('mobileL')} {
+    padding: 0 ${props => props.theme.spacing(2)};
+  }
 `
 
 function App() {

@@ -1,6 +1,7 @@
 import '@emotion/react';
 
 import {
+  BreakpointsType,
     PaletteType,
     SpacingType,
     TypographyType
@@ -11,5 +12,6 @@ declare module '@emotion/react' {
     typography: TypographyType;
     palette: PaletteType;
     spacing: SpacingType;
+    breakpoints: BreakpointsType;
   }
 }

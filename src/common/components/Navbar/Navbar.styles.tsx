@@ -2,7 +2,7 @@ import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import Typography from "../Typography/Typography";
 
-export const PortfolioNavbar = styled('div')`
+export const PortfolioNavbar = styled('nav')`
     background-color: ${props => props.theme.palette.background};
     height: 80px;
     display: flex;
@@ -15,6 +15,10 @@ export const NavbarSection = styled('div')`
   align-items: center;
   display: flex;
   gap: ${props => props.theme.spacing(4)};
+  
+  ${props => props.theme.breakpoints.down('mobileL')} {
+    gap: ${props => props.theme.spacing(2)};
+  }
 `
 
 export const NavbarButton = styled(Typography) <{ order: number }>`
@@ -62,5 +66,10 @@ export const ThemeButton = styled('img')`
   :hover {
     cursor: pointer;
     animation: ${rotateSun} 1s linear infinite;
+  }
+  
+  ${props => props.theme.breakpoints.down('mobileL')} {
+    height: 24px;
+    width: 24px;
   }
 `

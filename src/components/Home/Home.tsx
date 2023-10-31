@@ -10,7 +10,7 @@ import Typography from '../../common/components/Typography/Typography';
 const Home = () => {
     return <PortfolioHome>
         <PortfolioTitleContainer>
-            <HomeLabel />
+            {/* <HomeLabel /> */}
         </PortfolioTitleContainer>
         <Typography variant='body1' as="p">
             I’m a Senior React Developer based in Peru. I craft user-friendly responsive websites and awesome component libraries.

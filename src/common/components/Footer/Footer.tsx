@@ -7,8 +7,10 @@ const PortfolioFooter = styled('footer')`
     justify-content: space-between;
     border-top: ${({ theme }) => `solid 2px ${theme.palette.text}`};
     padding: ${({ theme }) => `${theme.spacing(2)} 0`};
-    position: absolute;
+    position: sticky;
+    background-color: ${({ theme }) => theme.palette.background};
     bottom: 0;
+    box-sizing: border-box;
 `;
 
 const Footer = () => {
