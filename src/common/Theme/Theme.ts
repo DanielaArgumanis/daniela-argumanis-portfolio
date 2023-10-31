@@ -1,9 +1,16 @@
+// @Theme
+import { breakpoints } from "./Breakpoints";
 import { palette } from "./Palette";
-import { fontSizes, spacing } from "./Units";
+import { spacing } from "./Spacing";
+import { typography } from "./TypographyStyles";
 
-const theme = {
+// @Types
+import { ThemeType } from "./Theme.types";
+
+const theme: ThemeType = {
+    breakpoints,
     palette,
-    fontSizes,
+    typography,
     spacing,
 };
 

@@ -1,7 +1,11 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import Typography from "../Typography/Typography";
 
-export const PortfolioNavbar = styled('div')`
+// @Types
+import { Breakpoint } from "../../Theme/Theme.types";
+
+export const PortfolioNavbar = styled('nav')`
     background-color: ${props => props.theme.palette.background};
     height: 80px;
     display: flex;
@@ -14,19 +18,19 @@ export const NavbarSection = styled('div')`
   align-items: center;
   display: flex;
   gap: ${props => props.theme.spacing(4)};
+  
+  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    gap: ${props => props.theme.spacing(2)};
+  }
 `
 
-export const NavbarButton = styled('a') <{ order: number }>`
+export const NavbarButton = styled(Typography) <{ order: number }>`
   position: relative;
   cursor: pointer;
   color: ${props => props.theme.palette.white};
-  font-size: ${props => props.theme.fontSizes.medium};
-  font-family: 'InriaSans', sans-serif;
-  font-weight: 700;
   top: 0;
 
   :hover {
-    /* color: ${props => props.theme.palette.accents[props.order]}; */
     transition: all 0.3s ease-in-out;
   }
 
@@ -65,5 +69,10 @@ export const ThemeButton = styled('img')`
   :hover {
     cursor: pointer;
     animation: ${rotateSun} 1s linear infinite;
+  }
+  
+  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    height: 24px;
+    width: 24px;
   }
 `

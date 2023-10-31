@@ -1,15 +1,17 @@
 import '@emotion/react';
 
 import {
-  FontSizesType,
+  BreakpointsType,
     PaletteType,
-    SpacingType
+    SpacingType,
+    TypographyType
  } from './Theme.types';
 
 declare module '@emotion/react' {
   export interface Theme {
-    fontSizes: FontSizesType;
+    typography: TypographyType;
     palette: PaletteType;
     spacing: SpacingType;
+    breakpoints: BreakpointsType;
   }
 }

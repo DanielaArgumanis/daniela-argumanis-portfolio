@@ -12,11 +12,6 @@ export const PortfolioTitle = styled('span')`
     font-size: 34px;
     font-weight: 700;
 `
-export const PortfolioDescription = styled('p')`
-    color: ${props => props.theme.palette.text};
-    font-size: 18px;
-    text-align: justify;
-`
 
 const getColorBorders = (accents: string[]) => keyframes`
   0% {

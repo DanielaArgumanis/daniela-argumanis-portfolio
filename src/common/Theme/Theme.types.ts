@@ -1,13 +1,3 @@
-export type FontSizes = {
-  xsmall: string,
-  small: string,
-  medium: string,
-  standard: string,
-  large: string,
-  xlarge: string,
-  xxlarge: string,
-};
-
 export type PaletteType = {
   background: string,
   disabled: string,
@@ -18,4 +8,31 @@ export type PaletteType = {
   text: string
 };
 
+export type TypographyType = {[key: string]: {
+  fontSize: string,
+  fontWeight?: number,
+}}
+
 export type SpacingType = (value: number) => string;
+
+export enum Breakpoint {
+  mobileS = 'mobileS',
+  mobileL = 'mobileL',
+  tablet = 'tablet',
+  laptopS = 'laptopS',
+  laptopXL = 'laptopXL',
+}
+
+export type BreakpointsType = {
+  values: Record<Breakpoint, number>;
+  up: (breakpoint: Breakpoint) => string;
+  down: (breakpoint: Breakpoint) => string;
+  between: (start: Breakpoint, end: Breakpoint) => string;
+};
+
+export type ThemeType = {
+  breakpoints: BreakpointsType,
+  palette: PaletteType,
+  typography: TypographyType,
+  spacing: SpacingType,
+}

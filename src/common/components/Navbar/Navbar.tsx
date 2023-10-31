@@ -30,7 +30,7 @@ const Navbar = () => {
     </NavbarSection>
     <NavbarSection>
       {navbarSections.map((section) => (
-        <NavbarButton order={section.order}>{section.title}</NavbarButton>
+        <NavbarButton variant='label' as="a" order={section.order}>{section.title}</NavbarButton>
       ))}
     </NavbarSection>
   </PortfolioNavbar>
