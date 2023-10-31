@@ -10,6 +10,9 @@ import Footer from './common/components/Footer/Footer';
 // @Theme
 import theme from './common/Theme/Theme';
 
+// @Types
+import { Breakpoint } from './common/Theme/Theme.types';
+
 const PortfolioLayout = styled('div')`
   display: flex;
   justify-content: center;
@@ -23,7 +26,7 @@ const PortfolioContainer = styled('div')`
   height: 100%;
   padding: 0 ${props => props.theme.spacing(4)};
   
-  ${props => props.theme.breakpoints.down('mobileL')} {
+  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     padding: 0 ${props => props.theme.spacing(2)};
   }
 `

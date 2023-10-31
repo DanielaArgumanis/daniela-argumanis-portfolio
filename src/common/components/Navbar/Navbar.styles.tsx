@@ -2,6 +2,9 @@ import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import Typography from "../Typography/Typography";
 
+// @Types
+import { Breakpoint } from "../../Theme/Theme.types";
+
 export const PortfolioNavbar = styled('nav')`
     background-color: ${props => props.theme.palette.background};
     height: 80px;
@@ -16,7 +19,7 @@ export const NavbarSection = styled('div')`
   display: flex;
   gap: ${props => props.theme.spacing(4)};
   
-  ${props => props.theme.breakpoints.down('mobileL')} {
+  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     gap: ${props => props.theme.spacing(2)};
   }
 `
@@ -68,7 +71,7 @@ export const ThemeButton = styled('img')`
     animation: ${rotateSun} 1s linear infinite;
   }
   
-  ${props => props.theme.breakpoints.down('mobileL')} {
+  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     height: 24px;
     width: 24px;
   }
