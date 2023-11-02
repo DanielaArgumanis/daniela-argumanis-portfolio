@@ -6,6 +6,8 @@ export const PortfolioHome = styled('div')`
     padding: ${props => `${props.theme.spacing(4)} 0`}; 
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
 `
 
 export const PortfolioTitle = styled('span')`
@@ -100,11 +102,6 @@ export const PortfolioContainer = styled('div')`
   }
 `
 
-export const HomeContent = styled('div')`
-  display: flex;
-  flex-grow: 1;
-`
-
 export const HomeNavBody = styled('div')`
   display: flex;
   min-width: 60%;
@@ -113,5 +110,5 @@ export const HomeNavBody = styled('div')`
 export const PortfolioBody = styled('div')`
   display: flex;
   flex-grow: 1;
-  gap: ${props => props.theme.spacing(4)};
+  gap: ${props => props.theme.spacing(8)};
 `

@@ -1,7 +1,7 @@
 import { PaletteType } from "./Theme.types";
 
 export const palette: PaletteType = {
-  background: '#151515',
+  background: '#18181B',
   disabled: '#b5b3b3',
   contrastText: '#141618',
   text: '#a1a1aa',
