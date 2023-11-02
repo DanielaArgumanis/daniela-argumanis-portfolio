@@ -1,12 +1,13 @@
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import { Breakpoint } from "../common/Theme/Theme.types";
 
 export const PortfolioHome = styled('div')`
-    width: 40%;
     padding: ${props => `${props.theme.spacing(4)} 0`}; 
     display: flex;
     flex-direction: column;
 `
+
 export const PortfolioTitle = styled('span')`
     color: ${props => props.theme.palette.white};
     font-size: 34px;
@@ -38,8 +39,8 @@ export const ContactSection = styled('div')`
     padding: ${props => `${props.theme.spacing(8)} 0`};
 
     svg {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
 
         :hover {
             cursor: pointer;
@@ -77,7 +78,40 @@ export const ContactSection = styled('div')`
 `
 
 export const PortfolioTitleContainer = styled('div')`
-    .label1 {
-        fill: ${props => props.theme.palette.accents[0]};
-    }
+  text-align: center;
+`
+
+export const PortfolioLayout = styled('div')`
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+`
+
+export const PortfolioContainer = styled('div')`
+  max-width: 1024px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 ${props => props.theme.spacing(4)};
+  
+  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    padding: 0 ${props => props.theme.spacing(2)};
+  }
+`
+
+export const HomeContent = styled('div')`
+  display: flex;
+  flex-grow: 1;
+`
+
+export const HomeNavBody = styled('div')`
+  display: flex;
+  min-width: 60%;
+`
+
+export const PortfolioBody = styled('div')`
+  display: flex;
+  flex-grow: 1;
+  gap: ${props => props.theme.spacing(4)};
 `

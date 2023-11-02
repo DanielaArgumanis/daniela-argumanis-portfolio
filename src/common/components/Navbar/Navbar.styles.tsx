@@ -1,9 +1,9 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import Typography from "../Typography/Typography";
 
 // @Types
 import { Breakpoint } from "../../Theme/Theme.types";
+import { NavLink } from "react-router-dom";
 
 export const PortfolioNavbar = styled('nav')`
     background-color: ${props => props.theme.palette.background};
@@ -24,11 +24,12 @@ export const NavbarSection = styled('div')`
   }
 `
 
-export const NavbarButton = styled(Typography) <{ order: number }>`
+export const NavbarButton = styled(NavLink) <{ order: number }>`
   position: relative;
   cursor: pointer;
   color: ${props => props.theme.palette.white};
   top: 0;
+  text-decoration: none ;
 
   :hover {
     transition: all 0.3s ease-in-out;
@@ -46,7 +47,8 @@ export const NavbarButton = styled(Typography) <{ order: number }>`
     background-color: ${props => props.theme.palette.white};
   }
 
-  &:hover::before {
+
+  &:hover::before, &.active::before {
     width: 95%;
     background-color: ${props => props.theme.palette.accents[props.order % 5]};
   }

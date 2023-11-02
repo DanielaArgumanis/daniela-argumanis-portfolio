@@ -2,7 +2,7 @@
 import { breakpoints } from "./Breakpoints";
 import { palette } from "./Palette";
 import { spacing } from "./Spacing";
-import { typography } from "./TypographyStyles";
+import { typography } from "./Typography.styles";
 
 // @Types
 import { ThemeType } from "./Theme.types";

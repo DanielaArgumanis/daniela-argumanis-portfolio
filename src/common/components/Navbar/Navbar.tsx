@@ -6,32 +6,38 @@ import { PortfolioNavbar, NavbarSection, ThemeButton, NavbarButton } from './Nav
 
 const navbarSections = [
   {
+    title: "Home",
+    order: 0,
+    href: '/'
+  },
+  {
     title: "About me",
-    order: 0
+    order: 1,
+    href: '/about-me'
   },
   {
     title: "Projects",
-    order: 1
+    order: 2,
+    href: '/projects'
   },
   {
-    title: "Articles",
-    order: 2
-  },
-  {
-    title: "Resume",
-    order: 3
+    title: "Publications",
+    order: 3,
+    href: '/publications'
   },
 ]
 
 const Navbar = () => {
+
   return <PortfolioNavbar>
     <NavbarSection>
       <ThemeButton src={sunIcon} alt="set-light-theme" />
     </NavbarSection>
     <NavbarSection>
-      {navbarSections.map((section) => (
-        <NavbarButton variant='label' as="a" order={section.order}>{section.title}</NavbarButton>
-      ))}
+        {navbarSections.map((section) => (
+            <NavbarButton order={section.order} to={section.href} >{section.title}
+            </NavbarButton>
+        ))}
     </NavbarSection>
   </PortfolioNavbar>
 }

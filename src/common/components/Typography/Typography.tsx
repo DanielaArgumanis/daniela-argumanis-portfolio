@@ -8,7 +8,7 @@ type TypographyProps = {
 const TypographyStyles = ({ variant }: TypographyProps) => {
     const theme = useTheme();
   
-    return theme.typography[variant];
+    return {margin: theme.spacing(1), ...theme.typography[variant]};
 };
 
 const Typography = styled('span')(TypographyStyles);

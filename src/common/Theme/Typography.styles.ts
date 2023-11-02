@@ -13,9 +13,18 @@ const fontSizes = {
     large: '1.125rem', // 18
     xlarge: '1.25rem', // 20
     xxlarge: '1.5rem', // 24
+    xxxlarge: '2rem',
 };
   
 export const typography = {
+    'title': {
+        fontSize: fontSizes.xxxlarge,
+        fontWeight: 700,
+        color: palette.white,
+        [breakpoints.down(Breakpoint.mobileL)]: {
+            fontSize: fontSizes.medium,
+        }
+    },
     'label': {
         fontSize: fontSizes.medium,
         fontWeight: 700,
