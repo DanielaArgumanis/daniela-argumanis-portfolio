@@ -17,8 +17,16 @@ const fontSizes = {
 };
   
 export const typography = {
-    'title': {
+    'title1': {
         fontSize: fontSizes.xxxlarge,
+        fontWeight: 700,
+        color: palette.white,
+        [breakpoints.down(Breakpoint.mobileL)]: {
+            fontSize: fontSizes.medium,
+        }
+    },
+    'title2': {
+        fontSize: fontSizes.xxlarge,
         fontWeight: 700,
         color: palette.white,
         [breakpoints.down(Breakpoint.mobileL)]: {

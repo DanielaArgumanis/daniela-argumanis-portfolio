@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 // @Components
-import Home from './components/Home';
+import Layout from './components/Layout';
 
 // @Theme
 import theme from './common/Theme/Theme';
@@ -19,7 +19,7 @@ import Publications from './components/Publications/Publications';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Layout />,
     children: [
       {
         path: "about-me",

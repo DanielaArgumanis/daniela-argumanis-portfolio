@@ -6,12 +6,14 @@ import { Breakpoint } from "../../Theme/Theme.types";
 import { NavLink } from "react-router-dom";
 
 export const PortfolioNavbar = styled('nav')`
-    background-color: ${props => props.theme.palette.background};
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
+  background-color: ${(props) => props.theme.palette.background};
+  height: 80px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 export const NavbarSection = styled('div')`
   display: flex;
