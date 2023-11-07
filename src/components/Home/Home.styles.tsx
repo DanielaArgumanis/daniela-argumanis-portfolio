@@ -4,11 +4,14 @@ export const PortfolioHome = styled('div')`
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 
 export const PortfolioTitleContainer = styled('div')`
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: ${(props) => props.theme.spacing(2)};
 `;
 
 export const ContactSection = styled('div')`

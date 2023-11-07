@@ -15,7 +15,6 @@ const Layout = () => {
   const locationOrder =
     routes.find((route) => route.href === location.pathname)?.order || 0;
   const theme = getTheme(locationOrder);
-  console.log('🚀 ~ theme:', theme);
 
   return (
     <ThemeProvider theme={theme}>

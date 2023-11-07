@@ -13,15 +13,17 @@ const Home = () => {
   return (
     <PortfolioHome>
       <PortfolioTitleContainer>
-        <Typography variant="title2" as="h1">
-          Welcome!
-        </Typography>
-        <Typography variant="title2" as="h1">
-          I'm Daniela Argumanis
-        </Typography>
-        <Typography variant="title2" as="h1" accent>
-          Senior Front-End Engineer
-        </Typography>
+        <div>
+          <Typography variant="title1" as="h1">
+            Welcome!
+          </Typography>
+          <Typography variant="title1" as="h1">
+            I'm Daniela Argumanis
+          </Typography>
+          <Typography variant="title1" as="h1" accent>
+            Senior Front-End Engineer
+          </Typography>
+        </div>
         <Typography variant="body1" as="p">
           I’m a Senior React Developer based in Peru. I craft user-friendly
           responsive websites and awesome component libraries.

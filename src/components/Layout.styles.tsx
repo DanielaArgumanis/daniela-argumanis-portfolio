@@ -21,6 +21,7 @@ export const PortfolioContainer = styled('div')`
   display: flex;
   flex-direction: column;
   padding: 0 ${(props) => props.theme.spacing(4)};
+  min-height: 100vh;
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     padding: 0 ${(props) => props.theme.spacing(2)};
@@ -31,7 +32,7 @@ export const PortfolioBody = styled('div')`
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: ${(props) => props.theme.spacing(4)};
-  height: calc(100vh - 80px - 64px);
+  height: calc(100vh - 60px - 64px);
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
 `;
 
