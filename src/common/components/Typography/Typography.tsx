@@ -9,7 +9,11 @@ type TypographyProps = {
 const TypographyStyles = ({ accent, variant }: TypographyProps) => {
     const theme = useTheme();
   
-    return {margin: theme.spacing(1), ...theme.typography[variant], ...(accent && {color: theme.palette.accents[1]})};
+    return {
+      margin: theme.spacing(1),
+      ...theme.typography[variant],
+      ...(accent && { color: theme.palette.accents }),
+    };
 };
 
 const Typography = styled('span')(TypographyStyles);

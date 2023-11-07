@@ -1,11 +1,11 @@
 export type PaletteType = {
-  background: string,
-  disabled: string,
-  contrastText: string,
-  dark: string,
-  white: string,
-  accents: string[],
-  text: string
+  background: string;
+  disabled: string;
+  contrastText: string;
+  dark: string;
+  white: string;
+  accents: string;
+  text: string;
 };
 
 export type TypographyType = {[key: string]: {

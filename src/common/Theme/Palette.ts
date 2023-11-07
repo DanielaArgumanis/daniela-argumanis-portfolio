@@ -1,5 +1,7 @@
 import { PaletteType } from "./Theme.types";
 
+export const accentColors = ['#8464CC', '#54BCCC', '#CC5DA9'];
+
 export const palette: PaletteType = {
   background: '#1E1E1E',
   disabled: '#b5b3b3',
@@ -7,9 +9,5 @@ export const palette: PaletteType = {
   text: '#A1A1AA',
   white: '#fff',
   dark: '#000',
-  accents: [
-    '#8464CC',
-    '#54BCCC',
-    '#CC5DA9',
-  ]
+  accents: accentColors[0],
 };

@@ -1,17 +1,27 @@
 // @Theme
 import { breakpoints } from "./Breakpoints";
-import { palette } from "./Palette";
-import { spacing } from "./Spacing";
-import { typography } from "./Typography.styles";
+import { accentColors, palette } from './Palette';
+import { spacing } from './Spacing';
+import { typography } from './Typography.styles';
 
 // @Types
-import { ThemeType } from "./Theme.types";
+import { ThemeType } from './Theme.types';
 
 const theme: ThemeType = {
-    breakpoints,
-    palette,
-    typography,
-    spacing,
+  breakpoints,
+  palette,
+  typography,
+  spacing,
 };
 
-export default theme;
+const getTheme = (routeOrder: number) => {
+  return {
+    ...theme,
+    palette: {
+      ...theme.palette,
+      accents: accentColors[routeOrder % 3],
+    },
+  };
+};
+
+export default getTheme;

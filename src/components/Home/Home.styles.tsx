@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 export const PortfolioHome = styled('div')`
-  padding: ${(props) => `${props.theme.spacing(4)} 0`};
+  padding: ${(props) => `${props.theme.spacing(2)} 0`};
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 `;
 
 export const PortfolioTitleContainer = styled('div')`
@@ -41,7 +41,7 @@ export const ContactSection = styled('div')`
       }
 
       line {
-        stroke: ${(props) => props.theme.palette.accents[1]};
+        stroke: ${(props) => props.theme.palette.accents};
       }
     }
   }

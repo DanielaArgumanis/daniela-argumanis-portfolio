@@ -1,15 +1,8 @@
 import './App.css';
-import { ThemeProvider } from '@emotion/react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // @Components
 import Layout from './components/Layout';
-
-// @Theme
-import theme from './common/Theme/Theme';
 
 // @Types
 import AboutMe from './components/AboutMe/AboutMe';
@@ -18,32 +11,27 @@ import Publications from './components/Publications/Publications';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
-        path: "about-me",
+        path: 'about-me',
         element: <AboutMe />,
       },
       {
-        path: "/projects",
+        path: '/projects',
         element: <Projects />,
       },
       {
-        path: "/publications",
+        path: '/publications',
         element: <Publications />,
       },
-    ]
+    ],
   },
-  
 ]);
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
