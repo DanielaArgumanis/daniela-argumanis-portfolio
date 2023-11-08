@@ -1,37 +1,14 @@
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-// @Components
-import Layout from './components/Layout';
-
-// @Types
-import AboutMe from './components/AboutMe/AboutMe';
-import Projects from './components/Projects/Projects';
-import Publications from './components/Publications/Publications';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      {
-        path: 'about-me',
-        element: <AboutMe />,
-      },
-      {
-        path: '/projects',
-        element: <Projects />,
-      },
-      {
-        path: '/publications',
-        element: <Publications />,
-      },
-    ],
-  },
-]);
+import Navbar from './common/components/Navbar';
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+    <Navbar/>
+    </div>
+  );
 }
 
 export default App;
