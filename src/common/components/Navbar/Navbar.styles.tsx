@@ -1,41 +1,45 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import Typography from "../Typography/Typography";
 
 // @Types
 import { Breakpoint } from "../../Theme/Theme.types";
+import { NavLink } from "react-router-dom";
 
 export const PortfolioNavbar = styled('nav')`
-    background-color: ${props => props.theme.palette.background};
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
+  background-color: ${(props) => props.theme.palette.background};
+  height: ${(props) => props.theme.sizing.navbar};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+`;
 
 export const NavbarSection = styled('div')`
   display: flex;
   align-items: center;
   display: flex;
-  gap: ${props => props.theme.spacing(4)};
-  
-  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
-    gap: ${props => props.theme.spacing(2)};
-  }
-`
+  gap: ${(props) => props.theme.spacing(4)};
 
-export const NavbarButton = styled(Typography) <{ order: number }>`
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    gap: ${(props) => props.theme.spacing(2)};
+  }
+`;
+
+export const NavbarButton = styled(NavLink)<{ order: number }>`
   position: relative;
   cursor: pointer;
-  color: ${props => props.theme.palette.white};
+  color: ${(props) => props.theme.palette.white};
   top: 0;
+  text-decoration: none;
 
   :hover {
     transition: all 0.3s ease-in-out;
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 4px; /* Initial border thickness */
@@ -43,14 +47,15 @@ export const NavbarButton = styled(Typography) <{ order: number }>`
     left: 50%; /* Start from the center */
     transform: translateX(-50%); /* Center horizontally */
     transition: all 0.3s ease-in-out; /* Transition for border width */
-    background-color: ${props => props.theme.palette.white};
+    background-color: ${(props) => props.theme.palette.white};
   }
 
-  &:hover::before {
+  &:hover::before,
+  &.active::before {
     width: 95%;
-    background-color: ${props => props.theme.palette.accents[props.order % 5]};
+    background-color: ${(props) => props.theme.palette.accents};
   }
-`
+`;
 
 const rotateSun = keyframes`
   0% {

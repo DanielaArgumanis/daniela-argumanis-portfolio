@@ -1,18 +1,15 @@
 @font-face {
-  font-family: 'InriaSans';
-  src: url('../public/fonts/InriaSans-Regular.ttf') format('truetype');
+  font-family: 'AnonymousPro';
+  src: url('../public/fonts/AnonymousPro-Regular.ttf') format('truetype');
   font-weight: normal;
 
-  font-weight: 700; /* Bold font weight */
-  src: url('../public/fonts/InriaSans-Bold.ttf') format('truetype');
-
-  font-weight: 200; /* Light font weight */
-  src: url('../public/fonts/InriaSans-Light.ttf') format('truetype');
+  font-weight: 700;
+  src: url('../public/fonts/AnonymousPro-Bold.ttf') format('truetype');
 }
 
-/* Apply Inter as the default font for the entire page */
 body {
-  font-family: 'InriaSans', sans-serif;
+  font-family: 'AnonymousPro', sans-serif;
+  background-color: #1E1E1E;
 }
 
 * {
