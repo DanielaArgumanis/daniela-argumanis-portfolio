@@ -10,7 +10,7 @@ export const AboutMeContainer = styled('div')`
     'image3 text3'
     'text4 text4';
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5fr 1fr 1.4fr 2fr 2fr;
+  grid-template-rows: 1.5fr 1fr 1.5fr 2fr 2fr;
 
   > img {
     height: 330px;

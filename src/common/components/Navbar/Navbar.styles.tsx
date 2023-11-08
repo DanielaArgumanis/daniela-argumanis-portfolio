@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 export const PortfolioNavbar = styled('nav')`
   background-color: ${(props) => props.theme.palette.background};
-  height: 60px;
+  height: ${(props) => props.theme.sizing.navbar};
   display: flex;
   justify-content: space-between;
   align-items: center;

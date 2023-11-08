@@ -8,10 +8,17 @@ export type PaletteType = {
   text: string;
 };
 
-export type TypographyType = {[key: string]: {
-  fontSize: string,
-  fontWeight?: number,
-}}
+export type SizingType = {
+  navbar: string;
+  footer: string;
+};
+
+export type TypographyType = {
+  [key: string]: {
+    fontSize: string;
+    fontWeight?: number;
+  };
+};
 
 export type SpacingType = (value: number) => string;
 
@@ -31,8 +38,9 @@ export type BreakpointsType = {
 };
 
 export type ThemeType = {
-  breakpoints: BreakpointsType,
-  palette: PaletteType,
-  typography: TypographyType,
-  spacing: SpacingType,
-}
+  breakpoints: BreakpointsType;
+  palette: PaletteType;
+  typography: TypographyType;
+  sizing: SizingType;
+  spacing: SpacingType;
+};

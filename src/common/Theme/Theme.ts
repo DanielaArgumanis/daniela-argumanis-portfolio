@@ -2,6 +2,7 @@
 import { breakpoints } from "./Breakpoints";
 import { accentColors, palette } from './Palette';
 import { spacing } from './Spacing';
+import { sizing } from './Sizing';
 import { typography } from './Typography.styles';
 
 // @Types
@@ -11,10 +12,11 @@ const theme: ThemeType = {
   breakpoints,
   palette,
   typography,
+  sizing,
   spacing,
 };
 
-const getTheme = (routeOrder: number) => {
+const getTheme = (routeOrder: number): ThemeType => {
   return {
     ...theme,
     palette: {
