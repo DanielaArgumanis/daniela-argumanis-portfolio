@@ -17,42 +17,50 @@ const fontSizes = {
 };
   
 export const typography = {
-    'title1': {
-        fontSize: fontSizes.xxxlarge,
-        fontWeight: 700,
-        color: palette.white,
-        [breakpoints.down(Breakpoint.mobileL)]: {
-            fontSize: fontSizes.medium,
-        }
+  title1: {
+    fontSize: fontSizes.xxxlarge,
+    fontWeight: 700,
+    color: palette.white,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.medium,
     },
-    'title2': {
-        fontSize: fontSizes.xxlarge,
-        fontWeight: 700,
-        color: palette.white,
-        [breakpoints.down(Breakpoint.mobileL)]: {
-            fontSize: fontSizes.medium,
-        }
+  },
+  title2: {
+    fontSize: fontSizes.xxlarge,
+    fontWeight: 700,
+    color: palette.white,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.medium,
     },
-    'label': {
-        fontSize: fontSizes.medium,
-        fontWeight: 700,
-        color: palette.white,
-        [breakpoints.down(Breakpoint.mobileL)]: {
-            fontSize: fontSizes.xsmall,
-        }
+  },
+  title3: {
+    fontSize: fontSizes.xlarge,
+    fontWeight: 700,
+    color: palette.white,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.medium,
     },
-    'body1': {
-        fontSize: fontSizes.large,
-        color: palette.text,
-        [breakpoints.down(Breakpoint.mobileL)]: {
-            fontSize: fontSizes.xsmall,
-        }
+  },
+  label: {
+    fontSize: fontSizes.medium,
+    fontWeight: 700,
+    color: palette.white,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.xsmall,
     },
-    'body2': {
-        fontSize: fontSizes.medium,
-        color: palette.text,
-        [breakpoints.down(Breakpoint.mobileL)]: {
-            fontSize: fontSizes.xsmall,
-        }
+  },
+  body1: {
+    fontSize: fontSizes.large,
+    color: palette.text,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.xsmall,
     },
-}
+  },
+  body2: {
+    fontSize: fontSizes.medium,
+    color: palette.text,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.xsmall,
+    },
+  },
+};
