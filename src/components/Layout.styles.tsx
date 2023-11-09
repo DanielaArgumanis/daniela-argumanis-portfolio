@@ -41,8 +41,4 @@ export const HomeNavBody = styled('div')`
   text-align: left;
   overflow-y: scroll;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `;
