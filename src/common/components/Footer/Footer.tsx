@@ -7,8 +7,12 @@ import { PortfolioFooter } from './Footer.styles';
 const Footer = () => {
   return (
     <PortfolioFooter>
-      <Typography variant="body2">© 2023 Daniela Argumanis</Typography>
-      <Typography variant="body2">daniela.argumanis@gmail.com</Typography>
+      <Typography variant="body2" className="desktop-footer">
+        Design and code by Daniela Argumanis © 2023
+      </Typography>
+      <Typography variant="body2" className="mobile-footer">
+        Daniela Argumanis © 2023
+      </Typography>
     </PortfolioFooter>
   );
 };

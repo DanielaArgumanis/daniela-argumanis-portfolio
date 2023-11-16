@@ -14,6 +14,10 @@ export const PortfolioNavbar = styled('nav')`
   position: sticky;
   top: 0;
   z-index: 1;
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    height: ${(props) => props.theme.sizing.navbarMobile};
+  }
 `;
 
 const animateMoon = keyframes`

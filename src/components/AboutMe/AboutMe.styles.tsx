@@ -61,6 +61,7 @@ export const AboutMeContainer = styled('div')`
       'image3 text3'
       'text4 text4';
     grid-template-rows: auto auto auto auto;
+    gap: ${(props) => props.theme.spacing(1)};
   }
 `;
 

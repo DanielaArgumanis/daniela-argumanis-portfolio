@@ -10,7 +10,9 @@ export type PaletteType = {
 
 export type SizingType = {
   navbar: string;
+  navbarMobile: string;
   footer: string;
+  footerMobile: string;
 };
 
 export type TypographyType = {

@@ -36,7 +36,7 @@ const ProjectItem = ({
       <div>
         <div>
           <ProjectTitle variant="title3">{title}</ProjectTitle>
-          <Typography variant="body2" as="p" margin="16px 0px">
+          <Typography variant="body2" as="p" margin="2 0">
             {description}
           </Typography>
         </div>

@@ -32,12 +32,15 @@ export const PortfolioBody = styled('div')<{ isHome: boolean }>`
   gap: ${(props) => props.theme.spacing(4)};
   height: ${(props) =>
     `calc(100% - ${props.theme.sizing.navbar} - ${props.theme.sizing.footer})`};
-  padding: ${(props) => `${props.theme.spacing(2)} 0`};
 
   ${(props) =>
     props.theme.breakpoints.between(Breakpoint.mobileL, Breakpoint.tablet)} {
-    padding: ${(props) =>
-      `${props.theme.spacing(2)} ${props.theme.spacing(2)}`};
+    padding: ${(props) => `0 ${props.theme.spacing(2)}`};
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    height: ${(props) =>
+      `calc(100% - ${props.theme.sizing.navbarMobile} - ${props.theme.sizing.footerMobile})`};
   }
 `;
 
@@ -47,6 +50,7 @@ export const HomeNavBody = styled('div')`
   overflow-y: scroll;
   height: 100%;
   width: 65%;
+  padding: ${(props) => `${props.theme.spacing(2)} 0`};
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     width: 100%;

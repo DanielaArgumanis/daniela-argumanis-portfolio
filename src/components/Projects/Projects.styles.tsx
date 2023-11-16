@@ -6,7 +6,6 @@ export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
-  overflow-y: scroll;
 `;
 
 export const ProjectTitle = styled(Typography)`

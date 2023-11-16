@@ -19,7 +19,9 @@ const AboutMeCard = ({ icon, description, title }: AboutMeCardProps) => {
       </AboutMeTitleContainer>
       {isDescriptionArray ? (
         description.map((text) => (
-          <Typography variant="body2">{text}</Typography>
+          <Typography variant="body2" margin="1 0 0 0">
+            {text}
+          </Typography>
         ))
       ) : (
         <Typography variant="body2">{description}</Typography>
