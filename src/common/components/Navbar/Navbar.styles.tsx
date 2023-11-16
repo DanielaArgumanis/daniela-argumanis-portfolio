@@ -46,8 +46,8 @@ export const NavbarSection = styled('div')`
   display: flex;
   gap: ${(props) => props.theme.spacing(4)};
 
-  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
-    gap: ${(props) => props.theme.spacing(2)};
+  ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
+    gap: ${(props) => props.theme.spacing(1)};
   }
 
   svg {
@@ -64,6 +64,11 @@ export const NavbarSection = styled('div')`
       .moon-star2 {
         animation: ${animateMoon} 1s linear infinite reverse;
       }
+    }
+
+    ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+      height: 24px;
+      width: 24px;
     }
   }
 `;
@@ -98,21 +103,3 @@ export const NavbarButton = styled(NavLink)<{ order: number }>`
   }
 `;
 
-export const ThemeButton = styled('img')<{ colorTheme: string }>`
-  height: 30px;
-  width: 30px;
-
-  :hover {
-    cursor: pointer;
-    animation: ${rotateSun} 1s linear infinite;
-  }
-
-  .moon-star {
-    fill: green;
-  }
-
-  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
-    height: 24px;
-    width: 24px;
-  }
-`;

@@ -25,7 +25,7 @@ const AboutMe = () => {
       </div>
       <AboutMeCard
         icon={<ReactIcon />}
-        description="Jotai GraphQL, React Query, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
+        description="Jotai, GraphQL, React Query, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
         title="Tech Stack"
       />
       <div>

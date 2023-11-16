@@ -5,7 +5,7 @@ export const routes = [
     href: '/',
   },
   {
-    title: 'About me',
+    title: 'About',
     order: 1,
     href: '/about-me',
   },

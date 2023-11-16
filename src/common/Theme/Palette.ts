@@ -13,7 +13,7 @@ export const palette: Record<'light' | 'dark', PaletteType> = {
     accents: accentColors[0],
   },
   light: {
-    background: '#fff',
+    background: '#EBEAF1',
     disabled: '#b5b3b3',
     contrastText: '#141618',
     text: '#60646C',

@@ -5,13 +5,9 @@ import { routes } from '../../Constants/routes';
 import SunIcon from '../../Icons/SunIcon';
 
 // @Styles
-import {
-  PortfolioNavbar,
-  NavbarSection,
-  ThemeButton,
-  NavbarButton,
-} from './Navbar.styles';
+import { PortfolioNavbar, NavbarSection, NavbarButton } from './Navbar.styles';
 import MoonIcon from '../../Icons/MoonIcon';
+import Typography from '../Typography/Typography';
 
 type NavbarProps = {
   colorTheme: 'light' | 'dark';
@@ -31,7 +27,7 @@ const Navbar = ({ colorTheme, setColorTheme }: NavbarProps) => {
       <NavbarSection>
         {routes.map((section) => (
           <NavbarButton order={section.order} to={section.href}>
-            {section.title}
+            <Typography variant="label">{section.title}</Typography>
           </NavbarButton>
         ))}
       </NavbarSection>
