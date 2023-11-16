@@ -1,4 +1,4 @@
-import { AboutMeContainer } from './AboutMe.styles';
+import { AboutMeContainer, AboutMeImg } from './AboutMe.styles';
 import DogPhoto from '../../about-me-dog.jpg';
 import ArequipaPhoto from '../../about-me-arequipa.jpg';
 import IcaPhoto from '../../about-me-ica.jpg';
@@ -8,26 +8,32 @@ import ReactIcon from '../../common/Icons/ReactIcon';
 const AboutMe = () => {
   return (
     <AboutMeContainer>
-      <img src={DogPhoto} />
+      <div>
+        <AboutMeImg src={DogPhoto} />
+      </div>
       <AboutMeCard
         icon={<ReactIcon />}
         description={[
           'Experience: 5 years',
-          'Libraries/frameworks: React, Angular',
+          'Libraries / frameworks: React, Angular',
           'Languages: Javascript, Typescript',
         ]}
         title="Front-end"
       />
-      <img src={IcaPhoto} />
+      <div>
+        <AboutMeImg src={IcaPhoto} />
+      </div>
       <AboutMeCard
         icon={<ReactIcon />}
-        description="Jotai GraphQL, React Query, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
+        description="Jotai, GraphQL, React Query, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
         title="Tech Stack"
       />
-      <img src={ArequipaPhoto} />
+      <div>
+        <AboutMeImg src={ArequipaPhoto} />
+      </div>
       <AboutMeCard
         icon={<ReactIcon />}
-        description="I enjoy bartending as a hobbie and gaming in my free time. I also like exploring new destinations within Peru and abroad. And let's not forget my dog – she's a big part of my life, and you'll definitely see her popping up in my portfolio!"
+        description="I enjoy bartending as a hobbie and gaming in my free time. I also like exploring new destinations within Peru and abroad. And let's not forget my dog – she's a big part of my life!"
         title="Interests"
       />
       <AboutMeCard

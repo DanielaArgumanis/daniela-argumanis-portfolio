@@ -3,26 +3,24 @@ import { breakpoints } from "./Breakpoints";
 import { accentColors, palette } from './Palette';
 import { spacing } from './Spacing';
 import { sizing } from './Sizing';
-import { typography } from './Typography.styles';
 
 // @Types
 import { ThemeType } from './Theme.types';
+import { getTypography } from './Typography.styles';
 
-const theme: ThemeType = {
-  breakpoints,
-  palette,
-  typography,
-  sizing,
-  spacing,
-};
-
-const getTheme = (routeOrder: number): ThemeType => {
+const getTheme = (
+  routeOrder: number,
+  colorTheme: 'dark' | 'light',
+): ThemeType => {
   return {
-    ...theme,
+    breakpoints,
+    typography: getTypography(colorTheme),
     palette: {
-      ...theme.palette,
+      ...palette[colorTheme],
       accents: accentColors[routeOrder % 3],
     },
+    sizing,
+    spacing,
   };
 };
 

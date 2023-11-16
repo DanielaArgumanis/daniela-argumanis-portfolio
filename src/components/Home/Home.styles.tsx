@@ -5,6 +5,7 @@ export const PortfolioHome = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 `;
 
 export const PortfolioTitleContainer = styled('div')`

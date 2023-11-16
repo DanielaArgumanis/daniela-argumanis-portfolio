@@ -10,7 +10,9 @@ export type PaletteType = {
 
 export type SizingType = {
   navbar: string;
+  navbarMobile: string;
   footer: string;
+  footerMobile: string;
 };
 
 export type TypographyType = {
@@ -25,6 +27,7 @@ export type SpacingType = (value: number) => string;
 export enum Breakpoint {
   mobileS = 'mobileS',
   mobileL = 'mobileL',
+  tabletS = 'tabletS',
   tablet = 'tablet',
   laptopS = 'laptopS',
   laptopXL = 'laptopXL',

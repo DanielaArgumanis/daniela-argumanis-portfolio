@@ -1,6 +1,13 @@
 import { Breakpoint, BreakpointsType } from "./Theme.types";
 
-const breakpointValues = { mobileS: 320, mobileL: 425, tablet: 768, laptopS: 1024, laptopXL: 2560 };
+const breakpointValues = {
+  mobileS: 320,
+  mobileL: 426,
+  tabletS: 600,
+  tablet: 768,
+  laptopS: 1024,
+  laptopXL: 2560,
+};
 
 export const breakpoints: BreakpointsType = {
     values: breakpointValues,

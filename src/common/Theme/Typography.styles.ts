@@ -16,11 +16,11 @@ const fontSizes = {
   xxxlarge: '1.75rem',
 };
   
-export const typography = {
+export const getTypography = (themeColor: 'light' | 'dark') => ({
   title1: {
     fontSize: fontSizes.xxxlarge,
     fontWeight: 700,
-    color: palette.white,
+    color: palette[themeColor].white,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.medium,
     },
@@ -28,7 +28,7 @@ export const typography = {
   title2: {
     fontSize: fontSizes.xxlarge,
     fontWeight: 700,
-    color: palette.white,
+    color: palette[themeColor].white,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.medium,
     },
@@ -36,7 +36,7 @@ export const typography = {
   title3: {
     fontSize: fontSizes.xlarge,
     fontWeight: 700,
-    color: palette.white,
+    color: palette[themeColor].white,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.medium,
     },
@@ -44,23 +44,30 @@ export const typography = {
   label: {
     fontSize: fontSizes.medium,
     fontWeight: 700,
-    color: palette.white,
+    color: palette[themeColor].white,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.xsmall,
     },
   },
   body1: {
     fontSize: fontSizes.large,
-    color: palette.text,
+    color: palette[themeColor].text,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.xsmall,
     },
   },
   body2: {
     fontSize: fontSizes.medium,
-    color: palette.text,
+    color: palette[themeColor].text,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.xsmall,
     },
   },
-};
+  body3: {
+    fontSize: fontSizes.small,
+    color: palette[themeColor].text,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.xsmall,
+    },
+  },
+});

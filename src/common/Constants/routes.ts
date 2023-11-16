@@ -5,7 +5,7 @@ export const routes = [
     href: '/',
   },
   {
-    title: 'About me',
+    title: 'About',
     order: 1,
     href: '/about-me',
   },
@@ -15,8 +15,8 @@ export const routes = [
     href: '/projects',
   },
   {
-    title: 'Publications',
+    title: 'Articles',
     order: 3,
-    href: '/publications',
+    href: '/Articles',
   },
 ];

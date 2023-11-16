@@ -10,8 +10,12 @@ type TypographyProps = {
 const TypographyStyles = ({ accent, margin, variant }: TypographyProps) => {
   const theme = useTheme();
 
+  const marginList = margin?.split(' ').reduce((prev, marginValue) => {
+    return `${prev} ${theme.spacing(parseInt(marginValue))}`;
+  }, '');
+
   return {
-    margin: margin ? margin : theme.spacing(1),
+    margin: margin ? marginList : theme.spacing(1),
     ...theme.typography[variant],
     ...(accent && { color: theme.palette.accents }),
   };
