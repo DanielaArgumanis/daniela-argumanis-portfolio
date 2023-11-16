@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Breakpoint } from '../../common/Theme/Theme.types';
 
 export const AboutMeContainer = styled('div')`
   display: grid;
@@ -10,37 +11,48 @@ export const AboutMeContainer = styled('div')`
     'image3 text3'
     'text4 text4';
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5fr 1fr 1.5fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
-  > img {
-    height: 330px;
-    width: 100%;
-    border: solid 2px ${(props) => props.theme.palette.white};
+  > div {
+    display: grid;
     :nth-of-type(1) {
       grid-area: image1;
     }
     :nth-of-type(2) {
-      grid-area: image2;
-    }
-    :nth-of-type(3) {
-      grid-area: image3;
-    }
-  }
-
-  > div {
-    :nth-of-type(1) {
       grid-area: text1;
     }
-    :nth-of-type(2) {
-      grid-area: text2;
-    }
     :nth-of-type(3) {
-      grid-area: text3;
+      grid-area: image2;
     }
     :nth-of-type(4) {
+      grid-area: text2;
+    }
+    :nth-of-type(5) {
+      grid-area: image3;
+    }
+    :nth-of-type(6) {
+      grid-area: text3;
+    }
+    :nth-of-type(7) {
       grid-area: text4;
     }
   }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    grid-template-areas:
+      'image1 text1'
+      'text2 image2'
+      'image3 text3'
+      'text4 text4';
+    grid-template-rows: auto auto auto auto;
+  }
+`;
+
+export const AboutMeImg = styled('img')`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: solid 2px ${(props) => props.theme.palette.white};
 `;
 
 export const AboutMeCardContainer = styled('div')`
@@ -54,6 +66,10 @@ export const AboutMeCardContainer = styled('div')`
     width: 24px;
     height: 24px;
     fill: ${(props) => props.theme.palette.accents};
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileS)} {
+    padding: ${(props) => props.theme.spacing(1)};
   }
 `;
 

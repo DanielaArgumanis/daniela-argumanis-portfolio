@@ -16,6 +16,30 @@ export const PortfolioNavbar = styled('nav')`
   z-index: 1;
 `;
 
+const animateMoon = keyframes`
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
+const rotateSun = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
 export const NavbarSection = styled('div')`
   display: flex;
   align-items: center;
@@ -24,6 +48,23 @@ export const NavbarSection = styled('div')`
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     gap: ${(props) => props.theme.spacing(2)};
+  }
+
+  svg {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    :hover {
+      &.sun-icon {
+        animation: ${rotateSun} 1s linear infinite;
+      }
+      .moon-star1 {
+        animation: ${animateMoon} 1s linear infinite;
+      }
+      .moon-star2 {
+        animation: ${animateMoon} 1s linear infinite reverse;
+      }
+    }
   }
 `;
 
@@ -57,27 +98,21 @@ export const NavbarButton = styled(NavLink)<{ order: number }>`
   }
 `;
 
-const rotateSun = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-export const ThemeButton = styled('img')`
+export const ThemeButton = styled('img')<{ colorTheme: string }>`
   height: 30px;
   width: 30px;
-  transform: rotate(360deg);
 
   :hover {
     cursor: pointer;
     animation: ${rotateSun} 1s linear infinite;
   }
-  
-  ${props => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+
+  .moon-star {
+    fill: green;
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     height: 24px;
     width: 24px;
   }
-`
+`;

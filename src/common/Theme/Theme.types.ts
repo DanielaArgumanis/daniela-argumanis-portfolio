@@ -25,6 +25,7 @@ export type SpacingType = (value: number) => string;
 export enum Breakpoint {
   mobileS = 'mobileS',
   mobileL = 'mobileL',
+  tabletS = 'tabletS',
   tablet = 'tablet',
   laptopS = 'laptopS',
   laptopXL = 'laptopXL',

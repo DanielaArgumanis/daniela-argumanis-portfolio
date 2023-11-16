@@ -15,8 +15,8 @@ export const routes = [
     href: '/projects',
   },
   {
-    title: 'Publications',
+    title: 'Articles',
     order: 3,
-    href: '/publications',
+    href: '/Articles',
   },
 ];
