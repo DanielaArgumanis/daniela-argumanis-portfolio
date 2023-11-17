@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Breakpoint } from '../../common/Theme/Theme.types';
+import { css } from '@emotion/react';
 
 export const AboutMeContainer = styled('div')`
   height: fit-content;
@@ -15,6 +16,19 @@ export const AboutMeContainer = styled('div')`
     'text4 text4';
 
   > div {
+    opacity: 0;
+    :hover {
+      animation: ${(props) =>
+        css`
+          ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards, ${props
+            .theme.animations.enterCards} 0s;
+        `};
+      opacity: 1;
+    }
+    animation: ${(props) =>
+      css`
+        ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
+      `};
     :nth-of-type(1) {
       grid-area: image1;
     }
@@ -23,19 +37,31 @@ export const AboutMeContainer = styled('div')`
     }
     :nth-of-type(3) {
       grid-area: image2;
+      animation-delay: 0.1s;
     }
     :nth-of-type(4) {
       grid-area: text2;
+      animation-delay: 0.2s;
     }
     :nth-of-type(5) {
       grid-area: image3;
+      animation-delay: 0.3s;
     }
     :nth-of-type(6) {
       grid-area: text3;
+      animation-delay: 0.3s;
     }
     :nth-of-type(7) {
       grid-area: text4;
+      animation-delay: 0.4s;
     }
+
+    /* :hover {
+      animation: ${(props) =>
+      css`
+        ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards
+      `};
+    } */
   }
 
   ${(props) =>
@@ -74,6 +100,7 @@ export const AboutMeImg = styled('img')`
 `;
 
 export const AboutMeCardContainer = styled('div')`
+  background-color: ${(props) => props.theme.palette.background};
   display: flex;
   flex-direction: column;
   border: 2px solid ${(props) => props.theme.palette.white};

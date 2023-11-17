@@ -27,7 +27,7 @@ export const PortfolioContainer = styled('div')`
   padding: 0 ${(props) => props.theme.spacing(2)};
 `;
 
-export const PortfolioBody = styled('div')<{ isHome: boolean }>`
+export const PortfolioBody = styled('div')`
   display: flex;
   gap: ${(props) => props.theme.spacing(4)};
   height: ${(props) =>
@@ -44,12 +44,14 @@ export const PortfolioBody = styled('div')<{ isHome: boolean }>`
   }
 `;
 
-export const HomeNavBody = styled('div')`
+export const HomeNavBody = styled('div')<{ isHome: boolean }>`
   display: flex;
+  position: relative;
   text-align: left;
   overflow-y: scroll;
   height: 100%;
-  width: 65%;
+  width: ${(props) => (props.isHome ? '0' : ' 65%')};
+  transition: width 0.5s ease-in;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
@@ -58,7 +60,8 @@ export const HomeNavBody = styled('div')`
 `;
 
 export const PortfolioHomeContainer = styled.div<{ isHome: boolean }>`
-  width: 35%;
+  width: ${(props) => (props.isHome ? '100%' : '35%')};
+  transition: width 0.5s ease-in;
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     display: ${(props) => (props.isHome ? 'flex' : 'none')};
     height: 100%;

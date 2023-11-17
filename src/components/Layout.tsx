@@ -30,15 +30,14 @@ const Layout = () => {
       <PortfolioLayout>
         <PortfolioContainer>
           <Navbar colorTheme={colorTheme} setColorTheme={setColorTheme} />
-          <PortfolioBody isHome={isHome}>
+          <PortfolioBody>
             <PortfolioHomeContainer isHome={isHome}>
               <Home />
             </PortfolioHomeContainer>
-            {location.pathname !== '/' && (
-              <HomeNavBody>
-                <Outlet />
-              </HomeNavBody>
-            )}
+
+            <HomeNavBody isHome={isHome}>
+              {location.pathname !== '/' && <Outlet />}
+            </HomeNavBody>
           </PortfolioBody>
           <Footer />
         </PortfolioContainer>

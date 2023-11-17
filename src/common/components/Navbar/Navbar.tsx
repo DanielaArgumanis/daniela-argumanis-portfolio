@@ -26,7 +26,11 @@ const Navbar = ({ colorTheme, setColorTheme }: NavbarProps) => {
       </NavbarSection>
       <NavbarSection>
         {routes.map((section) => (
-          <NavbarButton order={section.order} to={section.href}>
+          <NavbarButton
+            key={section.order}
+            order={section.order}
+            to={section.href}
+          >
             <Typography variant="label">{section.title}</Typography>
           </NavbarButton>
         ))}

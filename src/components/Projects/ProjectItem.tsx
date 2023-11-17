@@ -42,7 +42,7 @@ const ProjectItem = ({
         </div>
         <PillContainer>
           {technologies.map((technology) => (
-            <Pill>
+            <Pill key={technology}>
               <Typography variant="body3">{technology}</Typography>
             </Pill>
           ))}

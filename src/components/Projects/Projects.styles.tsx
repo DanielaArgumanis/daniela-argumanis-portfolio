@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
 import Typography from '../../common/components/Typography/Typography';
 import { Breakpoint } from '../../common/Theme/Theme.types';
+import { css } from '@emotion/react';
 
 export const ProjectsContainer = styled.div`
   display: flex;
+  position: absolute;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
 `;
@@ -22,6 +24,13 @@ export const ProjectTitle = styled(Typography)`
 `;
 
 export const ProjectCard = styled.div<{ reverse?: boolean }>`
+  opacity: 0;
+  animation: ${(props) =>
+    css`
+      ${props.theme.animations.enterCards} 0.8s ease-in-out ${props.reverse
+        ? '0s'
+        : '0.2s'} forwards
+    `};
   display: flex;
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   border: 2px solid ${({ theme }) => theme.palette.white};

@@ -40,7 +40,13 @@ export type BreakpointsType = {
   between: (start: Breakpoint, end: Breakpoint) => string;
 };
 
+export type AnimationsType = {
+  enterCards: string;
+  hoverCard: string;
+};
+
 export type ThemeType = {
+  animations: AnimationsType;
   breakpoints: BreakpointsType;
   palette: PaletteType;
   typography: TypographyType;
