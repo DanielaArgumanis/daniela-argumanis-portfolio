@@ -17,6 +17,10 @@ export const AboutMeContainer = styled('div')`
 
   > div {
     opacity: 0;
+    animation: ${(props) =>
+      css`
+        ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
+      `};
     :hover {
       animation: ${(props) =>
         css`
@@ -25,10 +29,7 @@ export const AboutMeContainer = styled('div')`
         `};
       opacity: 1;
     }
-    animation: ${(props) =>
-      css`
-        ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
-      `};
+    transition: transform 1s ease;
     :nth-of-type(1) {
       grid-area: image1;
     }

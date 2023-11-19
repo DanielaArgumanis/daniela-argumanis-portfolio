@@ -4,7 +4,7 @@ import { AnimationsType } from './Theme.types';
 export const animations: AnimationsType = {
   enterCards: keyframes`
     0% {
-      transform: translateX(2000px) scale(1);
+      transform: translateX(100%) scale(1);
       opacity: 1;
     }
     100% {
@@ -18,7 +18,7 @@ export const animations: AnimationsType = {
     opacity: 1;
   }
   100% {
-    transform: scale(1.3);
+    transform: perspective(500px) translateZ(50px)
   }
   `,
 };
