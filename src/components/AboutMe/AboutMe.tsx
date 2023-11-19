@@ -1,5 +1,6 @@
 // @Components
 import AboutMeCard from './AboutMeCard';
+import { CardContainer } from '../../common/Styles/Styles';
 
 // @Icons
 import ReactIcon from '../../common/Icons/ReactIcon';
@@ -15,9 +16,9 @@ import { AboutMeContainer, AboutMeImg } from './AboutMe.styles';
 const AboutMe = () => {
   return (
     <AboutMeContainer>
-      <div>
+      <CardContainer>
         <AboutMeImg src={DogPhoto} />
-      </div>
+      </CardContainer>
       <AboutMeCard
         icon={<ReactIcon />}
         description={[
@@ -27,17 +28,17 @@ const AboutMe = () => {
         ]}
         title="Front-end"
       />
-      <div>
+      <CardContainer>
         <AboutMeImg src={IcaPhoto} />
-      </div>
+      </CardContainer>
       <AboutMeCard
         icon={<ReactIcon />}
         description="Jotai, GraphQL, React Query, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
         title="Tech Stack"
       />
-      <div>
+      <CardContainer>
         <AboutMeImg src={ArequipaPhoto} />
-      </div>
+      </CardContainer>
       <AboutMeCard
         icon={<ReactIcon />}
         description="I enjoy bartending as a hobbie and gaming in my free time. I also like exploring new destinations within Peru and abroad. And let's not forget my dog – she's a big part of my life!"

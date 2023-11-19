@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const PortfolioHome = styled('div')`
-  padding: ${(props) => `${props.theme.spacing(2)} 0`};
+  padding: ${(props) => `${props.theme.spacing(1.5)} 0`};
   display: flex;
   flex-direction: column;
   justify-content: center;

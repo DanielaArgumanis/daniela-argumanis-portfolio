@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 import { css } from '@emotion/react';
 
+// @Styles
+import { CardContainer } from "../../common/Styles/Styles";
+
 // @Theme
 import { Breakpoint } from '../../common/Theme/Theme.types';
 
@@ -102,11 +105,8 @@ export const AboutMeImg = styled('img')`
   border: solid 2px ${(props) => props.theme.palette.white};
 `;
 
-export const AboutMeCardContainer = styled('div')`
-  background-color: ${(props) => props.theme.palette.background};
-  display: flex;
+export const AboutMeCardContainer = styled(CardContainer)`
   flex-direction: column;
-  border: 2px solid ${(props) => props.theme.palette.white};
   padding: ${(props) => props.theme.spacing(2)};
 
   svg {

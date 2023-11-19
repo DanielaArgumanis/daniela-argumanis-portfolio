@@ -2,7 +2,11 @@
 import Typography from '../../common/components/Typography/Typography';
 
 // @Styles
-import { PublicationCard } from './Publication.styles';
+import {
+  PublicationCard,
+  PublicationSourceContainer,
+} from './Publication.styles';
+import { PortfolioLink } from '../../common/Styles/Styles';
 
 type PublicationItemProps = {
   title: string;
@@ -19,21 +23,19 @@ const PublicationItem = ({
   date,
   url,
 }: PublicationItemProps) => {
-  const handleClick = () => {
-    window.open(url, '_blank');
-  };
-
   return (
-    <PublicationCard onClick={handleClick}>
-      <div>
-        <Typography variant="label">{source}</Typography>
-        <Typography variant="body2">{date}</Typography>
-      </div>
-      <Typography variant="title3">{title}</Typography>
-      <Typography variant="body2" as="p">
-        {description}
-      </Typography>
-    </PublicationCard>
+    <PortfolioLink to={url} target="_blank">
+      <PublicationCard>
+        <PublicationSourceContainer>
+          <Typography variant="label">{source}</Typography>
+          <Typography variant="body2">{date}</Typography>
+        </PublicationSourceContainer>
+        <Typography variant="title3">{title}</Typography>
+        <Typography variant="body2" as="p">
+          {description}
+        </Typography>
+      </PublicationCard>
+    </PortfolioLink>
   );
 };
 
