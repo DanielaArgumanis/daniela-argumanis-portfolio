@@ -1,8 +1,11 @@
+// @Components
 import Typography from '../../common/components/Typography/Typography';
 
 // @Icons
 import GithubIcon from '../../common/Icons/GithubIcon';
 import LinkedinIcon from '../../common/Icons/LinkedinIcon';
+
+// @Styles
 import {
   ContactSection,
   PortfolioHome,

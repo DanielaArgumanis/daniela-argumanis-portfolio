@@ -3,8 +3,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // @Components
 import Layout from './components/Layout';
-
-// @Types
 import AboutMe from './components/AboutMe/AboutMe';
 import Projects from './components/Projects/Projects';
 import Publications from './components/Publications/Publications';

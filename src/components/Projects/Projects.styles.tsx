@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
-import Typography from '../../common/components/Typography/Typography';
-import { Breakpoint } from '../../common/Theme/Theme.types';
 import { css } from '@emotion/react';
+
+// @Components
+import Typography from '../../common/components/Typography/Typography';
+
+// @Types
+import { Breakpoint } from '../../common/Theme/Theme.types';
 
 export const ProjectsContainer = styled.div`
   display: flex;

@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
-import { Breakpoint } from '../../common/Theme/Theme.types';
 import { css } from '@emotion/react';
+
+// @Theme
+import { Breakpoint } from '../../common/Theme/Theme.types';
 
 export const AboutMeContainer = styled('div')`
   height: fit-content;

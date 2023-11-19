@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+
+// @Types
 import { Breakpoint } from '../../Theme/Theme.types';
 
 export const PortfolioFooter = styled('footer')`

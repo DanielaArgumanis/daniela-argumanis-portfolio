@@ -1,4 +1,6 @@
 import { keyframes } from '@emotion/react';
+
+// @Types
 import { AnimationsType } from './Theme.types';
 
 export const animations: AnimationsType = {

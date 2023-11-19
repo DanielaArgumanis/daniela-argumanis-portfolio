@@ -5,21 +5,6 @@ import styled from "@emotion/styled";
 import { Breakpoint } from "../../Theme/Theme.types";
 import { NavLink } from "react-router-dom";
 
-export const PortfolioNavbar = styled('nav')`
-  background-color: ${(props) => props.theme.palette.background};
-  height: ${(props) => props.theme.sizing.navbar};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
-  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
-    height: ${(props) => props.theme.sizing.navbarMobile};
-  }
-`;
-
 const animateMoon = keyframes`
   0% {
     opacity: 1;
@@ -41,6 +26,21 @@ const rotateSun = keyframes`
   }
   100% {
     transform: rotate(360deg);
+  }
+`;
+
+export const PortfolioNavbar = styled('nav')`
+  background-color: ${(props) => props.theme.palette.background};
+  height: ${(props) => props.theme.sizing.navbar};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    height: ${(props) => props.theme.sizing.navbarMobile};
   }
 `;
 
@@ -77,7 +77,7 @@ export const NavbarSection = styled('div')`
   }
 `;
 
-export const NavbarButton = styled(NavLink)<{ order: number }>`
+export const NavbarLink = styled(NavLink)<{ order: number }>`
   position: relative;
   cursor: pointer;
   color: ${(props) => props.theme.palette.white};
@@ -92,11 +92,11 @@ export const NavbarButton = styled(NavLink)<{ order: number }>`
     content: '';
     position: absolute;
     width: 0;
-    height: 4px; /* Initial border thickness */
+    height: 4px;
     bottom: -0.5rem;
-    left: 50%; /* Start from the center */
-    transform: translateX(-50%); /* Center horizontally */
-    transition: all 0.3s ease-in-out; /* Transition for border width */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
     background-color: ${(props) => props.theme.palette.white};
   }
 
@@ -106,4 +106,3 @@ export const NavbarButton = styled(NavLink)<{ order: number }>`
     background-color: ${(props) => props.theme.palette.accents};
   }
 `;
-

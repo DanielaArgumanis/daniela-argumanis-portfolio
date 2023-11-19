@@ -1,4 +1,5 @@
-import { PaletteType } from "./Theme.types";
+// @Types
+import { PaletteType } from './Theme.types';
 
 export const accentColors = ['#8464CC', '#54BCCC', '#CC5DA9'];
 

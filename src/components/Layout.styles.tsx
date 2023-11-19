@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+
+// @Theme
 import { Breakpoint } from '../common/Theme/Theme.types';
 
 export const PortfolioTitle = styled('span')`
@@ -7,7 +9,7 @@ export const PortfolioTitle = styled('span')`
   font-weight: 700;
 `;
 
-export const PortfolioLayout = styled('div')`
+export const MainLayout = styled('div')`
   display: flex;
   justify-content: center;
   background-color: ${(props) => props.theme.palette.background};
@@ -17,7 +19,7 @@ export const PortfolioLayout = styled('div')`
   padding: 0;
 `;
 
-export const PortfolioContainer = styled('div')`
+export const MainContainer = styled('div')`
   max-width: 1024px;
   width: 100%;
   height: 100%;
@@ -44,7 +46,7 @@ export const PortfolioBody = styled('div')`
   }
 `;
 
-export const HomeNavBody = styled('div')<{ isHome: boolean }>`
+export const PortfolioOutletContainer = styled('div')<{ isHome: boolean }>`
   display: flex;
   position: relative;
   text-align: left;

@@ -1,20 +1,25 @@
-import { Outlet, useLocation } from 'react-router';
 import { useState } from 'react';
+import { Outlet, useLocation } from 'react-router';
+import { ThemeProvider } from '@emotion/react';
+
+// @Components
+import Footer from '../common/components/Footer/Footer';
+import Home from './Home/Home';
+import Navbar from '../common/components/Navbar/Navbar';
+
+// @Constants
+import { routes } from '../common/Constants/routes';
 
 // @Styles
 import {
-  PortfolioContainer,
-  PortfolioLayout,
+  PortfolioOutletContainer,
   PortfolioBody,
-  HomeNavBody,
+  MainContainer,
   PortfolioHomeContainer,
+  MainLayout,
 } from './Layout.styles';
 
-import Footer from '../common/components/Footer/Footer';
-import Navbar from '../common/components/Navbar/Navbar';
-import Home from './Home/Home';
-import { ThemeProvider } from '@emotion/react';
-import { routes } from '../common/Constants/routes';
+// @Theme
 import getTheme from '../common/Theme/Theme';
 
 const Layout = () => {
@@ -27,21 +32,20 @@ const Layout = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <PortfolioLayout>
-        <PortfolioContainer>
+      <MainLayout>
+        <MainContainer>
           <Navbar colorTheme={colorTheme} setColorTheme={setColorTheme} />
           <PortfolioBody>
             <PortfolioHomeContainer isHome={isHome}>
               <Home />
             </PortfolioHomeContainer>
-
-            <HomeNavBody isHome={isHome}>
+            <PortfolioOutletContainer isHome={isHome}>
               {location.pathname !== '/' && <Outlet />}
-            </HomeNavBody>
+            </PortfolioOutletContainer>
           </PortfolioBody>
           <Footer />
-        </PortfolioContainer>
-      </PortfolioLayout>
+        </MainContainer>
+      </MainLayout>
     </ThemeProvider>
   );
 };

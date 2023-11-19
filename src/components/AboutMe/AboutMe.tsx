@@ -1,9 +1,16 @@
-import { AboutMeContainer, AboutMeImg } from './AboutMe.styles';
+// @Components
+import AboutMeCard from './AboutMeCard';
+
+// @Icons
+import ReactIcon from '../../common/Icons/ReactIcon';
+
+// @Images
 import DogPhoto from '../../about-me-dog.jpg';
 import ArequipaPhoto from '../../about-me-arequipa.jpg';
 import IcaPhoto from '../../about-me-ica.jpg';
-import AboutMeCard from './AboutMeCard';
-import ReactIcon from '../../common/Icons/ReactIcon';
+
+// @Styles
+import { AboutMeContainer, AboutMeImg } from './AboutMe.styles';
 
 const AboutMe = () => {
   return (
