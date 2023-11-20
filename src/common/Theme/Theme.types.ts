@@ -1,11 +1,9 @@
 export type PaletteType = {
   background: string;
   disabled: string;
-  contrastText: string;
-  dark: string;
-  white: string;
-  accents: string;
-  text: string;
+  primary: string;
+  accent: string;
+  secondary: string;
 };
 
 export type SizingType = {

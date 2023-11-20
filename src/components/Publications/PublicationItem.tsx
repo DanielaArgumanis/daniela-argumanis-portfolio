@@ -1,12 +1,12 @@
 // @Components
-import Typography from '../../common/components/Typography/Typography';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Styles
 import {
   PublicationCard,
   PublicationSourceContainer,
 } from './Publication.styles';
-import { PortfolioLink } from '../../common/Styles/Styles';
+import { PortfolioLink } from '@styles/Styles';
 
 type PublicationItemProps = {
   title: string;

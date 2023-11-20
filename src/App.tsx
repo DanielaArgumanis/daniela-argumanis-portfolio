@@ -2,7 +2,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // @Components
-import Layout from './components/Layout';
+import Layout from './components/Layout/Layout';
 import AboutMe from './components/AboutMe/AboutMe';
 import Projects from './components/Projects/Projects';
 import Publications from './components/Publications/Publications';

@@ -1,6 +1,6 @@
 // @Components
-import { PortfolioLink } from '../../common/Styles/Styles';
-import Typography from '../../common/components/Typography/Typography';
+import { PortfolioLink } from '@styles/Styles';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Styles
 import {
@@ -33,7 +33,7 @@ const ProjectItem = ({
       <ProjectCard reverse={reverse} noPadding>
         <img src={image} />
         <ProjectCardDescription>
-          <ProjectTitle variant="title3">{title}</ProjectTitle>
+          <ProjectTitle variant="label">{title}</ProjectTitle>
           <Typography variant="body2" as="p" margin="2 0">
             {description}
           </Typography>

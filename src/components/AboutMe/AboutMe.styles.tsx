@@ -2,10 +2,10 @@ import styled from "@emotion/styled";
 import { css } from '@emotion/react';
 
 // @Styles
-import { CardContainer } from "../../common/Styles/Styles";
+import { CardContainer } from '@styles/Styles';
 
 // @Theme
-import { Breakpoint } from '../../common/Theme/Theme.types';
+import { Breakpoint } from '@theme/Theme.types';
 
 export const AboutMeContainer = styled('div')`
   height: fit-content;
@@ -97,7 +97,7 @@ export const AboutMeImg = styled('img')`
   height: 100%;
   object-fit: cover;
   overflow-y: hidden;
-  border: solid 2px ${(props) => props.theme.palette.white};
+  border: solid 2px ${(props) => props.theme.palette.primary};
 `;
 
 export const AboutMeCardContainer = styled(CardContainer)`
@@ -107,7 +107,7 @@ export const AboutMeCardContainer = styled(CardContainer)`
     padding: 0;
     width: 24px;
     height: 24px;
-    fill: ${(props) => props.theme.palette.accents};
+    fill: ${(props) => props.theme.palette.accent};
   }
 `;
 
@@ -123,7 +123,7 @@ export const AboutMeTitleContainer = styled('div')`
       width: 0;
       height: 4px; /* Initial border thickness */
       bottom: -0.5rem;
-      background-color: ${(props) => props.theme.palette.accents};
+      background-color: ${(props) => props.theme.palette.accent};
       width: 100%;
     }
   }

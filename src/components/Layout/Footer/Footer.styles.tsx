@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
+import { Breakpoint } from '@theme/Theme.types';
 
 // @Types
-import { Breakpoint } from '../../Theme/Theme.types';
 
 export const PortfolioFooter = styled('footer')`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: ${({ theme }) => `solid 2px ${theme.palette.text}`};
+  border-top: ${({ theme }) => `solid 2px ${theme.palette.secondary}`};
   height: ${(props) => props.theme.sizing.footer};
   position: sticky;
   background-color: ${({ theme }) => theme.palette.background};

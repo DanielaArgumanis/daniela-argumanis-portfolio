@@ -1,9 +1,8 @@
 // @Components
-import Typography from '../../common/components/Typography/Typography';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Icons
-import GithubIcon from '../../common/Icons/GithubIcon';
-import LinkedinIcon from '../../common/Icons/LinkedinIcon';
+import { GithubIcon, LinkedinIcon } from '@icons';
 
 // @Styles
 import {

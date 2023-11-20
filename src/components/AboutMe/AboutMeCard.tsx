@@ -1,7 +1,7 @@
 import React from 'react';
 
 // @Components
-import Typography from '../../common/components/Typography/Typography';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Styles
 import { AboutMeCardContainer, AboutMeTitleContainer } from './AboutMe.styles';

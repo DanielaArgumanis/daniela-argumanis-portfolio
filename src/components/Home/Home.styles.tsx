@@ -44,7 +44,7 @@ export const ContactSection = styled('div')`
       }
 
       line {
-        stroke: ${(props) => props.theme.palette.accents};
+        stroke: ${(props) => props.theme.palette.accent};
       }
     }
   }
