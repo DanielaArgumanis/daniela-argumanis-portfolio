@@ -12,7 +12,7 @@ export const AboutMeContainer = styled('div')`
   display: grid;
   gap: ${(props) => props.theme.spacing(2)};
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 200px 200px 250px auto;
+  grid-template-rows: 220px 160px 220px 250px auto;
   grid-template-areas:
     'image1 text1'
     'image1 image2'
@@ -24,16 +24,16 @@ export const AboutMeContainer = styled('div')`
     opacity: 0;
     animation: ${(props) =>
       css`
-        ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
+        ${props.theme.animations.enterCards} 0.8s ease-in-out 0.2s forwards
       `};
-    :hover {
+    /* :hover {
       animation: ${(props) =>
-        css`
-          ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards, ${props
-            .theme.animations.enterCards} 0s;
-        `};
+      css`
+        ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards, ${props
+          .theme.animations.enterCards} 0s;
+      `};
       opacity: 1;
-    }
+    } */
     transition: transform 1s ease;
     :nth-of-type(1) {
       grid-area: image1;
@@ -43,23 +43,18 @@ export const AboutMeContainer = styled('div')`
     }
     :nth-of-type(3) {
       grid-area: image2;
-      animation-delay: 0.1s;
     }
     :nth-of-type(4) {
       grid-area: text2;
-      animation-delay: 0.2s;
     }
     :nth-of-type(5) {
       grid-area: image3;
-      animation-delay: 0.3s;
     }
     :nth-of-type(6) {
       grid-area: text3;
-      animation-delay: 0.3s;
     }
     :nth-of-type(7) {
       grid-area: text4;
-      animation-delay: 0.4s;
     }
 
     /* :hover {
@@ -72,7 +67,7 @@ export const AboutMeContainer = styled('div')`
 
   ${(props) =>
     props.theme.breakpoints.between(Breakpoint.tablet, Breakpoint.laptopS)} {
-    grid-template-rows: 200px 200px 200px 250px auto;
+    grid-template-rows: 260px 80px 260px 340px auto;
   }
 
   ${(props) =>
@@ -83,7 +78,7 @@ export const AboutMeContainer = styled('div')`
       'text2 image2'
       'image3 text3'
       'text4 text4';
-    grid-template-rows: auto auto auto 220px auto;
+    grid-template-rows: auto auto auto 300px auto;
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
@@ -107,17 +102,12 @@ export const AboutMeImg = styled('img')`
 
 export const AboutMeCardContainer = styled(CardContainer)`
   flex-direction: column;
-  padding: ${(props) => props.theme.spacing(2)};
 
   svg {
     padding: 0;
     width: 24px;
     height: 24px;
     fill: ${(props) => props.theme.palette.accents};
-  }
-
-  ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
-    padding: ${(props) => props.theme.spacing(1)};
   }
 `;
 

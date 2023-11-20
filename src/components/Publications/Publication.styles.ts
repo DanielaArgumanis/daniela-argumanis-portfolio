@@ -16,7 +16,6 @@ export const PublicationCard = styled(CardContainer)`
     css`
       ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
     `};
-  padding: ${({ theme }) => theme.spacing(2)};
   flex-direction: column;
 
   :hover {

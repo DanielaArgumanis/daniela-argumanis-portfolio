@@ -16,7 +16,7 @@ import { AboutMeContainer, AboutMeImg } from './AboutMe.styles';
 const AboutMe = () => {
   return (
     <AboutMeContainer>
-      <CardContainer>
+      <CardContainer noPadding>
         <AboutMeImg src={DogPhoto} />
       </CardContainer>
       <AboutMeCard
@@ -28,15 +28,15 @@ const AboutMe = () => {
         ]}
         title="Front-end"
       />
-      <CardContainer>
+      <CardContainer noPadding>
         <AboutMeImg src={IcaPhoto} />
       </CardContainer>
       <AboutMeCard
         icon={<ReactIcon />}
-        description="Jotai, GraphQL, React Query, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
+        description="Redux, Jotai, React Query, GraphQL, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
         title="Tech Stack"
       />
-      <CardContainer>
+      <CardContainer noPadding>
         <AboutMeImg src={ArequipaPhoto} />
       </CardContainer>
       <AboutMeCard

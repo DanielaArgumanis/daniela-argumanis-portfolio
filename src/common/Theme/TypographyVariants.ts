@@ -49,9 +49,17 @@ export const getTypography = (themeColor: 'light' | 'dark') => ({
       fontSize: fontSizes.xsmall,
     },
   },
+  smallLabel: {
+    fontSize: fontSizes.small,
+    color: palette[themeColor].text,
+    [breakpoints.down(Breakpoint.mobileL)]: {
+      fontSize: fontSizes.xsmall,
+    },
+  },
   body1: {
     fontSize: fontSizes.large,
     color: palette[themeColor].text,
+    lineHeight: 1.5,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.xsmall,
     },
@@ -59,13 +67,7 @@ export const getTypography = (themeColor: 'light' | 'dark') => ({
   body2: {
     fontSize: fontSizes.medium,
     color: palette[themeColor].text,
-    [breakpoints.down(Breakpoint.mobileL)]: {
-      fontSize: fontSizes.xsmall,
-    },
-  },
-  body3: {
-    fontSize: fontSizes.small,
-    color: palette[themeColor].text,
+    lineHeight: 1.5,
     [breakpoints.down(Breakpoint.mobileL)]: {
       fontSize: fontSizes.xsmall,
     },

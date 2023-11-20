@@ -30,7 +30,7 @@ const ProjectItem = ({
 }: ProjectItemProps) => {
   return (
     <PortfolioLink to={url} target="_blank">
-      <ProjectCard reverse={reverse}>
+      <ProjectCard reverse={reverse} noPadding>
         <img src={image} />
         <ProjectCardDescription>
           <ProjectTitle variant="title3">{title}</ProjectTitle>
@@ -40,7 +40,7 @@ const ProjectItem = ({
           <PillContainer>
             {technologies.map((technology) => (
               <Pill key={technology}>
-                <Typography variant="body3">{technology}</Typography>
+                <Typography variant="smallLabel">{technology}</Typography>
               </Pill>
             ))}
           </PillContainer>
