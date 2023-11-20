@@ -1,13 +1,15 @@
+// @Components
+import Typography from '../Typography/Typography';
+
 // @Constants
 import { routes } from '../../Constants/routes';
 
 // @Icons
 import SunIcon from '../../Icons/SunIcon';
+import MoonIcon from '../../Icons/MoonIcon';
 
 // @Styles
-import { PortfolioNavbar, NavbarSection, NavbarButton } from './Navbar.styles';
-import MoonIcon from '../../Icons/MoonIcon';
-import Typography from '../Typography/Typography';
+import { PortfolioNavbar, NavbarSection, NavbarLink } from './Navbar.styles';
 
 type NavbarProps = {
   colorTheme: 'light' | 'dark';
@@ -26,9 +28,13 @@ const Navbar = ({ colorTheme, setColorTheme }: NavbarProps) => {
       </NavbarSection>
       <NavbarSection>
         {routes.map((section) => (
-          <NavbarButton order={section.order} to={section.href}>
+          <NavbarLink
+            key={section.order}
+            order={section.order}
+            to={section.href}
+          >
             <Typography variant="label">{section.title}</Typography>
-          </NavbarButton>
+          </NavbarLink>
         ))}
       </NavbarSection>
     </PortfolioNavbar>

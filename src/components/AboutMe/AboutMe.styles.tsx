@@ -1,4 +1,10 @@
 import styled from "@emotion/styled";
+import { css } from '@emotion/react';
+
+// @Styles
+import { CardContainer } from "../../common/Styles/Styles";
+
+// @Theme
 import { Breakpoint } from '../../common/Theme/Theme.types';
 
 export const AboutMeContainer = styled('div')`
@@ -6,7 +12,7 @@ export const AboutMeContainer = styled('div')`
   display: grid;
   gap: ${(props) => props.theme.spacing(2)};
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 200px 200px 250px auto;
+  grid-template-rows: 220px 160px 220px 250px auto;
   grid-template-areas:
     'image1 text1'
     'image1 image2'
@@ -15,6 +21,20 @@ export const AboutMeContainer = styled('div')`
     'text4 text4';
 
   > div {
+    opacity: 0;
+    animation: ${(props) =>
+      css`
+        ${props.theme.animations.enterCards} 0.8s ease-in-out 0.2s forwards
+      `};
+    /* :hover {
+      animation: ${(props) =>
+      css`
+        ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards, ${props
+          .theme.animations.enterCards} 0s;
+      `};
+      opacity: 1;
+    } */
+    transition: transform 1s ease;
     :nth-of-type(1) {
       grid-area: image1;
     }
@@ -36,11 +56,18 @@ export const AboutMeContainer = styled('div')`
     :nth-of-type(7) {
       grid-area: text4;
     }
+
+    /* :hover {
+      animation: ${(props) =>
+      css`
+        ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards
+      `};
+    } */
   }
 
   ${(props) =>
     props.theme.breakpoints.between(Breakpoint.tablet, Breakpoint.laptopS)} {
-    grid-template-rows: 200px 200px 200px 250px auto;
+    grid-template-rows: 260px 80px 260px 340px auto;
   }
 
   ${(props) =>
@@ -51,7 +78,7 @@ export const AboutMeContainer = styled('div')`
       'text2 image2'
       'image3 text3'
       'text4 text4';
-    grid-template-rows: auto auto auto 220px auto;
+    grid-template-rows: auto auto auto 300px auto;
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
@@ -73,21 +100,14 @@ export const AboutMeImg = styled('img')`
   border: solid 2px ${(props) => props.theme.palette.white};
 `;
 
-export const AboutMeCardContainer = styled('div')`
-  display: flex;
+export const AboutMeCardContainer = styled(CardContainer)`
   flex-direction: column;
-  border: 2px solid ${(props) => props.theme.palette.white};
-  padding: ${(props) => props.theme.spacing(2)};
 
   svg {
     padding: 0;
     width: 24px;
     height: 24px;
     fill: ${(props) => props.theme.palette.accents};
-  }
-
-  ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
-    padding: ${(props) => props.theme.spacing(1)};
   }
 `;
 

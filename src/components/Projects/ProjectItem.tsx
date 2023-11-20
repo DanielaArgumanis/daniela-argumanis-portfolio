@@ -1,4 +1,5 @@
 // @Components
+import { PortfolioLink } from '../../common/Styles/Styles';
 import Typography from '../../common/components/Typography/Typography';
 
 // @Styles
@@ -6,6 +7,7 @@ import {
   Pill,
   PillContainer,
   ProjectCard,
+  ProjectCardDescription,
   ProjectTitle,
 } from './Projects.styles';
 
@@ -26,29 +28,25 @@ const ProjectItem = ({
   image,
   url,
 }: ProjectItemProps) => {
-  const handleClick = () => {
-    window.open(url, '_blank');
-  };
-
   return (
-    <ProjectCard onClick={handleClick} reverse={reverse}>
-      <img src={image} />
-      <div>
-        <div>
+    <PortfolioLink to={url} target="_blank">
+      <ProjectCard reverse={reverse} noPadding>
+        <img src={image} />
+        <ProjectCardDescription>
           <ProjectTitle variant="title3">{title}</ProjectTitle>
           <Typography variant="body2" as="p" margin="2 0">
             {description}
           </Typography>
-        </div>
-        <PillContainer>
-          {technologies.map((technology) => (
-            <Pill>
-              <Typography variant="body3">{technology}</Typography>
-            </Pill>
-          ))}
-        </PillContainer>
-      </div>
-    </ProjectCard>
+          <PillContainer>
+            {technologies.map((technology) => (
+              <Pill key={technology}>
+                <Typography variant="smallLabel">{technology}</Typography>
+              </Pill>
+            ))}
+          </PillContainer>
+        </ProjectCardDescription>
+      </ProjectCard>
+    </PortfolioLink>
   );
 };
 

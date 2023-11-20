@@ -1,5 +1,9 @@
 import React from 'react';
+
+// @Components
 import Typography from '../../common/components/Typography/Typography';
+
+// @Styles
 import { AboutMeCardContainer, AboutMeTitleContainer } from './AboutMe.styles';
 
 type AboutMeCardProps = {
@@ -18,8 +22,8 @@ const AboutMeCard = ({ icon, description, title }: AboutMeCardProps) => {
         <Typography variant="label">{title}</Typography>
       </AboutMeTitleContainer>
       {isDescriptionArray ? (
-        description.map((text) => (
-          <Typography variant="body2" margin="1 0 0 0">
+        description.map((text, idx) => (
+          <Typography key={idx} variant="body2" margin="1 0 0 0">
             {text}
           </Typography>
         ))

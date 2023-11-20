@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const PortfolioHome = styled('div')`
-  padding: ${(props) => `${props.theme.spacing(2)} 0`};
+  gap: ${(props) => props.theme.spacing(4)};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,6 @@ export const ContactSection = styled('div')`
   display: flex;
   gap: ${(props) => props.theme.spacing(6)};
   justify-content: center;
-  padding: ${(props) => `${props.theme.spacing(8)} 0`};
 
   svg {
     width: 60px;

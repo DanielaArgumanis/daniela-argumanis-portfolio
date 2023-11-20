@@ -1,4 +1,8 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+
+// @Styles
+import { CardContainer } from '../../common/Styles/Styles';
 
 export const PublicationsContainer = styled.div`
   display: flex;
@@ -7,18 +11,19 @@ export const PublicationsContainer = styled.div`
   overflow-y: scroll;
 `;
 
-export const PublicationCard = styled.div`
-  border: solid 2px ${({ theme }) => theme.palette.white};
-  padding: ${({ theme }) => theme.spacing(2)};
-  display: flex;
+export const PublicationCard = styled(CardContainer)`
+  animation: ${(props) =>
+    css`
+      ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
+    `};
   flex-direction: column;
 
   :hover {
     cursor: pointer;
   }
+`;
 
-  > div {
-    display: flex;
-    justify-content: space-between;
-  }
+export const PublicationSourceContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;

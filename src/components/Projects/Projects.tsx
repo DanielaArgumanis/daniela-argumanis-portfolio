@@ -1,5 +1,10 @@
+// @Components
 import ProjectItem from './ProjectItem';
+
+// @Gifs
 import ProjectGif from '../../project-gif.gif';
+
+// @Styles
 import { ProjectsContainer } from './Projects.styles';
 
 const PROJECTS_LIST = [

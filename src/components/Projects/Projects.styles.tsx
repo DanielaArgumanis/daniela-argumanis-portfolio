@@ -1,9 +1,16 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
+// @Components
 import Typography from '../../common/components/Typography/Typography';
+
+// @Types
 import { Breakpoint } from '../../common/Theme/Theme.types';
+import { CardContainer } from '../../common/Styles/Styles';
 
 export const ProjectsContainer = styled.div`
   display: flex;
+  position: absolute;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
 `;
@@ -21,17 +28,11 @@ export const ProjectTitle = styled(Typography)`
   }
 `;
 
-export const ProjectCard = styled.div<{ reverse?: boolean }>`
-  display: flex;
+export const ProjectCard = styled(CardContainer)<{ reverse?: boolean }>`
+  opacity: 0;
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
-  border: 2px solid ${({ theme }) => theme.palette.white};
   text-align: center;
   align-items: center;
-
-  > div {
-    padding: ${({ theme }) => theme.spacing(2)};
-    width: 40%;
-  }
 
   img {
     width: 60%;
@@ -41,13 +42,18 @@ export const ProjectCard = styled.div<{ reverse?: boolean }>`
   ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
     flex-direction: column;
 
-    > div {
-      width: 100%;
-    }
-
     img {
       width: 100%;
     }
+  }
+`;
+
+export const ProjectCardDescription = styled.div`
+  padding: ${({ theme }) => theme.spacing(2)};
+  width: 40%;
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
+    width: 100%;
   }
 `;
 

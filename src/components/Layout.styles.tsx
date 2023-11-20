@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+
+// @Theme
 import { Breakpoint } from '../common/Theme/Theme.types';
 
 export const PortfolioTitle = styled('span')`
@@ -7,7 +9,7 @@ export const PortfolioTitle = styled('span')`
   font-weight: 700;
 `;
 
-export const PortfolioLayout = styled('div')`
+export const MainLayout = styled('div')`
   display: flex;
   justify-content: center;
   background-color: ${(props) => props.theme.palette.background};
@@ -17,7 +19,7 @@ export const PortfolioLayout = styled('div')`
   padding: 0;
 `;
 
-export const PortfolioContainer = styled('div')`
+export const MainContainer = styled('div')`
   max-width: 1024px;
   width: 100%;
   height: 100%;
@@ -27,7 +29,7 @@ export const PortfolioContainer = styled('div')`
   padding: 0 ${(props) => props.theme.spacing(2)};
 `;
 
-export const PortfolioBody = styled('div')<{ isHome: boolean }>`
+export const PortfolioBody = styled('div')`
   display: flex;
   gap: ${(props) => props.theme.spacing(4)};
   height: ${(props) =>
@@ -44,21 +46,25 @@ export const PortfolioBody = styled('div')<{ isHome: boolean }>`
   }
 `;
 
-export const HomeNavBody = styled('div')`
+export const PortfolioOutletContainer = styled('div')<{ isHome: boolean }>`
   display: flex;
+  position: relative;
   text-align: left;
   overflow-y: scroll;
   height: 100%;
-  width: 65%;
+  width: ${(props) => (props.isHome ? '0' : ' 65%')};
+  transition: width 0.5s ease-in;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
-    width: 100%;
+    width: ${(props) => (props.isHome ? '0' : ' 100%')};
   }
 `;
 
 export const PortfolioHomeContainer = styled.div<{ isHome: boolean }>`
-  width: 35%;
+  width: ${(props) => (props.isHome ? '100%' : '35%')};
+  transition: all 0.5s ease-in;
+  padding: ${(props) => `${props.theme.spacing(2)} 0`};
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     display: ${(props) => (props.isHome ? 'flex' : 'none')};
     height: 100%;
