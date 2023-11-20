@@ -7,7 +7,7 @@ const NavbarContainer = styled.div`
 `
 
 const Navbar = () => {
-    return <NavbarContainer></NavbarContainer>
+    return <NavbarContainer>Navbar</NavbarContainer>
 }
 
 export default Navbar;
