@@ -57,13 +57,14 @@ export const PortfolioOutletContainer = styled('div')<{ isHome: boolean }>`
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
-    width: 100%;
+    width: ${(props) => (props.isHome ? '0' : ' 100%')};
   }
 `;
 
 export const PortfolioHomeContainer = styled.div<{ isHome: boolean }>`
   width: ${(props) => (props.isHome ? '100%' : '35%')};
-  transition: width 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  padding: ${(props) => `${props.theme.spacing(2)} 0`};
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     display: ${(props) => (props.isHome ? 'flex' : 'none')};
     height: 100%;

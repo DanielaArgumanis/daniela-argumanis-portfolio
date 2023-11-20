@@ -6,6 +6,7 @@ export const accentColors = ['#8464CC', '#54BCCC', '#CC5DA9'];
 export const palette: Record<'light' | 'dark', PaletteType> = {
   dark: {
     background: '#1E1E1E',
+    //background: '#1A191D',
     disabled: '#b5b3b3',
     contrastText: '#141618',
     text: '#A1A1AA',
