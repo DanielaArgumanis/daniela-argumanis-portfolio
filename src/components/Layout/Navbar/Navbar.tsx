@@ -5,8 +5,8 @@ import Typography from '@commonComponents/Typography/Typography';
 import { routes } from '@constants/routes';
 
 // @Icons
-import SunIcon from '@icons/SunIcon';
-import MoonIcon from '@icons/MoonIcon';
+import SunIcon from '@icons/sun-white.svg?react';
+import MoonIcon from '@icons/moon-black.svg?react';
 
 // @Styles
 import { PortfolioNavbar, NavbarSection, NavbarLink } from './Navbar.styles';
