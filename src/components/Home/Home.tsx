@@ -2,8 +2,7 @@
 import Typography from '@commonComponents/Typography/Typography';
 
 // @Icons
-import GithubIcon from '@icons/GithubIcon';
-import LinkedinIcon from '@icons/LinkedinIcon';
+import { GithubIcon, LinkedinIcon } from '@icons';
 
 // @Styles
 import {

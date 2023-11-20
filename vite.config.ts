@@ -10,7 +10,7 @@ export default defineConfig({
       '@commonComponents': '/src/common/components',
       '@components': '/src/components',
       '@constants': '/src/common/Constants',
-      '@icons': '/src/common/Icons',
+      '@icons': '/src/common/Icons/index.tsx',
       '@images': '/src/common/Images',
       '@styles': '/src/common/Styles',
       '@theme': '/src/common/Theme',

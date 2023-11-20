@@ -3,7 +3,7 @@ import AboutMeCard from './AboutMeCard';
 import { CardContainer } from '@styles/Styles';
 
 // @Icons
-import ReactIcon from '@icons/ReactIcon';
+import { ReactIcon } from '@icons';
 
 // @Images
 import DogPhoto from '@images/about-me-dog.jpg';
