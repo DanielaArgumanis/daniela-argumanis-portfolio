@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Breakpoint } from '@theme/Theme.types';
 
 export const PortfolioTitle = styled('span')`
-  color: ${(props) => props.theme.palette.white};
+  color: ${(props) => props.theme.palette.primary};
   font-size: 34px;
   font-weight: 700;
 `;

@@ -60,7 +60,7 @@ export const NavbarSection = styled('div')`
     cursor: pointer;
     :hover {
       &.sun-icon {
-        animation: ${rotateSun} 1s linear infinite;
+        animation: ${rotateSun} 1.5s linear infinite;
       }
       .moon-star1 {
         animation: ${animateMoon} 1s linear infinite;
@@ -80,7 +80,7 @@ export const NavbarSection = styled('div')`
 export const NavbarLink = styled(NavLink)<{ order: number }>`
   position: relative;
   cursor: pointer;
-  color: ${(props) => props.theme.palette.white};
+  color: ${(props) => props.theme.palette.primary};
   top: 0;
   text-decoration: none;
 
@@ -97,12 +97,12 @@ export const NavbarLink = styled(NavLink)<{ order: number }>`
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.3s ease-in-out;
-    background-color: ${(props) => props.theme.palette.white};
+    background-color: ${(props) => props.theme.palette.primary};
   }
 
   &:hover::before,
   &.active::before {
     width: 95%;
-    background-color: ${(props) => props.theme.palette.accents};
+    background-color: ${(props) => props.theme.palette.accent};
   }
 `;

@@ -22,7 +22,7 @@ export const ProjectTitle = styled(Typography)`
     width: 0;
     height: 4px; /* Initial border thickness */
     bottom: -0.5rem;
-    background-color: ${(props) => props.theme.palette.accents};
+    background-color: ${(props) => props.theme.palette.accent};
     width: 100%;
   }
 `;
@@ -67,7 +67,7 @@ export const PillContainer = styled.div`
 export const Pill = styled.div`
   display: inline-flex;
   border-radius: 20px;
-  border: solid 1px ${({ theme }) => theme.palette.white};
+  border: solid 1px ${({ theme }) => theme.palette.primary};
 
   > span {
     margin: ${({ theme }) => `${theme.spacing(0.5)} ${theme.spacing(1)}`};

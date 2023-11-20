@@ -33,7 +33,7 @@ const ProjectItem = ({
       <ProjectCard reverse={reverse} noPadding>
         <img src={image} />
         <ProjectCardDescription>
-          <ProjectTitle variant="title3">{title}</ProjectTitle>
+          <ProjectTitle variant="label">{title}</ProjectTitle>
           <Typography variant="body2" as="p" margin="2 0">
             {description}
           </Typography>

@@ -8,7 +8,7 @@ export const PortfolioFooter = styled('footer')`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: ${({ theme }) => `solid 2px ${theme.palette.text}`};
+  border-top: ${({ theme }) => `solid 2px ${theme.palette.secondary}`};
   height: ${(props) => props.theme.sizing.footer};
   position: sticky;
   background-color: ${({ theme }) => theme.palette.background};
