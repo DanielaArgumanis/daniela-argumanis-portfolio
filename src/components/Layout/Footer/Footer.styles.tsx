@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
+import { Breakpoint } from '@theme/Theme.types';
 
 // @Types
-import { Breakpoint } from '../../Theme/Theme.types';
 
 export const PortfolioFooter = styled('footer')`
   width: 100%;

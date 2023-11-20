@@ -1,12 +1,12 @@
 // @Components
-import Typography from '../Typography/Typography';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Constants
-import { routes } from '../../Constants/routes';
+import { routes } from '@constants/routes';
 
 // @Icons
-import SunIcon from '../../Icons/SunIcon';
-import MoonIcon from '../../Icons/MoonIcon';
+import SunIcon from '@icons/SunIcon';
+import MoonIcon from '@icons/MoonIcon';
 
 // @Styles
 import { PortfolioNavbar, NavbarSection, NavbarLink } from './Navbar.styles';

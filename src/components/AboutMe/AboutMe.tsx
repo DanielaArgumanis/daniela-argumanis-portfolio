@@ -1,14 +1,14 @@
 // @Components
 import AboutMeCard from './AboutMeCard';
-import { CardContainer } from '../../common/Styles/Styles';
+import { CardContainer } from '@styles/Styles';
 
 // @Icons
-import ReactIcon from '../../common/Icons/ReactIcon';
+import ReactIcon from '@icons/ReactIcon';
 
 // @Images
-import DogPhoto from '../../about-me-dog.jpg';
-import ArequipaPhoto from '../../about-me-arequipa.jpg';
-import IcaPhoto from '../../about-me-ica.jpg';
+import DogPhoto from '@images/about-me-dog.jpg';
+import ArequipaPhoto from '@images/about-me-arequipa.jpg';
+import IcaPhoto from '@images/about-me-ica.jpg';
 
 // @Styles
 import { AboutMeContainer, AboutMeImg } from './AboutMe.styles';

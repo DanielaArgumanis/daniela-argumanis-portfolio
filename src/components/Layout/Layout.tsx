@@ -3,12 +3,12 @@ import { Outlet, useLocation } from 'react-router';
 import { ThemeProvider } from '@emotion/react';
 
 // @Components
-import Footer from '../common/components/Footer/Footer';
-import Home from './Home/Home';
-import Navbar from '../common/components/Navbar/Navbar';
+import Footer from './Footer/Footer';
+import Home from '../Home/Home';
+import Navbar from './Navbar/Navbar';
 
 // @Constants
-import { routes } from '../common/Constants/routes';
+import { routes } from '@constants/routes';
 
 // @Styles
 import {
@@ -17,10 +17,10 @@ import {
   MainContainer,
   PortfolioHomeContainer,
   MainLayout,
-} from './Layout.styles';
+} from '../Layout/Layout.styles';
 
 // @Theme
-import getTheme from '../common/Theme/Theme';
+import getTheme from '@theme/Theme';
 
 const Layout = () => {
   const [colorTheme, setColorTheme] = useState<'light' | 'dark'>('dark');

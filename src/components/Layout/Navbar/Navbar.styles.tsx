@@ -2,7 +2,7 @@ import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
 // @Types
-import { Breakpoint } from "../../Theme/Theme.types";
+import { Breakpoint } from '@theme/Theme.types';
 import { NavLink } from "react-router-dom";
 
 const animateMoon = keyframes`

@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 // @Components
-import Typography from '../../common/components/Typography/Typography';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Types
-import { Breakpoint } from '../../common/Theme/Theme.types';
-import { CardContainer } from '../../common/Styles/Styles';
+import { Breakpoint } from '@theme/Theme.types';
+import { CardContainer } from '@styles/Styles';
 
 export const ProjectsContainer = styled.div`
   display: flex;

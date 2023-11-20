@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 // @Styles
-import { CardContainer } from '../../common/Styles/Styles';
+import { CardContainer } from '@styles/Styles';
 
 export const PublicationsContainer = styled.div`
   display: flex;

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 // @Types
-import { Breakpoint } from '../Theme/Theme.types';
+import { Breakpoint } from '@theme/Theme.types';
 
 export const CardContainer = styled.div<{noPadding?: boolean}>`
   animation: ${(props) =>

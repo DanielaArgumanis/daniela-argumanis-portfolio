@@ -2,7 +2,7 @@
 import ProjectItem from './ProjectItem';
 
 // @Gifs
-import ProjectGif from '../../project-gif.gif';
+import ProjectGif from '@images/project-gif.gif';
 
 // @Styles
 import { ProjectsContainer } from './Projects.styles';

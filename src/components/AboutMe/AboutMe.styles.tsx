@@ -2,10 +2,10 @@ import styled from "@emotion/styled";
 import { css } from '@emotion/react';
 
 // @Styles
-import { CardContainer } from "../../common/Styles/Styles";
+import { CardContainer } from '@styles/Styles';
 
 // @Theme
-import { Breakpoint } from '../../common/Theme/Theme.types';
+import { Breakpoint } from '@theme/Theme.types';
 
 export const AboutMeContainer = styled('div')`
   height: fit-content;

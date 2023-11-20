@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 // @Theme
-import { Breakpoint } from '../common/Theme/Theme.types';
+import { Breakpoint } from '@theme/Theme.types';
 
 export const PortfolioTitle = styled('span')`
   color: ${(props) => props.theme.palette.white};

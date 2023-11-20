@@ -1,6 +1,6 @@
 // @Components
-import { PortfolioLink } from '../../common/Styles/Styles';
-import Typography from '../../common/components/Typography/Typography';
+import { PortfolioLink } from '@styles/Styles';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Styles
 import {

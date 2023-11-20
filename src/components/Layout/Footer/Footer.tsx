@@ -1,5 +1,5 @@
 // @Components
-import Typography from '../Typography/Typography';
+import Typography from '@commonComponents/Typography/Typography';
 
 // @Styles
 import { PortfolioFooter } from './Footer.styles';
