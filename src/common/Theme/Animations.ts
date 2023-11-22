@@ -6,7 +6,7 @@ import { AnimationsType } from './Theme.types';
 export const animations: AnimationsType = {
   enterCards: keyframes`
     0% {
-      transform: translateX(2000px);
+      transform: translateY(-1500px);
       opacity: 1;
     }
     100% {

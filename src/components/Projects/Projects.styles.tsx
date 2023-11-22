@@ -9,7 +9,6 @@ import { CardContainer } from '@styles/Styles';
 
 export const ProjectsContainer = styled.div`
   display: flex;
-  position: absolute;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
 `;

@@ -24,6 +24,14 @@ export const ContactSection = styled('div')`
     width: 60px;
     height: 60px;
 
+    path {
+      fill: ${(props) => props.theme.palette.primary};
+    }
+
+    rect {
+      stroke: ${(props) => props.theme.palette.primary};
+    }
+
     :hover {
       cursor: pointer;
       .left-line {

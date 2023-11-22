@@ -8,7 +8,7 @@ import { Breakpoint } from '@theme/Theme.types';
 export const CardContainer = styled.div<{ noPadding?: boolean }>`
   animation: ${(props) =>
     css`
-      ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
+      ${props.theme.animations.enterCards} 1s ease-in-out forwards
     `};
   border: solid 2px ${({ theme }) => theme.palette.primary};
   background-color: ${(props) => props.theme.palette.background};

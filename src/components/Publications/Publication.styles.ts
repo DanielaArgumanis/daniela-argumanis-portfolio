@@ -8,7 +8,6 @@ export const PublicationsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
-  overflow-y: scroll;
 `;
 
 export const PublicationCard = styled(CardContainer)`
