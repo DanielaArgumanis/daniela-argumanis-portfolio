@@ -48,13 +48,16 @@ export const PortfolioBody = styled('div')`
 
 export const PortfolioOutletContainer = styled('div')<{ isHome: boolean }>`
   display: flex;
-  position: relative;
   text-align: left;
-  overflow-y: scroll;
   height: 100%;
   width: ${(props) => (props.isHome ? '0' : ' 65%')};
   transition: width 0.5s ease-in;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
+  overflow-y: scroll;
+
+  > div {
+    height: fit-content;
+  }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     width: ${(props) => (props.isHome ? '0' : ' 100%')};

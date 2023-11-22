@@ -1,5 +1,4 @@
 // @Components
-import { PortfolioLink } from '@styles/Styles';
 import Typography from '@commonComponents/Typography/Typography';
 
 // @Styles
@@ -8,15 +7,18 @@ import {
   PillContainer,
   ProjectCard,
   ProjectCardDescription,
+  ProjectLinkIcon,
   ProjectTitle,
+  UrlContainer,
 } from './Projects.styles';
+import { PortfolioLink } from '@styles/Styles';
 
 type ProjectItemProps = {
   title: string;
   description: string;
   technologies: readonly string[];
   image: string;
-  url: string;
+  urls: readonly { name: string; url: string }[];
   reverse?: boolean;
 };
 
@@ -26,26 +28,38 @@ const ProjectItem = ({
   technologies,
   reverse,
   image,
-  url,
+  urls,
 }: ProjectItemProps) => {
   return (
-    <PortfolioLink to={url} target="_blank">
-      <ProjectCard reverse={reverse} noPadding>
-        <img src={image} />
-        <ProjectCardDescription>
-          <ProjectTitle variant="label">{title}</ProjectTitle>
-          <Typography variant="body2" as="p" margin="2 0">
-            {description}
-          </Typography>
-          <PillContainer>
-            {technologies.map((technology) => (
-              <Pill key={technology}>
-                <Typography variant="smallLabel">{technology}</Typography>
-              </Pill>
+    <PortfolioLink to={urls[0].url} target="_blank">
+      <div>
+        <ProjectCard reverse={reverse} noPadding isInteractive>
+          <img src={image} />
+          <ProjectCardDescription>
+            <ProjectTitle variant="title3">{title}</ProjectTitle>
+            <Typography variant="body2" as="p">
+              {description}
+            </Typography>
+            {urls.map((url) => (
+              <PortfolioLink to={url.url} target="_blank">
+                <UrlContainer>
+                  <ProjectLinkIcon />
+                  <Typography variant="body2" color="primary" margin="0 1">
+                    {url.name}
+                  </Typography>
+                </UrlContainer>
+              </PortfolioLink>
             ))}
-          </PillContainer>
-        </ProjectCardDescription>
-      </ProjectCard>
+            <PillContainer>
+              {technologies.map((technology) => (
+                <Pill key={technology}>
+                  <Typography variant="smallLabel">{technology}</Typography>
+                </Pill>
+              ))}
+            </PillContainer>
+          </ProjectCardDescription>
+        </ProjectCard>
+      </div>
     </PortfolioLink>
   );
 };

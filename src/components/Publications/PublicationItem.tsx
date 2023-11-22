@@ -25,7 +25,7 @@ const PublicationItem = ({
 }: PublicationItemProps) => {
   return (
     <PortfolioLink to={url} target="_blank">
-      <PublicationCard>
+      <PublicationCard isInteractive>
         <PublicationSourceContainer>
           <Typography variant="label">{source}</Typography>
           <Typography variant="body2">{date}</Typography>

@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 // @Components
 import Typography from '@commonComponents/Typography/Typography';
 
+// @Links
+import { LinkIcon } from '@icons';
+
 // @Types
 import { Breakpoint } from '@theme/Theme.types';
 import { CardContainer } from '@styles/Styles';
@@ -15,26 +18,17 @@ export const ProjectsContainer = styled.div`
 
 export const ProjectTitle = styled(Typography)`
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 4px; /* Initial border thickness */
-    bottom: -0.5rem;
-    background-color: ${(props) => props.theme.palette.accent};
-    width: 100%;
-  }
 `;
 
 export const ProjectCard = styled(CardContainer)<{ reverse?: boolean }>`
   opacity: 0;
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
-  text-align: center;
   align-items: center;
 
   img {
     width: 60%;
-    max-height: 300px;
+    height: 100%;
+    object-fit: cover;
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
@@ -47,6 +41,8 @@ export const ProjectCard = styled(CardContainer)<{ reverse?: boolean }>`
 `;
 
 export const ProjectCardDescription = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: ${({ theme }) => theme.spacing(2)};
   width: 40%;
 
@@ -58,9 +54,9 @@ export const ProjectCardDescription = styled.div`
 export const PillContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: ${({ theme }) => theme.spacing(1)};
   max-width: 100%;
+  margin: ${({ theme }) => theme.spacing(1)};
 `;
 
 export const Pill = styled.div`
@@ -70,5 +66,32 @@ export const Pill = styled.div`
 
   > span {
     margin: ${({ theme }) => `${theme.spacing(0.5)} ${theme.spacing(1)}`};
+  }
+`;
+
+export const ProjectLinkIcon = styled(LinkIcon)`
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
+  align-items: center;
+  
+  path {
+    stroke: ${({ theme }) => theme.palette.primary};
+  }
+`;
+
+export const UrlContainer = styled.div`
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    span {
+      color: ${({ theme }) => theme.palette.accent};
+    }
+    svg {
+      path {
+        stroke: ${({ theme }) => theme.palette.accent};
+      }
+    }
   }
 `;

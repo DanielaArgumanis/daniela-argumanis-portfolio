@@ -16,10 +16,6 @@ export const PublicationCard = styled(CardContainer)`
       ${props.theme.animations.enterCards} 0.8s ease-in-out forwards
     `};
   flex-direction: column;
-
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 export const PublicationSourceContainer = styled.div`

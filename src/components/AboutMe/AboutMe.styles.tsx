@@ -8,7 +8,6 @@ import { CardContainer } from '@styles/Styles';
 import { Breakpoint } from '@theme/Theme.types';
 
 export const AboutMeContainer = styled('div')`
-  height: fit-content;
   display: grid;
   gap: ${(props) => props.theme.spacing(2)};
   grid-template-columns: 1fr 1fr;
@@ -97,7 +96,6 @@ export const AboutMeImg = styled('img')`
   height: 100%;
   object-fit: cover;
   overflow-y: hidden;
-  border: solid 2px ${(props) => props.theme.palette.primary};
 `;
 
 export const AboutMeCardContainer = styled(CardContainer)`
