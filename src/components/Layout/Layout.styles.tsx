@@ -51,9 +51,9 @@ export const PortfolioOutletContainer = styled('div')<{ isHome: boolean }>`
   text-align: left;
   height: 100%;
   width: ${(props) => (props.isHome ? '0' : ' 65%')};
-  transition: width 0.5s ease-in;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
   overflow-y: scroll;
+  transition: width 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
 
   > div {
     height: fit-content;
@@ -65,9 +65,12 @@ export const PortfolioOutletContainer = styled('div')<{ isHome: boolean }>`
 `;
 
 export const PortfolioHomeContainer = styled.div<{ isHome: boolean }>`
-  width: ${(props) => (props.isHome ? '100%' : '35%')};
-  transition: all 0.5s ease-in;
+  width: ${({ isHome }) => (isHome ? '70%' : '35%')};
+  margin: ${({ isHome }) => (isHome ? 'auto' : '0 auto')};
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
+  text-align: ${(props) => (props.isHome ? 'center' : 'flex-start')};
+  transition: all 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
+
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     display: ${(props) => (props.isHome ? 'flex' : 'none')};
     height: 100%;

@@ -37,7 +37,7 @@ const Layout = () => {
           <Navbar colorTheme={colorTheme} setColorTheme={setColorTheme} />
           <PortfolioBody>
             <PortfolioHomeContainer isHome={isHome}>
-              <Home />
+              <Home isHome={isHome} />
             </PortfolioHomeContainer>
             <PortfolioOutletContainer isHome={isHome}>
               {location.pathname !== '/' && <Outlet />}

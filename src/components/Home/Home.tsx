@@ -2,7 +2,7 @@
 import Typography from '@commonComponents/Typography/Typography';
 
 // @Icons
-import { GithubIcon, LinkedinIcon } from '@icons';
+import { GithubIcon, LinkedinIcon, MailIcon } from '@icons';
 
 // @Styles
 import {
@@ -11,17 +11,17 @@ import {
   PortfolioTitleContainer,
 } from './Home.styles';
 
-const Home = () => {
+const Home = ({ isHome }: { isHome: boolean }) => {
   return (
     <PortfolioHome>
       <PortfolioTitleContainer>
-        <Typography variant="title1" as="h1" margin="0">
-          Welcome!
+        <Typography variant="title1" as="span" margin="0">
+          Welcome
         </Typography>
-        <Typography variant="title1" as="h1" margin="0">
+        <Typography variant="title1" as="span" margin="0">
           I'm Daniela Argumanis
         </Typography>
-        <Typography variant="title1" as="h1" accent margin="0">
+        <Typography variant="title1" as="span" accent margin="0">
           Senior Front-End Engineer
         </Typography>
         <Typography variant="body1" as="p" margin="2 0">
@@ -29,9 +29,10 @@ const Home = () => {
           responsive websites and awesome component libraries.
         </Typography>
       </PortfolioTitleContainer>
-      <ContactSection>
+      <ContactSection isHome={isHome}>
         <GithubIcon />
         <LinkedinIcon />
+        <MailIcon />
       </ContactSection>
     </PortfolioHome>
   );

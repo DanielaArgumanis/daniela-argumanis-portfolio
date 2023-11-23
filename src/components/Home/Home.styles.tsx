@@ -1,24 +1,24 @@
 import styled from '@emotion/styled';
 
 export const PortfolioHome = styled('div')`
+  padding: ${(props) => props.theme.spacing(4)} 0;
   gap: ${(props) => props.theme.spacing(4)};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  transition: all 1s ease-in;
 `;
 
 export const PortfolioTitleContainer = styled('div')`
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: ${(props) => props.theme.spacing(2)};
 `;
 
-export const ContactSection = styled('div')`
+export const ContactSection = styled('div')<{ isHome: boolean }>`
   display: flex;
   gap: ${(props) => props.theme.spacing(6)};
-  justify-content: center;
+  justify-content: ${({ isHome }) => isHome && 'center'};
 
   svg {
     width: 60px;
@@ -32,8 +32,9 @@ export const ContactSection = styled('div')`
       stroke: ${(props) => props.theme.palette.primary};
     }
 
+    cursor: pointer;
+
     :hover {
-      cursor: pointer;
       .left-line {
         transition: all 0.2s ease-in;
         transform: translateY(-28px);

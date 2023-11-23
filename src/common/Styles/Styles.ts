@@ -20,7 +20,6 @@ export const CardContainer = styled.div<{
   margin: ${({ isInteractive, theme }) =>
     isInteractive &&
     `${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)} 0`};
-  transition: all 0.2s ease-in-out;
 
   :hover {
     box-shadow: ${({ isInteractive, theme }) =>
