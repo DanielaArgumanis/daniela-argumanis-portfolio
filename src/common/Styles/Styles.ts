@@ -34,6 +34,8 @@ export const CardContainer = styled.div<{
     }
   }
 
+  transition: all 0.2s ease-in-out;
+
   ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
     padding: ${({ noPadding, theme }) => !noPadding && theme.spacing(1)};
   }

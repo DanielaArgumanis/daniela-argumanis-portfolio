@@ -53,7 +53,7 @@ export const PortfolioOutletContainer = styled('div')`
   width: 65%;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
   overflow-y: scroll;
-  transition: width 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
+  transition: all 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
 
   > div {
     height: fit-content;
