@@ -35,13 +35,8 @@ const PROJECTS_LIST = [
 const Projects = () => {
   return (
     <ProjectsContainer>
-      {PROJECTS_LIST.map((project, idx) => (
-        <ProjectItem
-          key={project.order}
-          {...project}
-          reverse={idx % 2 === 0}
-          urls={project.urls}
-        />
+      {PROJECTS_LIST.map((project) => (
+        <ProjectItem key={project.order} {...project} urls={project.urls} />
       ))}
     </ProjectsContainer>
   );

@@ -19,23 +19,18 @@ type ProjectItemProps = {
   technologies: readonly string[];
   image: string;
   urls: readonly { name: string; url: string }[];
-  reverse?: boolean;
 };
 
 const ProjectItem = ({
   title,
   description,
   technologies,
-  reverse,
   image,
   urls,
 }: ProjectItemProps) => {
   return (
     <PortfolioLink to={urls[0].url} target="_blank">
-      <ProjectCard reverse={reverse} noPadding isInteractive>
-        <ProjectImageContainer>
-          <ProjectImage src={image} />
-        </ProjectImageContainer>
+      <ProjectCard noPadding isInteractive>
         <ProjectCardDescription>
           <Typography variant="title3">{title}</Typography>
           <Typography variant="body2" as="p">
@@ -52,6 +47,9 @@ const ProjectItem = ({
             ))}
           </PillContainer>
         </ProjectCardDescription>
+        <ProjectImageContainer>
+          <ProjectImage src={image} />
+        </ProjectImageContainer>
       </ProjectCard>
     </PortfolioLink>
   );

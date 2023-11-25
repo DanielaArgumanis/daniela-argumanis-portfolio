@@ -12,7 +12,7 @@ export const PortfolioTitle = styled('span')`
 export const MainLayout = styled('div')`
   display: flex;
   justify-content: center;
-  background-color: ${(props) => props.theme.palette.background};
+  background-color: ${({ theme }) => theme.palette.background};
   height: 100vh;
   width: 100vw;
   margin: 0;

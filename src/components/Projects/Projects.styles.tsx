@@ -30,10 +30,9 @@ export const Pill = styled.div`
   }
 `;
 
-export const ProjectCard = styled(CardContainer)<{ reverse?: boolean }>`
-  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+export const ProjectCard = styled(CardContainer)`
   ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 

@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 // @Styles
 import { CardContainer } from '@styles/Styles';
@@ -11,7 +10,7 @@ export const AboutMeContainer = styled('div')`
   display: grid;
   gap: ${(props) => props.theme.spacing(2)};
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 220px 160px 220px 250px auto;
+  grid-template-rows: auto;
   grid-template-areas:
     'image1 text1'
     'image1 image2'
@@ -20,19 +19,6 @@ export const AboutMeContainer = styled('div')`
     'text4 text4';
 
   > div {
-    opacity: 0;
-    animation: ${(props) =>
-      css`
-        ${props.theme.animations.enterCards} 0.8s ease-in-out 0.2s forwards
-      `};
-    /* :hover {
-      animation: ${(props) =>
-      css`
-        ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards, ${props
-          .theme.animations.enterCards} 0s;
-      `};
-      opacity: 1;
-    } */
     transition: transform 1s ease;
     :nth-of-type(1) {
       grid-area: image1;
@@ -55,47 +41,35 @@ export const AboutMeContainer = styled('div')`
     :nth-of-type(7) {
       grid-area: text4;
     }
-
-    /* :hover {
-      animation: ${(props) =>
-      css`
-        ${props.theme.animations.hoverCard} 0.3s ease-in-out forwards
-      `};
-    } */
   }
 
-  ${(props) =>
-    props.theme.breakpoints.between(Breakpoint.tablet, Breakpoint.laptopS)} {
-    grid-template-rows: 260px 80px 260px 340px auto;
-  }
-
-  ${(props) =>
-    props.theme.breakpoints.between(Breakpoint.tabletS, Breakpoint.tablet)} {
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
     grid-template-areas:
       'image1 text1'
-      'image1 image2'
       'text2 image2'
       'image3 text3'
       'text4 text4';
-    grid-template-rows: auto auto auto 300px auto;
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
-    grid-template-areas:
-      'text1 text2'
-      'image1 image2'
-      'image3 text3'
-      'text4 text4';
-    grid-template-rows: auto auto auto auto;
     gap: ${(props) => props.theme.spacing(1)};
   }
 `;
 
-export const AboutMeImg = styled('img')`
-  width: 100%;
+export const AboutMeImg = styled(CardContainer)<{ src: string }>`
+  background-image: ${(props) => `url(${props.src})`};
+  background-position: center;
+  background-size: cover;
   height: 100%;
-  object-fit: cover;
-  overflow-y: hidden;
+  min-height: 350px;
+  width: 100%;
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    min-height: 285px;
+  }
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    min-height: 220px;
+  }
 `;
 
 export const AboutMeCardContainer = styled(CardContainer)`
@@ -105,7 +79,6 @@ export const AboutMeCardContainer = styled(CardContainer)`
     padding: 0;
     width: 24px;
     height: 24px;
-    fill: ${(props) => props.theme.palette.accent};
   }
 `;
 
