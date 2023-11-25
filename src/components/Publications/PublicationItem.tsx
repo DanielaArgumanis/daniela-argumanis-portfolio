@@ -1,5 +1,6 @@
 // @Components
 import Typography from '@commonComponents/Typography/Typography';
+import PageLink from '@commonComponents/PageLink/PageLink';
 
 // @Styles
 import {
@@ -27,8 +28,8 @@ const PublicationItem = ({
     <PortfolioLink to={url} target="_blank">
       <PublicationCard isInteractive>
         <PublicationSourceContainer>
-          <Typography variant="label">{source}</Typography>
-          <Typography variant="body2">{date}</Typography>
+          <PageLink name={source} url={url} />
+          <Typography variant="label">{date}</Typography>
         </PublicationSourceContainer>
         <Typography variant="title3">{title}</Typography>
         <Typography variant="body2" as="p">

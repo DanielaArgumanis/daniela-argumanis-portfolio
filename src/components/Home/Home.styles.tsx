@@ -1,7 +1,10 @@
 import styled from '@emotion/styled';
 
+// @Types
+import { Breakpoint } from '@theme/Theme.types';
+
 export const PortfolioHome = styled('div')`
-  padding: ${(props) => props.theme.spacing(4)} 0;
+  padding: ${(props) => `${props.theme.spacing(4)} ${props.theme.spacing(1)}`};
   gap: ${(props) => props.theme.spacing(4)};
   display: flex;
   flex-direction: column;
@@ -17,8 +20,8 @@ export const PortfolioTitleContainer = styled('div')`
 
 export const ContactSection = styled('div')<{ isHome: boolean }>`
   display: flex;
-  gap: ${(props) => props.theme.spacing(6)};
-  justify-content: ${({ isHome }) => isHome && 'center'};
+  justify-content: ${({ isHome }) => isHome ? 'center' : 'space-between'};
+  gap: ${({theme, isHome}) => isHome &&  theme.spacing(6)};
 
   svg {
     width: 60px;
@@ -31,30 +34,19 @@ export const ContactSection = styled('div')<{ isHome: boolean }>`
     rect {
       stroke: ${(props) => props.theme.palette.primary};
     }
+  }
 
-    cursor: pointer;
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    svg {
+    width: ${({ isHome }) => !isHome && '50px'};
+    height: ${({ isHome }) => !isHome && '50px'};
+    }
+  }
 
-    :hover {
-      .left-line {
-        transition: all 0.2s ease-in;
-        transform: translateY(-28px);
-      }
-      .top-line {
-        transition: all 0.2s ease-in 0.2s;
-        transform: translateX(28px);
-      }
-      .right-line {
-        transition: all 0.2s ease-in 0.4s;
-        transform: translateY(28px);
-      }
-      .bottom-line {
-        transition: all 0.2s ease-in 0.6s;
-        transform: translateX(-28px);
-      }
-
-      line {
-        stroke: ${(props) => props.theme.palette.accent};
-      }
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    svg {
+    width: 40px;
+    height: 40px;
     }
   }
 `;

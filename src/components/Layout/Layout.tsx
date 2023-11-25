@@ -39,9 +39,11 @@ const Layout = () => {
             <PortfolioHomeContainer isHome={isHome}>
               <Home isHome={isHome} />
             </PortfolioHomeContainer>
-            <PortfolioOutletContainer isHome={isHome}>
-              {location.pathname !== '/' && <Outlet />}
-            </PortfolioOutletContainer>
+            {!isHome && (
+              <PortfolioOutletContainer>
+                {location.pathname !== '/' && <Outlet />}
+              </PortfolioOutletContainer>
+            )}
           </PortfolioBody>
           <Footer />
         </MainContainer>

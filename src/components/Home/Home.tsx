@@ -10,13 +10,14 @@ import {
   PortfolioHome,
   PortfolioTitleContainer,
 } from './Home.styles';
+import { CardContainer, PortfolioLink } from '@styles/Styles';
 
 const Home = ({ isHome }: { isHome: boolean }) => {
   return (
     <PortfolioHome>
       <PortfolioTitleContainer>
         <Typography variant="title1" as="span" margin="0">
-          Welcome
+          Welcome!
         </Typography>
         <Typography variant="title1" as="span" margin="0">
           I'm Daniela Argumanis
@@ -30,9 +31,22 @@ const Home = ({ isHome }: { isHome: boolean }) => {
         </Typography>
       </PortfolioTitleContainer>
       <ContactSection isHome={isHome}>
-        <GithubIcon />
-        <LinkedinIcon />
-        <MailIcon />
+        <PortfolioLink to="https://github.com/DanielaArgumanis" target="_blank">
+          <CardContainer noPadding isInteractive>
+            <GithubIcon />
+          </CardContainer>
+        </PortfolioLink>
+        <PortfolioLink
+          to="https://www.linkedin.com/in/daniela-argumanis/"
+          target="_blank"
+        >
+          <CardContainer noPadding isInteractive>
+            <LinkedinIcon />
+          </CardContainer>
+        </PortfolioLink>
+        <CardContainer noPadding isInteractive>
+          <MailIcon />
+        </CardContainer>
       </ContactSection>
     </PortfolioHome>
   );

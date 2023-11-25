@@ -7,11 +7,11 @@ import {
   PillContainer,
   ProjectCard,
   ProjectCardDescription,
-  ProjectLinkIcon,
-  ProjectTitle,
-  UrlContainer,
+  ProjectImage,
+  ProjectImageContainer,
 } from './Projects.styles';
 import { PortfolioLink } from '@styles/Styles';
+import PageLink from '@commonComponents/PageLink/PageLink';
 
 type ProjectItemProps = {
   title: string;
@@ -32,34 +32,27 @@ const ProjectItem = ({
 }: ProjectItemProps) => {
   return (
     <PortfolioLink to={urls[0].url} target="_blank">
-      <div>
-        <ProjectCard reverse={reverse} noPadding isInteractive>
-          <img src={image} />
-          <ProjectCardDescription>
-            <ProjectTitle variant="title3">{title}</ProjectTitle>
-            <Typography variant="body2" as="p">
-              {description}
-            </Typography>
-            {urls.map((url) => (
-              <PortfolioLink to={url.url} target="_blank">
-                <UrlContainer>
-                  <ProjectLinkIcon />
-                  <Typography variant="body2" color="primary" margin="0 1">
-                    {url.name}
-                  </Typography>
-                </UrlContainer>
-              </PortfolioLink>
+      <ProjectCard reverse={reverse} noPadding isInteractive>
+        <ProjectImageContainer>
+          <ProjectImage src={image} />
+        </ProjectImageContainer>
+        <ProjectCardDescription>
+          <Typography variant="title3">{title}</Typography>
+          <Typography variant="body2" as="p">
+            {description}
+          </Typography>
+          {urls.map((url) => (
+            <PageLink {...url} />
+          ))}
+          <PillContainer>
+            {technologies.map((technology) => (
+              <Pill key={technology}>
+                <Typography variant="smallLabel">{technology}</Typography>
+              </Pill>
             ))}
-            <PillContainer>
-              {technologies.map((technology) => (
-                <Pill key={technology}>
-                  <Typography variant="smallLabel">{technology}</Typography>
-                </Pill>
-              ))}
-            </PillContainer>
-          </ProjectCardDescription>
-        </ProjectCard>
-      </div>
+          </PillContainer>
+        </ProjectCardDescription>
+      </ProjectCard>
     </PortfolioLink>
   );
 };

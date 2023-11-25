@@ -1,54 +1,15 @@
 import styled from '@emotion/styled';
 
-// @Components
-import Typography from '@commonComponents/Typography/Typography';
-
-// @Links
-import { LinkIcon } from '@icons';
+// @Styles
+import { CardContainer } from '@styles/Styles';
 
 // @Types
 import { Breakpoint } from '@theme/Theme.types';
-import { CardContainer } from '@styles/Styles';
 
 export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
-`;
-
-export const ProjectTitle = styled(Typography)`
-  position: relative;
-`;
-
-export const ProjectCard = styled(CardContainer)<{ reverse?: boolean }>`
-  opacity: 0;
-  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
-  align-items: center;
-
-  img {
-    width: 60%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
-    flex-direction: column;
-
-    img {
-      width: 100%;
-    }
-  }
-`;
-
-export const ProjectCardDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: ${({ theme }) => theme.spacing(2)};
-  width: 40%;
-
-  ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {
-    width: 100%;
-  }
 `;
 
 export const PillContainer = styled.div`
@@ -69,29 +30,37 @@ export const Pill = styled.div`
   }
 `;
 
-export const ProjectLinkIcon = styled(LinkIcon)`
-  height: 20px;
-  width: 20px;
-  display: inline-flex;
-  align-items: center;
-  
-  path {
-    stroke: ${({ theme }) => theme.palette.primary};
+export const ProjectCard = styled(CardContainer)<{ reverse?: boolean }>`
+  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    flex-direction: column;
   }
 `;
 
-export const UrlContainer = styled.div`
-  display: inline-flex;
-  align-items: center;
+export const ProjectCardDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: ${({ theme }) => theme.spacing(2)};
+  width: 40%;
 
-  &:hover {
-    span {
-      color: ${({ theme }) => theme.palette.accent};
-    }
-    svg {
-      path {
-        stroke: ${({ theme }) => theme.palette.accent};
-      }
-    }
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    width: 100%;
   }
+`;
+
+export const ProjectImageContainer = styled.div`
+  width: 60%;
+  height: 100%;
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+export const ProjectImage = styled.img`
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
 `;

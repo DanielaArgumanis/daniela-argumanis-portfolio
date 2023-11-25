@@ -17,13 +17,21 @@ export const CardContainer = styled.div<{
   background-color: ${(props) => props.theme.palette.background};
   display: flex;
   padding: ${({ noPadding, theme }) => !noPadding && theme.spacing(2)};
+  cursor: ${({ isInteractive }) => isInteractive && 'pointer'};
   margin: ${({ isInteractive, theme }) =>
-    isInteractive &&
-    `${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)} 0`};
+    isInteractive && `${theme.spacing(1)}`};
 
   :hover {
     box-shadow: ${({ isInteractive, theme }) =>
       isInteractive && `6px 6px 0 2px ${theme.palette.accent}`};
+    a:first-of-type:not(:has(+ :hover)) {
+      span {
+        color: ${({ theme }) => theme.palette.accent};
+      }
+      path {
+        stroke: ${({ theme }) => theme.palette.accent};
+      }
+    }
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tabletS)} {

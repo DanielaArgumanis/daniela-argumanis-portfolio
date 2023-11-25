@@ -20,5 +20,6 @@ export const PublicationCard = styled(CardContainer)`
 
 export const PublicationSourceContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
 `;

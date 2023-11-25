@@ -2,6 +2,7 @@
 import ProjectItem from './ProjectItem';
 
 // @Gifs
+import QRGeneratorGit from '@images/QRGenerator.gif';
 import ProjectGif from '@images/project-gif.gif';
 
 // @Styles
@@ -12,9 +13,9 @@ const PROJECTS_LIST = [
     order: 0,
     title: 'QRGenerator',
     description:
-      'This is a chrome extension that allows you to generate and customize QR codes for your business.',
+      'Chrome extension that allows you to generate and customize QR codes for your business.',
     technologies: ['React', 'Emotion', 'Vite'],
-    image: ProjectGif,
+    image: QRGeneratorGit,
     urls: [
       { name: 'Github', url: 'https://github.com/' },
       { name: 'Extension Store', url: 'https://chromewebstore.google.com' },
@@ -22,12 +23,12 @@ const PROJECTS_LIST = [
   },
   {
     order: 1,
-    title: 'Air bnb',
+    title: 'Action Claims',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec',
-    technologies: ['React', 'Redux', 'Storybook'],
+      'Landing page for a company that offers house insurance services.',
+    technologies: ['React', 'webpack', 'styled-components'],
     image: ProjectGif,
-    urls: [{ name: 'Github', url: 'github.com' }],
+    urls: [{ name: 'Action Claims', url: 'https://actionclaimspa.com/' }],
   },
 ] as const;
 
