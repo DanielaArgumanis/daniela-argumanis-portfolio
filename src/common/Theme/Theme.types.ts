@@ -47,6 +47,7 @@ export type AnimationsType = {
 export type ThemeType = {
   animations: AnimationsType;
   breakpoints: BreakpointsType;
+  colorMode: 'dark' | 'light';
   palette: PaletteType;
   typography: TypographyType;
   sizing: SizingType;

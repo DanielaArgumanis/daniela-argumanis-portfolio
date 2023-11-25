@@ -17,7 +17,7 @@ export const palette: Record<'light' | 'dark', PaletteType> = {
     secondaryBackground: '#FFFFFF',
     disabled: '#b5b3b3',
     secondary: '#717171',
-    primary: '#10172A',
+    primary: '#20222C',
     accent: accentColors[0],
   },
 };

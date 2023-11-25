@@ -12,6 +12,7 @@ import {
 declare module '@emotion/react' {
   export interface Theme {
     animations: AnimationsType;
+    colorMode: 'dark' | 'light';
     typography: TypographyType;
     palette: PaletteType;
     spacing: SpacingType;

@@ -27,6 +27,20 @@ export const MainContainer = styled('div')`
   display: flex;
   flex-direction: column;
   padding: 0 ${(props) => props.theme.spacing(2)};
+
+  ${(props) =>
+    props.theme.breakpoints.between(Breakpoint.tablet, Breakpoint.laptopS)} {
+    padding: ${(props) => `0 ${props.theme.spacing(4)}`};
+  }
+
+  ${(props) =>
+    props.theme.breakpoints.between(Breakpoint.mobileL, Breakpoint.tablet)} {
+    padding: ${(props) => `0 ${props.theme.spacing(4)}`};
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
+    max-width: 600px;
+  }
 `;
 
 export const PortfolioBody = styled('div')`
@@ -34,11 +48,6 @@ export const PortfolioBody = styled('div')`
   gap: ${(props) => props.theme.spacing(5)};
   height: ${(props) =>
     `calc(100% - ${props.theme.sizing.navbar} - ${props.theme.sizing.footer})`};
-
-  ${(props) =>
-    props.theme.breakpoints.between(Breakpoint.mobileL, Breakpoint.tablet)} {
-    padding: ${(props) => `0 ${props.theme.spacing(2)}`};
-  }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     height: ${(props) =>

@@ -29,7 +29,9 @@ const PublicationItem = ({
       <PublicationCard isInteractive>
         <PublicationSourceContainer>
           <PageLink name={source} url={url} />
-          <Typography variant="label">{date}</Typography>
+          <Typography variant="label" margin="0">
+            {date}
+          </Typography>
         </PublicationSourceContainer>
         <Typography variant="title3">{title}</Typography>
         <Typography variant="body2" as="p">

@@ -5,7 +5,6 @@ import { Breakpoint } from '@theme/Theme.types';
 
 export const PortfolioHome = styled('div')`
   padding: ${(props) => `${props.theme.spacing(4)} ${props.theme.spacing(1)}`};
-  gap: ${(props) => props.theme.spacing(4)};
   display: flex;
   flex-direction: column;
   transition: all 1s ease-in;
@@ -20,8 +19,9 @@ export const PortfolioTitleContainer = styled('div')`
 
 export const ContactSection = styled('div')<{ isHome: boolean }>`
   display: flex;
-  justify-content: ${({ isHome }) => isHome ? 'center' : 'space-between'};
-  gap: ${({theme, isHome}) => isHome &&  theme.spacing(6)};
+  justify-content: ${({ isHome }) => (isHome ? 'center' : 'space-between')};
+  gap: ${({ theme, isHome }) => isHome && theme.spacing(6)};
+  padding-top: ${({ theme }) => theme.spacing(6)};
 
   svg {
     width: 60px;
@@ -37,16 +37,18 @@ export const ContactSection = styled('div')<{ isHome: boolean }>`
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    padding-top: ${({ theme, isHome }) =>
+      isHome ? theme.spacing(6) : theme.spacing(2)};
     svg {
-    width: ${({ isHome }) => !isHome && '50px'};
-    height: ${({ isHome }) => !isHome && '50px'};
+      width: ${({ isHome }) => !isHome && '50px'};
+      height: ${({ isHome }) => !isHome && '50px'};
     }
   }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     svg {
-    width: 40px;
-    height: 40px;
+      width: 40px;
+      height: 40px;
     }
   }
 `;

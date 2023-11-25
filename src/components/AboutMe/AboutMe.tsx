@@ -33,7 +33,7 @@ const AboutMe = () => {
       </CardContainer>
       <AboutMeCard
         icon={<ReactIcon />}
-        description="Redux, Jotai, React Query, GraphQL, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
+        description="Redux, React Query, GraphQL, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
         title="Tech Stack"
       />
       <CardContainer noPadding>

@@ -8,10 +8,12 @@ import { Breakpoint } from '@theme/Theme.types';
 export const CardContainer = styled.div<{
   isInteractive?: boolean;
   noPadding?: boolean;
+  noAnimation?: boolean;
 }>`
-  animation: ${(props) =>
+  animation: ${({ noAnimation, theme }) =>
+    !noAnimation &&
     css`
-      ${props.theme.animations.enterCards} 1s ease-in-out forwards
+      ${theme.animations.enterCards} 1s ease-in-out forwards
     `};
   border: solid 2px ${({ theme }) => theme.palette.primary};
   background-color: ${(props) => props.theme.palette.background};
@@ -24,10 +26,8 @@ export const CardContainer = styled.div<{
   :hover {
     box-shadow: ${({ isInteractive, theme }) =>
       isInteractive && `6px 6px 0 2px ${theme.palette.accent}`};
-    a:first-of-type:not(:has(+ :hover)) {
-      span {
-        color: ${({ theme }) => theme.palette.accent};
-      }
+    h6:first-of-type:not(:has(+ :hover)) {
+      color: ${({ theme }) => theme.palette.accent};
       path {
         stroke: ${({ theme }) => theme.palette.accent};
       }

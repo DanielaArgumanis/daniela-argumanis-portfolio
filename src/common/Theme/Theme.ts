@@ -11,14 +11,15 @@ import { ThemeType } from './Theme.types';
 
 const getTheme = (
   routeOrder: number,
-  colorTheme: 'dark' | 'light',
+  colorMode: 'dark' | 'light',
 ): ThemeType => {
   return {
     animations,
     breakpoints,
-    typography: getTypography(colorTheme),
+    colorMode: colorMode,
+    typography: getTypography(colorMode),
     palette: {
-      ...palette[colorTheme],
+      ...palette[colorMode],
       accent: accentColors[routeOrder % 3],
     },
     sizing,

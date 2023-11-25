@@ -42,7 +42,7 @@ const ProjectItem = ({
             {description}
           </Typography>
           {urls.map((url) => (
-            <PageLink {...url} />
+            <PageLink key={url.name} {...url} />
           ))}
           <PillContainer>
             {technologies.map((technology) => (
