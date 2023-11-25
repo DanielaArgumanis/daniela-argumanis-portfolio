@@ -12,7 +12,8 @@ export const PortfolioTitle = styled('span')`
 export const MainLayout = styled('div')`
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.palette.background};
+  background: ${({ theme }) => theme.palette.background};
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   margin: 0;

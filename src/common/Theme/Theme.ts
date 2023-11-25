@@ -1,5 +1,5 @@
 // @Theme
-import { accentColors, palette } from './Palette';
+import { palette } from './Palette';
 import { animations } from './Animations';
 import { breakpoints } from './Breakpoints';
 import { getTypography } from './TypographyVariants';
@@ -20,7 +20,7 @@ const getTheme = (
     typography: getTypography(colorMode),
     palette: {
       ...palette[colorMode],
-      accent: accentColors[routeOrder % 3],
+      accent: palette[colorMode].accents[routeOrder % 3],
     },
     sizing,
     spacing,
