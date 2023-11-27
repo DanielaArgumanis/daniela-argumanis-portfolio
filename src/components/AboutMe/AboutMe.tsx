@@ -1,6 +1,6 @@
 // @Components
 import AboutMeCard from './AboutMeCard';
-import { CardContainer } from '@styles/Styles';
+import Card from '@commonComponents/Card/Card';
 
 // @Icons
 import SVGIcon, { CodeIcon, GamingIcon, ReactIcon, StudyIcon } from '@icons';
@@ -16,7 +16,9 @@ import { AboutMeContainer, AboutMeImg } from './AboutMe.styles';
 const AboutMe = () => {
   return (
     <AboutMeContainer>
-      <AboutMeImg src={DogPhoto} />
+      <Card noPadding>
+        <AboutMeImg src={DogPhoto} />
+      </Card>
       <AboutMeCard
         icon={<SVGIcon icon={ReactIcon} fill="accent" />}
         description={[
@@ -26,20 +28,24 @@ const AboutMe = () => {
         ]}
         title="Front-end"
       />
-      <AboutMeImg src={IcaPhoto} />
+      <Card noPadding>
+        <AboutMeImg src={IcaPhoto} />
+      </Card>
       <AboutMeCard
         icon={<SVGIcon icon={CodeIcon} stroke="accent" />}
         description="Redux, React Query, GraphQL, Storybook, Material UI, Jest, React Testing Library, Github, Azure, Jira, SonarQube"
         title="Tech Stack"
       />
-      <AboutMeImg src={ArequipaPhoto} />
+      <Card noPadding>
+        <AboutMeImg src={ArequipaPhoto} />
+      </Card>
       <AboutMeCard
         icon={<SVGIcon icon={GamingIcon} stroke="accent" />}
         description="I enjoy bartending as a hobbie and gaming in my free time. I also like exploring new destinations within Peru and abroad. And let's not forget my dog – she's a big part of my life!"
         title="Interests"
       />
       <AboutMeCard
-        icon={<SVGIcon icon={StudyIcon} fill="accent" stroke="background" />}
+        icon={<SVGIcon icon={StudyIcon} fill="accent" />}
         description={[
           'I began my studies in mechanical engineering in 2014 but soon discovered my passion for programming, so I switched to software engineering in 2016. I quickly started learning the fundamentals of front-end and proceeded to master Angular and React.',
           'Currently, I’m mainly working with React and Typescript, and during my free time, I’m exploring the exciting world of animations and SVG transformations.',

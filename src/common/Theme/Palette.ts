@@ -14,7 +14,7 @@ export const palette: Record<'light' | 'dark', PaletteType> = {
     secondary: '#d7d7e2',
     disabled: '#b5b3b3',
     accent: '#fff',
-    accents: ['#A6D6F5', '#9693F5', '#f0c642'],
+    accents: ['#A6D6F5', '#9693F5', '#A6D6F5'],
   },
   light: {
     background: `url(${BackgroundLight})`,

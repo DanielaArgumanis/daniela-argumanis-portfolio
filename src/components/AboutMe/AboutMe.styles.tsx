@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
 
-// @Styles
-import { CardContainer } from '@styles/Styles';
-
 // @Theme
 import { Breakpoint } from '@theme/Theme.types';
 
@@ -56,7 +53,7 @@ export const AboutMeContainer = styled('div')`
   }
 `;
 
-export const AboutMeImg = styled(CardContainer)<{ src: string }>`
+export const AboutMeImg = styled.div<{ src: string }>`
   background-image: ${(props) => `url(${props.src})`};
   background-position: center;
   background-size: cover;
@@ -72,17 +69,12 @@ export const AboutMeImg = styled(CardContainer)<{ src: string }>`
   }
 `;
 
-export const AboutMeCardContainer = styled(CardContainer)`
-  flex-direction: column;
-
+export const AboutMeTitleContainer = styled('div')`
   svg {
     padding: 0;
     width: 24px;
     height: 24px;
   }
-`;
-
-export const AboutMeTitleContainer = styled('div')`
   display: flex;
   align-items: center;
 

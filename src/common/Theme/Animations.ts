@@ -7,11 +7,11 @@ export const animations: AnimationsType = {
   enterCards: keyframes`
     0% {
       transform: translateY(-1500px);
-      opacity: 1;
+      z-index: 10;
     }
     100% {
-      transform: none;
-      opacity: 1;
+      transform: translateY(0);
+      z-index: 10;
     }
   `,
   hoverCard: keyframes`

@@ -1,5 +1,6 @@
 // @Components
 import Typography from '@commonComponents/Typography/Typography';
+import Card from '@commonComponents/Card/Card';
 
 // @Hooks
 import { useCopyToClipboard } from '@hooks/useCopyToClipboard';
@@ -13,13 +14,13 @@ import {
   PortfolioHome,
   PortfolioTitleContainer,
 } from './Home.styles';
-import { CardContainer, PortfolioLink } from '@styles/Styles';
+import { PortfolioLink } from '@styles/Styles';
 
 // @Utils
 
 const Home = ({ isHome }: { isHome: boolean }) => {
   const copyToClipboard = useCopyToClipboard();
-  
+
   return (
     <PortfolioHome>
       <PortfolioTitleContainer>
@@ -39,26 +40,26 @@ const Home = ({ isHome }: { isHome: boolean }) => {
       </PortfolioTitleContainer>
       <ContactSection isHome={isHome}>
         <PortfolioLink to="https://github.com/DanielaArgumanis" target="_blank">
-          <CardContainer noPadding isInteractive noAnimation>
+          <Card noPadding isInteractive noAnimation>
             <GithubIcon />
-          </CardContainer>
+          </Card>
         </PortfolioLink>
         <PortfolioLink
           to="https://www.linkedin.com/in/daniela-argumanis/"
           target="_blank"
         >
-          <CardContainer noPadding isInteractive noAnimation>
+          <Card noPadding isInteractive noAnimation>
             <LinkedinIcon />
-          </CardContainer>
+          </Card>
         </PortfolioLink>
-        <CardContainer
+        <Card
           noPadding
           isInteractive
           noAnimation
           onClick={() => copyToClipboard('daniela.argumanis@gmail.com')}
         >
           <MailIcon />
-        </CardContainer>
+        </Card>
       </ContactSection>
     </PortfolioHome>
   );

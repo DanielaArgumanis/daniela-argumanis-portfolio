@@ -10,6 +10,7 @@ export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(2)};
+  z-index: 0;
 `;
 
 export const PillContainer = styled.div`
@@ -27,12 +28,6 @@ export const Pill = styled.div`
 
   > span {
     margin: ${({ theme }) => `${theme.spacing(0.5)} ${theme.spacing(1)}`};
-  }
-`;
-
-export const ProjectCard = styled(CardContainer)`
-  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
-    flex-direction: column-reverse;
   }
 `;
 

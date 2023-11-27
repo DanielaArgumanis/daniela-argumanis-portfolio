@@ -19,6 +19,7 @@ export const PortfolioTitleContainer = styled('div')`
 
 export const ContactSection = styled('div')<{ isHome: boolean }>`
   display: flex;
+  z-index: 0;
   justify-content: ${({ isHome }) => (isHome ? 'center' : 'space-between')};
   gap: ${({ theme, isHome }) => isHome && theme.spacing(6)};
   padding-top: ${({ theme }) => theme.spacing(6)};
