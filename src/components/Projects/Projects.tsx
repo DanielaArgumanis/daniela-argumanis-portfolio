@@ -2,39 +2,44 @@
 import ProjectItem from './ProjectItem';
 
 // @Gifs
+import QRGeneratorGit from '@images/QRGenerator.gif';
 import ProjectGif from '@images/project-gif.gif';
 
 // @Styles
 import { ProjectsContainer } from './Projects.styles';
+import { CardContainer } from '@commonComponents/Card/Card.styles';
 
 const PROJECTS_LIST = [
   {
     order: 0,
-    title: 'Air bnb',
+    title: 'QRGenerator',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec',
-    technologies: ['React', 'Redux', 'Storybook'],
-    image: ProjectGif,
-    url: '',
+      'Chrome extension that allows you to generate and customize QR codes for your business.',
+    technologies: ['React', 'Emotion', 'Vite'],
+    image: QRGeneratorGit,
+    urls: [
+      { name: 'Github', url: 'https://github.com/' },
+      { name: 'Extension Store', url: 'https://chromewebstore.google.com' },
+    ],
   },
   {
     order: 1,
-    title: 'Air bnb',
+    title: 'Action Claims',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec',
-    technologies: ['React', 'Redux', 'Storybook'],
+      'Landing page for a company that offers house insurance services.',
+    technologies: ['React', 'webpack', 'styled-components'],
     image: ProjectGif,
-    url: '',
+    urls: [{ name: 'Action Claims', url: 'https://actionclaimspa.com/' }],
   },
 ] as const;
 
 const Projects = () => {
   return (
-    <ProjectsContainer>
-      {PROJECTS_LIST.map((project, idx) => (
-        <ProjectItem key={project.order} {...project} reverse={idx % 2 === 0} />
+    <CardContainer>
+      {PROJECTS_LIST.map((project) => (
+        <ProjectItem key={project.order} {...project} urls={project.urls} />
       ))}
-    </ProjectsContainer>
+    </CardContainer>
   );
 };
 

@@ -11,11 +11,11 @@ import { MoonIcon, SunIcon } from '@icons';
 import { PortfolioNavbar, NavbarSection, NavbarLink } from './Navbar.styles';
 
 type NavbarProps = {
-  colorTheme: 'light' | 'dark';
+  colorMode: 'light' | 'dark';
   setColorTheme: React.Dispatch<React.SetStateAction<'light' | 'dark'>>;
 };
 
-const Navbar = ({ colorTheme, setColorTheme }: NavbarProps) => {
+const Navbar = ({ colorMode, setColorTheme }: NavbarProps) => {
   const handleChangeTheme = () => {
     setColorTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
@@ -23,7 +23,7 @@ const Navbar = ({ colorTheme, setColorTheme }: NavbarProps) => {
   return (
     <PortfolioNavbar>
       <NavbarSection onClick={handleChangeTheme}>
-        {colorTheme === 'light' ? <MoonIcon /> : <SunIcon />}
+        {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
       </NavbarSection>
       <NavbarSection>
         {routes.map((section) => (

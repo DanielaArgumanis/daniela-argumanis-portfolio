@@ -1,11 +1,10 @@
 // @Components
 import Typography from '@commonComponents/Typography/Typography';
+import PageLink from '@commonComponents/PageLink/PageLink';
+import Card from '@commonComponents/Card/Card';
 
 // @Styles
-import {
-  PublicationCard,
-  PublicationSourceContainer,
-} from './Publication.styles';
+import { PublicationSourceContainer } from './Publication.styles';
 import { PortfolioLink } from '@styles/Styles';
 
 type PublicationItemProps = {
@@ -25,16 +24,18 @@ const PublicationItem = ({
 }: PublicationItemProps) => {
   return (
     <PortfolioLink to={url} target="_blank">
-      <PublicationCard>
+      <Card isInteractive direction="column">
         <PublicationSourceContainer>
-          <Typography variant="label">{source}</Typography>
-          <Typography variant="body2">{date}</Typography>
+          <PageLink name={source} url={url} />
+          <Typography variant="label" margin="0">
+            {date}
+          </Typography>
         </PublicationSourceContainer>
         <Typography variant="title3">{title}</Typography>
         <Typography variant="body2" as="p">
           {description}
         </Typography>
-      </PublicationCard>
+      </Card>
     </PortfolioLink>
   );
 };

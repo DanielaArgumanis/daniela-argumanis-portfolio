@@ -1,5 +1,5 @@
 // @Theme
-import { accentColors, palette } from './Palette';
+import { palette } from './Palette';
 import { animations } from './Animations';
 import { breakpoints } from './Breakpoints';
 import { getTypography } from './TypographyVariants';
@@ -11,15 +11,16 @@ import { ThemeType } from './Theme.types';
 
 const getTheme = (
   routeOrder: number,
-  colorTheme: 'dark' | 'light',
+  colorMode: 'dark' | 'light',
 ): ThemeType => {
   return {
     animations,
     breakpoints,
-    typography: getTypography(colorTheme),
+    colorMode: colorMode,
+    typography: getTypography(colorMode),
     palette: {
-      ...palette[colorTheme],
-      accent: accentColors[routeOrder % 3],
+      ...palette[colorMode],
+      accent: palette[colorMode].accents[routeOrder % 4],
     },
     sizing,
     spacing,

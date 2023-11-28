@@ -4,6 +4,8 @@ export type PaletteType = {
   primary: string;
   accent: string;
   secondary: string;
+  secondaryBackground: string;
+  accents: string[];
 };
 
 export type SizingType = {
@@ -46,6 +48,7 @@ export type AnimationsType = {
 export type ThemeType = {
   animations: AnimationsType;
   breakpoints: BreakpointsType;
+  colorMode: 'dark' | 'light';
   palette: PaletteType;
   typography: TypographyType;
   sizing: SizingType;

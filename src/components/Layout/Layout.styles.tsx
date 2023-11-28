@@ -12,11 +12,24 @@ export const PortfolioTitle = styled('span')`
 export const MainLayout = styled('div')`
   display: flex;
   justify-content: center;
-  background-color: ${(props) => props.theme.palette.background};
+  background: ${({ theme }) => theme.palette.background};
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+
+  ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ${({ theme }) =>
+      theme.colorMode === 'dark' ? '#000' : '#fff'};
+    opacity: ${({ theme }) => (theme.colorMode === 'dark' ? '0.2' : '0.6')};
+  }
 `;
 
 export const MainContainer = styled('div')`
@@ -27,18 +40,27 @@ export const MainContainer = styled('div')`
   display: flex;
   flex-direction: column;
   padding: 0 ${(props) => props.theme.spacing(2)};
+
+  ${(props) =>
+    props.theme.breakpoints.between(Breakpoint.tablet, Breakpoint.laptopS)} {
+    padding: ${(props) => `0 ${props.theme.spacing(4)}`};
+  }
+
+  ${(props) =>
+    props.theme.breakpoints.between(Breakpoint.mobileL, Breakpoint.tablet)} {
+    padding: ${(props) => `0 ${props.theme.spacing(4)}`};
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
+    max-width: 600px;
+  }
 `;
 
 export const PortfolioBody = styled('div')`
   display: flex;
-  gap: ${(props) => props.theme.spacing(4)};
+  gap: ${(props) => props.theme.spacing(5)};
   height: ${(props) =>
     `calc(100% - ${props.theme.sizing.navbar} - ${props.theme.sizing.footer})`};
-
-  ${(props) =>
-    props.theme.breakpoints.between(Breakpoint.mobileL, Breakpoint.tablet)} {
-    padding: ${(props) => `0 ${props.theme.spacing(2)}`};
-  }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
     height: ${(props) =>
@@ -46,28 +68,33 @@ export const PortfolioBody = styled('div')`
   }
 `;
 
-export const PortfolioOutletContainer = styled('div')<{ isHome: boolean }>`
+export const PortfolioOutletContainer = styled('div')`
   display: flex;
-  position: relative;
   text-align: left;
-  overflow-y: scroll;
   height: 100%;
-  width: ${(props) => (props.isHome ? '0' : ' 65%')};
-  transition: width 0.5s ease-in;
+  width: 65%;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
+  overflow-y: scroll;
+  transition: all 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
+
+  > div {
+    height: fit-content;
+  }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
-    width: ${(props) => (props.isHome ? '0' : ' 100%')};
+    width: 100%;
   }
 `;
 
 export const PortfolioHomeContainer = styled.div<{ isHome: boolean }>`
-  width: ${(props) => (props.isHome ? '100%' : '35%')};
-  transition: all 0.5s ease-in;
+  width: ${({ isHome }) => (isHome ? '70%' : '35%')};
+  margin: ${({ isHome }) => (isHome ? 'auto' : '0 auto')};
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
+  text-align: ${(props) => (props.isHome ? 'center' : 'flex-start')};
+  transition: all 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
+
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     display: ${(props) => (props.isHome ? 'flex' : 'none')};
-    height: 100%;
     width: 100%;
   }
 `;

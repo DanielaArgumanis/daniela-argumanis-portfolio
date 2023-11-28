@@ -2,11 +2,11 @@
 import PublicationItem from './PublicationItem';
 
 // @Styles
-import { PublicationsContainer } from './Publication.styles';
+import { CardContainer } from '@commonComponents/Card/Card.styles';
 
 const Publications = () => {
   return (
-    <PublicationsContainer>
+    <CardContainer>
       <PublicationItem
         title="A Framework Based on UCD and Scrum for the Software Development Process"
         description="This paper proposes a framework that successfully includes UCD techniques and roles into Scrum, detailing phases, activities and roles that teams should follow. This proposal was tested in a small software project to improve a banking system. The results of this test showed that following the proposed framework improved the software development process in terms of team experience, product usability, and resource efficiency."
@@ -21,7 +21,7 @@ const Publications = () => {
         date="January 05, 2021"
         url="https://doi.org/10.1007/978-3-030-66919-5_6"
       />
-    </PublicationsContainer>
+    </CardContainer>
   );
 };
 

@@ -6,12 +6,12 @@ import { AnimationsType } from './Theme.types';
 export const animations: AnimationsType = {
   enterCards: keyframes`
     0% {
-      transform: translateX(2000px);
-      opacity: 1;
+      transform: translateY(-1500px);
+      z-index: 10;
     }
     100% {
-      transform: none;
-      opacity: 1;
+      transform: translateY(0);
+      z-index: 10;
     }
   `,
   hoverCard: keyframes`

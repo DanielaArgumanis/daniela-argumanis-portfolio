@@ -1,42 +1,44 @@
 // @Components
-import { PortfolioLink } from '@styles/Styles';
 import Typography from '@commonComponents/Typography/Typography';
+import PageLink from '@commonComponents/PageLink/PageLink';
+import Card from '@commonComponents/Card/Card';
 
 // @Styles
 import {
   Pill,
   PillContainer,
-  ProjectCard,
   ProjectCardDescription,
-  ProjectTitle,
+  ProjectImage,
+  ProjectImageContainer,
 } from './Projects.styles';
+import { PortfolioLink } from '@styles/Styles';
 
 type ProjectItemProps = {
   title: string;
   description: string;
   technologies: readonly string[];
   image: string;
-  url: string;
-  reverse?: boolean;
+  urls: readonly { name: string; url: string }[];
 };
 
 const ProjectItem = ({
   title,
   description,
   technologies,
-  reverse,
   image,
-  url,
+  urls,
 }: ProjectItemProps) => {
   return (
-    <PortfolioLink to={url} target="_blank">
-      <ProjectCard reverse={reverse} noPadding>
-        <img src={image} />
+    <PortfolioLink to={urls[0].url} target="_blank">
+      <Card noPadding isInteractive>
         <ProjectCardDescription>
-          <ProjectTitle variant="label">{title}</ProjectTitle>
-          <Typography variant="body2" as="p" margin="2 0">
+          <Typography variant="title3">{title}</Typography>
+          <Typography variant="body2" as="p">
             {description}
           </Typography>
+          {urls.map((url) => (
+            <PageLink key={url.name} {...url} />
+          ))}
           <PillContainer>
             {technologies.map((technology) => (
               <Pill key={technology}>
@@ -45,7 +47,10 @@ const ProjectItem = ({
             ))}
           </PillContainer>
         </ProjectCardDescription>
-      </ProjectCard>
+        <ProjectImageContainer>
+          <ProjectImage src={image} />
+        </ProjectImageContainer>
+      </Card>
     </PortfolioLink>
   );
 };

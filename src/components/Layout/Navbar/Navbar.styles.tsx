@@ -97,7 +97,6 @@ export const NavbarLink = styled(NavLink)<{ order: number }>`
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.3s ease-in-out;
-    background-color: ${(props) => props.theme.palette.primary};
   }
 
   &:hover::before,

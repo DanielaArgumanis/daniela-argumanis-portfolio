@@ -1,10 +1,11 @@
 import React from 'react';
 
 // @Components
+import Card from '@commonComponents/Card/Card';
 import Typography from '@commonComponents/Typography/Typography';
 
 // @Styles
-import { AboutMeCardContainer, AboutMeTitleContainer } from './AboutMe.styles';
+import { AboutMeTitleContainer } from './AboutMe.styles';
 
 type AboutMeCardProps = {
   icon: React.ReactNode;
@@ -16,7 +17,7 @@ const AboutMeCard = ({ icon, description, title }: AboutMeCardProps) => {
   const isDescriptionArray = Array.isArray(description);
 
   return (
-    <AboutMeCardContainer>
+    <Card direction="column">
       <AboutMeTitleContainer>
         {icon}
         <Typography variant="label">{title}</Typography>
@@ -30,7 +31,7 @@ const AboutMeCard = ({ icon, description, title }: AboutMeCardProps) => {
       ) : (
         <Typography variant="body2">{description}</Typography>
       )}
-    </AboutMeCardContainer>
+    </Card>
   );
 };
 

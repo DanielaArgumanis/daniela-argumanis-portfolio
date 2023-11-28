@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Outlet, useLocation } from 'react-router';
+import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from '@emotion/react';
 
 // @Components
@@ -18,30 +19,34 @@ import {
   PortfolioHomeContainer,
   MainLayout,
 } from '../Layout/Layout.styles';
+import 'react-toastify/dist/ReactToastify.css';
 
 // @Theme
 import getTheme from '@theme/Theme';
 
 const Layout = () => {
-  const [colorTheme, setColorTheme] = useState<'light' | 'dark'>('dark');
+  const [colorMode, setColorTheme] = useState<'light' | 'dark'>('dark');
   const location = useLocation();
   const locationOrder =
     routes.find((route) => route.href === location.pathname)?.order || 0;
-  const theme = getTheme(locationOrder, colorTheme);
+  const theme = getTheme(locationOrder, colorMode);
   const isHome = location.pathname === '/';
 
   return (
     <ThemeProvider theme={theme}>
       <MainLayout>
+        <ToastContainer />
         <MainContainer>
-          <Navbar colorTheme={colorTheme} setColorTheme={setColorTheme} />
+          <Navbar colorMode={colorMode} setColorTheme={setColorTheme} />
           <PortfolioBody>
             <PortfolioHomeContainer isHome={isHome}>
-              <Home />
+              <Home isHome={isHome} />
             </PortfolioHomeContainer>
-            <PortfolioOutletContainer isHome={isHome}>
-              {location.pathname !== '/' && <Outlet />}
-            </PortfolioOutletContainer>
+            {!isHome && (
+              <PortfolioOutletContainer>
+                {location.pathname !== '/' && <Outlet />}
+              </PortfolioOutletContainer>
+            )}
           </PortfolioBody>
           <Footer />
         </MainContainer>

@@ -1,51 +1,55 @@
 import styled from '@emotion/styled';
 
+// @Types
+import { Breakpoint } from '@theme/Theme.types';
+
 export const PortfolioHome = styled('div')`
-  gap: ${(props) => props.theme.spacing(4)};
+  padding: ${(props) => `${props.theme.spacing(4)} ${props.theme.spacing(1)}`};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  transition: all 1s ease-in;
 `;
 
 export const PortfolioTitleContainer = styled('div')`
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: ${(props) => props.theme.spacing(2)};
 `;
 
-export const ContactSection = styled('div')`
+export const ContactSection = styled('div')<{ isHome: boolean }>`
   display: flex;
-  gap: ${(props) => props.theme.spacing(6)};
-  justify-content: center;
+  z-index: 0;
+  justify-content: ${({ isHome }) => (isHome ? 'center' : 'space-between')};
+  gap: ${({ theme, isHome }) => isHome && theme.spacing(6)};
+  padding-top: ${({ theme }) => theme.spacing(6)};
 
   svg {
     width: 60px;
     height: 60px;
 
-    :hover {
-      cursor: pointer;
-      .left-line {
-        transition: all 0.2s ease-in;
-        transform: translateY(-28px);
-      }
-      .top-line {
-        transition: all 0.2s ease-in 0.2s;
-        transform: translateX(28px);
-      }
-      .right-line {
-        transition: all 0.2s ease-in 0.4s;
-        transform: translateY(28px);
-      }
-      .bottom-line {
-        transition: all 0.2s ease-in 0.6s;
-        transform: translateX(-28px);
-      }
+    path {
+      fill: ${(props) => props.theme.palette.primary};
+    }
 
-      line {
-        stroke: ${(props) => props.theme.palette.accent};
-      }
+    rect {
+      stroke: ${(props) => props.theme.palette.primary};
+    }
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    padding-top: ${({ theme, isHome }) =>
+      isHome ? theme.spacing(6) : theme.spacing(2)};
+    svg {
+      width: ${({ isHome }) => !isHome && '50px'};
+      height: ${({ isHome }) => !isHome && '50px'};
+    }
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    svg {
+      width: 40px;
+      height: 40px;
     }
   }
 `;
