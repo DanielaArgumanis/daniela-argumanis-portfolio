@@ -20,7 +20,7 @@ const getTheme = (
     typography: getTypography(colorMode),
     palette: {
       ...palette[colorMode],
-      accent: palette[colorMode].accents[routeOrder % 3],
+      accent: palette[colorMode].accents[routeOrder % 4],
     },
     sizing,
     spacing,

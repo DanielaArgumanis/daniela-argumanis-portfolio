@@ -50,8 +50,8 @@ export const ProjectImageContainer = styled.div`
 `;
 
 export const ProjectImage = styled.img`
-  height: 300px;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: right;
 `;

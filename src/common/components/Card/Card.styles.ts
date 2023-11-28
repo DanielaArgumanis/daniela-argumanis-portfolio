@@ -73,9 +73,11 @@ export const StyledCard = styled.div<{
       background: conic-gradient(
         from var(--gradient-angle),
         ${({ theme }) =>
-          `${theme.palette.accents[0]}, ${theme.palette.accents[1]}, ${theme.palette.accents[2]}, ${theme.palette.accents[1]}, ${theme.palette.accents[0]}`}
+          `${theme.palette.accents.slice(0, 4).join(', ')}, ${
+            theme.palette.accents[2]
+          }, ${theme.palette.accents[1]}, ${theme.palette.accents[0]}`}
       );
-      animation: ${borderRotation} 1s linear infinite;
+      animation: ${borderRotation} 2s linear infinite;
     }
 
     ::after {
