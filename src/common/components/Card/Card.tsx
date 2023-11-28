@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { CardContainer } from './CardContainer.styles';
+
+// @Styles
+import { StyledCard } from './Card.styles';
 
 type CardProps = {
   children: React.ReactNode;
@@ -27,7 +29,7 @@ const Card = ({
   };
 
   return (
-    <CardContainer
+    <StyledCard
       animationFinished={animationFinished}
       onAnimationEnd={onAnimationEnd}
       noPadding={noPadding}
@@ -36,7 +38,7 @@ const Card = ({
       direction={direction}
     >
       {children}
-    </CardContainer>
+    </StyledCard>
   );
 };
 

@@ -25,7 +25,9 @@ const TypographyStyles = ({
     margin: margin ? marginList : theme.spacing(1),
     ...theme.typography[variant],
     ...(color && { color: theme.palette[color] }),
-    ...(accent && { color: theme.palette.accent }),
+    ...(accent && {
+      color: theme.palette.accent,
+    }),
   };
 };
 

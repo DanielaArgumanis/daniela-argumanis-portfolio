@@ -1,8 +1,17 @@
 import { keyframes, css } from '@emotion/react';
 import styled from '@emotion/styled';
+
+// @Types
 import { Breakpoint } from '@theme/Theme.types';
 
-const rotation = keyframes` 
+export const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(4)};
+  z-index: 0;
+`;
+
+const borderRotation = keyframes` 
   0% {
     --gradient-angle: 0deg;
   }
@@ -11,7 +20,7 @@ const rotation = keyframes`
   }
 `;
 
-export const CardContainer = styled.div<{
+export const StyledCard = styled.div<{
   animationFinished?: boolean;
   isInteractive?: boolean;
   noPadding?: boolean;
@@ -35,30 +44,42 @@ export const CardContainer = styled.div<{
   padding: ${({ noPadding, theme }) => !noPadding && theme.spacing(2)};
   cursor: ${({ isInteractive }) => isInteractive && 'pointer'};
   margin: ${({ isInteractive, theme }) =>
-    isInteractive && `${theme.spacing(1)}`};
-  border: 2px solid ${({ theme }) => theme.palette.primary};
+    isInteractive && `0 ${theme.spacing(1.5)}`};
+  border: 2px solid ${({ theme }) => theme.palette.secondary};
+  > * {
+    z-index: 2;
+  }
 
+  ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ${({ theme }) =>
+      theme.colorMode === 'dark' ? '#000' : '#fff'};
+    opacity: ${({ theme }) => (theme.colorMode === 'dark' ? '0.2' : '0.6')};
+  }
   :hover {
     border-color: transparent;
-    ::before,
+
     ::after {
       content: '';
       position: absolute;
       inset: -0.3rem;
       z-index: -1;
+      --gradient-angle: 0deg;
       background: conic-gradient(
         from var(--gradient-angle),
-        #6ca5f0,
-        #6c7bf0,
-        #a34df0,
-        #6c7bf0,
-        #6ca5f0
+        ${({ theme }) =>
+          `${theme.palette.accents[0]}, ${theme.palette.accents[1]}, ${theme.palette.accents[2]}, ${theme.palette.accents[1]}, ${theme.palette.accents[0]}`}
       );
-      animation: ${rotation} 1s linear infinite;
+      animation: ${borderRotation} 1s linear infinite;
     }
 
     ::after {
-      filter: blur(0.2rem);
+      filter: blur(0.3rem);
     }
     h6:first-of-type:not(:has(+ :hover)) {
       color: ${({ theme }) => theme.palette.accent};

@@ -7,6 +7,7 @@ import ProjectGif from '@images/project-gif.gif';
 
 // @Styles
 import { ProjectsContainer } from './Projects.styles';
+import { CardContainer } from '@commonComponents/Card/Card.styles';
 
 const PROJECTS_LIST = [
   {
@@ -34,11 +35,11 @@ const PROJECTS_LIST = [
 
 const Projects = () => {
   return (
-    <ProjectsContainer>
+    <CardContainer>
       {PROJECTS_LIST.map((project) => (
         <ProjectItem key={project.order} {...project} urls={project.urls} />
       ))}
-    </ProjectsContainer>
+    </CardContainer>
   );
 };
 

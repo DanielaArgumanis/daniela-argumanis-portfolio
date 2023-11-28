@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-export const PublicationsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(2)};
-  z-index: 0;
-`;
-
 export const PublicationCard = styled.div`
   flex-direction: column;
 `;

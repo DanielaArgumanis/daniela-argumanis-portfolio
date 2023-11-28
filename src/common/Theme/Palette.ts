@@ -14,15 +14,15 @@ export const palette: Record<'light' | 'dark', PaletteType> = {
     secondary: '#d7d7e2',
     disabled: '#b5b3b3',
     accent: '#fff',
-    accents: ['#A6D6F5', '#9693F5', '#A6D6F5'],
+    accents: ['#6260EB', '#54CAEB', '#ea60e1'],
   },
   light: {
     background: `url(${BackgroundLight})`,
     secondaryBackground: '#FFFFFF',
     disabled: '#b5b3b3',
-    secondary: '#717171',
+    secondary: '#5d5d5d',
     primary: '#20222C',
     accent: '#fff',
-    accents: ['#000', '#000', '#000 '],
+    accents: ['#FB757E', '#7092BE', '#8085B3 '],
   },
 };

@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
 
-// @Styles
-import { CardContainer } from '@styles/Styles';
-
 // @Types
 import { Breakpoint } from '@theme/Theme.types';
 
