@@ -113,7 +113,7 @@ const animateDots = keyframes`
 export const SplashContainer = styled.div<{ showSplash: boolean }>`
   height: 100vh;
   width: 100vw;
-  background-color: #070c16;
+  background-color: ${({ theme }) => theme.palette.backgroundColor};
   display: ${({ showSplash }) => (showSplash ? 'flex' : 'none')};
   justify-content: center;
   align-items: center;
@@ -122,7 +122,7 @@ export const SplashContainer = styled.div<{ showSplash: boolean }>`
   svg {
     height: 100px;
     width: 100px;
-    fill: #fff;
+    fill: ${({ theme }) => theme.palette.primary};
 
     .dot {
       opacity: 0;

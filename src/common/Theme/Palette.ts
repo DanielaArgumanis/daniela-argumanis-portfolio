@@ -24,7 +24,7 @@ export const palette: Record<'light' | 'dark', PaletteType> = {
     backgroundColor: '#fff',
     disabled: '#b5b3b3',
     primary: '#20222C',
-    secondary: '#5d5d5d',
+    secondary: '#444444',
     secondaryBackground: '#FFFFFF',
   },
 };
