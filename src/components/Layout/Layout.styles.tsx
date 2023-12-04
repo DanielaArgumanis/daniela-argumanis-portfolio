@@ -77,12 +77,7 @@ export const PortfolioOutletContainer = styled('div')`
   height: 100%;
   width: 65%;
   padding: ${(props) => `${props.theme.spacing(2)} 0`};
-  overflow-y: scroll;
   transition: all 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
-
-  > div {
-    height: fit-content;
-  }
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     width: 100%;

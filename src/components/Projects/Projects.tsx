@@ -16,7 +16,13 @@ const PROJECTS_LIST = [
       'Chrome extension that allows you to generate and customize QR codes for your business.',
     technologies: ['React', 'Emotion', 'Vite'],
     image: QRGeneratorGit,
-    urls: [{ name: 'Github', url: 'https://github.com/' }],
+    urls: [
+      {
+        name: 'Github',
+        url: 'https://github.com/eduardodediosp96/QRGenerator',
+      },
+    ],
+    position: 'right',
   },
   {
     title: 'Action Claims',
@@ -25,6 +31,7 @@ const PROJECTS_LIST = [
     technologies: ['React', 'webpack', 'styled-components'],
     image: ActionClaimsGif,
     urls: [{ name: 'Action Claims', url: 'https://actionclaimspa.com/' }],
+    position: 'center',
   },
   {
     title: 'My Portfolio',
@@ -37,6 +44,7 @@ const PROJECTS_LIST = [
         url: 'https://github.com/DanielaArgumanis/daniela-argumanis-portfolio',
       },
     ],
+    position: 'center',
   },
 ] as const;
 

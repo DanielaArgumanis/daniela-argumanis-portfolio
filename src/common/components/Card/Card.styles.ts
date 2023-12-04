@@ -9,6 +9,8 @@ export const CardContainer = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing(4)};
   z-index: 0;
+  overflow-y: scroll;
+  padding: ${({ theme }) => theme.spacing(1.5) + ' ' + 0};
 `;
 
 const borderRotation = keyframes` 

@@ -49,9 +49,9 @@ export const ProjectImageContainer = styled.div`
   }
 `;
 
-export const ProjectImage = styled.img`
+export const ProjectImage = styled.img<{ position: string }>`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right;
+  object-position: ${({ position }) => position};
 `;

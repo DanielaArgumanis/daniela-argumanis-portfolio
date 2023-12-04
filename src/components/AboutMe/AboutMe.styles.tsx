@@ -4,6 +4,9 @@ import styled from '@emotion/styled';
 import { Breakpoint } from '@theme/Theme.types';
 
 export const AboutMeContainer = styled('div')`
+  padding: ${({ theme }) => theme.spacing(1.5) + ' ' + 0};
+  height: 100%;
+  overflow-y: scroll;
   display: grid;
   gap: ${(props) => props.theme.spacing(2)};
   grid-template-columns: 1fr 1fr;

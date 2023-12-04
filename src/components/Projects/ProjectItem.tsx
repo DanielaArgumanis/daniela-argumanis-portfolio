@@ -19,6 +19,7 @@ type ProjectItemProps = {
   technologies: readonly string[];
   image: string;
   urls: readonly { name: string; url: string }[];
+  position: string;
 };
 
 const ProjectItem = ({
@@ -27,6 +28,7 @@ const ProjectItem = ({
   technologies,
   image,
   urls,
+  position,
 }: ProjectItemProps) => {
   return (
     <PortfolioLink to={urls[0].url} target="_blank">
@@ -48,7 +50,7 @@ const ProjectItem = ({
           </PillContainer>
         </ProjectCardDescription>
         <ProjectImageContainer>
-          <ProjectImage src={image} />
+          <ProjectImage src={image} position={position} />
         </ProjectImageContainer>
       </Card>
     </PortfolioLink>
