@@ -1,3 +1,4 @@
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
 // @Theme
@@ -9,10 +10,12 @@ export const PortfolioTitle = styled('span')`
   font-weight: 700;
 `;
 
-export const MainLayout = styled('div')`
+export const MainLayout = styled('div')<{ showSplash: boolean }>`
+  visibility: ${({ showSplash }) => (showSplash ? 'hidden' : 'visible')};
   display: flex;
   justify-content: center;
   background: ${({ theme }) => theme.palette.background};
+  background-color: ${({ theme }) => theme.palette.backgroundColor};
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -96,5 +99,44 @@ export const PortfolioHomeContainer = styled.div<{ isHome: boolean }>`
   ${(props) => props.theme.breakpoints.down(Breakpoint.tablet)} {
     display: ${(props) => (props.isHome ? 'flex' : 'none')};
     width: 100%;
+  }
+`;
+
+const animateDots = keyframes`
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}`;
+
+export const SplashContainer = styled.div<{ showSplash: boolean }>`
+  height: 100vh;
+  width: 100vw;
+  background-color: #070c16;
+  display: ${({ showSplash }) => (showSplash ? 'flex' : 'none')};
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0, 0.9, 0.18, 0.96);
+
+  svg {
+    height: 100px;
+    width: 100px;
+    fill: #fff;
+
+    .dot {
+      opacity: 0;
+      animation: ${animateDots} 0.3s ease-in-out forwards;
+
+      :nth-of-type(1) {
+        animation-delay: 0s;
+      }
+      :nth-of-type(2) {
+        animation-delay: 0.3s;
+      }
+      :nth-of-type(3) {
+        animation-delay: 0.6s;
+      }
+    }
   }
 `;

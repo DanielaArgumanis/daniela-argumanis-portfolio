@@ -12,12 +12,12 @@ import { PortfolioNavbar, NavbarSection, NavbarLink } from './Navbar.styles';
 
 type NavbarProps = {
   colorMode: 'light' | 'dark';
-  setColorTheme: React.Dispatch<React.SetStateAction<'light' | 'dark'>>;
+  handleUpdateColorMode: (colorMode: 'light' | 'dark') => void;
 };
 
-const Navbar = ({ colorMode, setColorTheme }: NavbarProps) => {
+const Navbar = ({ colorMode, handleUpdateColorMode }: NavbarProps) => {
   const handleChangeTheme = () => {
-    setColorTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    handleUpdateColorMode(colorMode === 'light' ? 'dark' : 'light');
   };
 
   return (
