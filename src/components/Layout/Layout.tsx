@@ -23,7 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // @Theme
 import getTheme from '@theme/Theme';
-import SVGIcon, { SplashIcon } from '@icons';
+import SVGIcon, { ProgrammingIcon } from '@icons';
 
 const Layout = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -52,7 +52,7 @@ const Layout = () => {
   return (
     <ThemeProvider theme={theme}>
       <SplashContainer showSplash={showSplash}>
-        <SVGIcon icon={SplashIcon} />
+        <SVGIcon icon={ProgrammingIcon} />
       </SplashContainer>
       <MainLayout showSplash={showSplash}>
         <ToastContainer />

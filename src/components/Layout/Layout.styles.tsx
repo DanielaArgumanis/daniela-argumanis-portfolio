@@ -97,13 +97,14 @@ export const PortfolioHomeContainer = styled.div<{ isHome: boolean }>`
   }
 `;
 
-const animateDots = keyframes`
+const animateRect = keyframes`
 0% {
-  opacity: 0;
+  transform: scaleX(0);
 }
 100% {
-  opacity: 1;
-}`;
+  transform: scaleX(1);
+}
+`;
 
 export const SplashContainer = styled.div<{ showSplash: boolean }>`
   height: 100vh;
@@ -119,18 +120,32 @@ export const SplashContainer = styled.div<{ showSplash: boolean }>`
     width: 100px;
     fill: ${({ theme }) => theme.palette.primary};
 
-    .dot {
-      opacity: 0;
-      animation: ${animateDots} 0.3s ease-in-out forwards;
-
+    rect {
+      transform: scaleX(0);
+      animation: ${animateRect} 0.2s cubic-bezier(0, 0.9, 0.18, 0.96) forwards;
       :nth-of-type(1) {
-        animation-delay: 0s;
+        animation-delay: 0.1s;
       }
       :nth-of-type(2) {
-        animation-delay: 0.3s;
+        animation-delay: 0.2s;
       }
       :nth-of-type(3) {
+        animation-delay: 0.3s;
+      }
+      :nth-of-type(4) {
+        animation-delay: 0.4s;
+      }
+      :nth-of-type(5) {
+        animation-delay: 0.5s;
+      }
+      :nth-of-type(6) {
         animation-delay: 0.6s;
+      }
+      :nth-of-type(7) {
+        animation-delay: 0.7s;
+      }
+      :nth-of-type(8) {
+        animation-delay: 0.8s;
       }
     }
   }
