@@ -1,5 +1,9 @@
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from 'react-router-dom';
 
 // @Components
 import Layout from './components/Layout/Layout';
@@ -25,6 +29,10 @@ const router = createBrowserRouter([
         element: <Publications />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <Navigate to="/" />,
   },
 ]);
 
