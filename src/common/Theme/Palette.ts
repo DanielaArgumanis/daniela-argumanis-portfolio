@@ -3,7 +3,7 @@ import { PaletteType } from './Theme.types';
 
 import BackgroundDark from '@images/background-dark.jpg';
 import BackgroundDarkMobile from '@images/background-dark-mobile.jpg';
-import BackgroundLight from '@images/background-light-2.jpg';
+import BackgroundLight from '@images/background-light.jpg';
 import BackgroundLightMobile from '@images/background-light-mobile.jpg';
 
 export const accentColors = ['rgb(14, 31, 61)', '#5096e8', '#5096e8'];
