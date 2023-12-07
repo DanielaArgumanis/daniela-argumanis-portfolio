@@ -17,6 +17,6 @@ export const routes = [
   {
     title: 'Articles',
     order: 3,
-    href: '/Articles',
+    href: '/articles',
   },
 ];
