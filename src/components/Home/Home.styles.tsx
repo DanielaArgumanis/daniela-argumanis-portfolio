@@ -8,6 +8,7 @@ export const PortfolioHome = styled('div')`
   display: flex;
   flex-direction: column;
   transition: all 1s ease-in;
+  width: 100%;
 `;
 
 export const PortfolioTitleContainer = styled('div')`

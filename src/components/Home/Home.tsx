@@ -39,7 +39,11 @@ const Home = ({ isHome }: { isHome: boolean }) => {
         </Typography>
       </PortfolioTitleContainer>
       <ContactSection isHome={isHome}>
-        <PortfolioLink to="https://github.com/DanielaArgumanis" target="_blank">
+        <PortfolioLink
+          to="https://github.com/DanielaArgumanis"
+          target="_blank"
+          aria-label="Go to Github page"
+        >
           <Card noPadding isInteractive noAnimation>
             <GithubIcon />
           </Card>
@@ -47,6 +51,7 @@ const Home = ({ isHome }: { isHome: boolean }) => {
         <PortfolioLink
           to="https://www.linkedin.com/in/daniela-argumanis/"
           target="_blank"
+          aria-label="Go to Linkedin page"
         >
           <Card noPadding isInteractive noAnimation>
             <LinkedinIcon />
@@ -57,6 +62,7 @@ const Home = ({ isHome }: { isHome: boolean }) => {
           isInteractive
           noAnimation
           onClick={() => copyToClipboard('daniela.argumanis@gmail.com')}
+          aria-label="Copy email to clipboard"
         >
           <MailIcon />
         </Card>

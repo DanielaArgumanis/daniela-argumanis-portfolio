@@ -14,7 +14,7 @@ export const MainLayout = styled('div')<{ showSplash: boolean }>`
   visibility: ${({ showSplash }) => (showSplash ? 'hidden' : 'visible')};
   display: flex;
   justify-content: center;
-  background: ${({ theme }) => theme.palette.background};
+  background-image: ${({ theme }) => theme.palette.background};
   background-color: ${({ theme }) => theme.palette.backgroundColor};
   background-size: cover;
   height: 100vh;
@@ -32,6 +32,10 @@ export const MainLayout = styled('div')<{ showSplash: boolean }>`
     background-color: ${({ theme }) =>
       theme.colorMode === 'dark' ? '#000' : '#fff'};
     opacity: ${({ theme }) => (theme.colorMode === 'dark' ? '0.2' : '0.6')};
+  }
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.mobileL)} {
+    background-image: ${({ theme }) => theme.palette.backgroundMobile};
   }
 `;
 

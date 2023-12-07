@@ -31,7 +31,11 @@ const ProjectItem = ({
   position,
 }: ProjectItemProps) => {
   return (
-    <PortfolioLink to={urls[0].url} target="_blank">
+    <PortfolioLink
+      to={urls[0].url}
+      target="_blank"
+      aria-label={`Link to ${urls[0].name}`}
+    >
       <Card noPadding isInteractive>
         <ProjectCardDescription>
           <Typography variant="title3">{title}</Typography>

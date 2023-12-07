@@ -1,5 +1,6 @@
 export type PaletteType = {
   background: string;
+  backgroundMobile: string;
   backgroundColor: string;
   disabled: string;
   primary: string;
