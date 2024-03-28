@@ -36,7 +36,7 @@ const Layout = () => {
 
   useEffect(() => {
     const mode = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    if (!!mode) {
+    if (mode) {
       setColorMode(mode);
     }
     setTimeout(() => {

@@ -3,13 +3,6 @@ import styled from '@emotion/styled';
 // @Types
 import { Breakpoint } from '@theme/Theme.types';
 
-export const ProjectsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing(2)};
-  z-index: 0;
-`;
-
 export const PillContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +37,6 @@ export const ProjectImageContainer = styled.div`
   height: 100%;
 
   ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
-    flex-direction: column;
     width: 100%;
   }
 `;
@@ -54,4 +46,12 @@ export const ProjectImage = styled.img<{ position: string }>`
   height: 100%;
   object-fit: cover;
   object-position: ${({ position }) => position};
+`;
+
+export const ProjectCardContent = styled.div`
+  display: flex;
+
+  ${(props) => props.theme.breakpoints.down(Breakpoint.laptopS)} {
+    flex-direction: column-reverse;
+  }
 `;

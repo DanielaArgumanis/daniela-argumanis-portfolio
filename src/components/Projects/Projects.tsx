@@ -2,7 +2,7 @@
 import ProjectItem from './ProjectItem';
 
 // @Gifs
-import QRGeneratorGit from '@images/QRGenerator.gif';
+import QRGeneratorGif from '@images/QRGenerator.gif';
 import ProjectGif from '@images/project-gif.gif';
 import ActionClaimsGif from '@images/action-claims.gif';
 
@@ -15,8 +15,12 @@ const PROJECTS_LIST = [
     description:
       'Chrome extension that allows you to generate and customize QR codes for your business.',
     technologies: ['React', 'Emotion', 'Vite'],
-    image: QRGeneratorGit,
+    image: QRGeneratorGif,
     urls: [
+      {
+        name: 'Chrome Store',
+        url: 'https://chromewebstore.google.com/detail/qr-generator/iopnmogmnkjlcndnpabhgaljdlknadbe?hl=es',
+      },
       {
         name: 'Github',
         url: 'https://github.com/eduardodediosp96/QRGenerator',

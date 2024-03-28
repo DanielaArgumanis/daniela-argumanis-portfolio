@@ -1,4 +1,4 @@
-import { keyframes } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
 // @Theme
@@ -98,7 +98,27 @@ const animateRect = keyframes`
 }
 `;
 
+const fadeOutAnimation = keyframes`
+  from {
+    opacity: 1;
+    display: flex;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+`;
+
 export const SplashContainer = styled.div<{ showSplash: boolean }>`
+  position: absolute;
+  z-index: 100;
+  opacity: ${(props) => (props.showSplash ? '1' : '0')};
+  animation: ${(props) =>
+    props.showSplash
+      ? ''
+      : css`
+          ${fadeOutAnimation} 0.5s ease-in
+        `};
   height: 100vh;
   width: 100vw;
   background-color: ${({ theme }) => theme.palette.backgroundColor};
