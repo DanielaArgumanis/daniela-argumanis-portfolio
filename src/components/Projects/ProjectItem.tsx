@@ -7,6 +7,7 @@ import Card from '@commonComponents/Card/Card';
 import {
   Pill,
   PillContainer,
+  ProjectCardContent,
   ProjectCardDescription,
   ProjectImage,
   ProjectImageContainer,
@@ -37,25 +38,27 @@ const ProjectItem = ({
       aria-label={`Link to ${urls[0].name}`}
     >
       <Card noPadding isInteractive>
-        <ProjectCardDescription>
-          <Typography variant="title3">{title}</Typography>
-          <Typography variant="body2" as="p">
-            {description}
-          </Typography>
-          {urls.map((url) => (
-            <PageLink key={url.name} {...url} />
-          ))}
-          <PillContainer>
-            {technologies.map((technology) => (
-              <Pill key={technology}>
-                <Typography variant="smallLabel">{technology}</Typography>
-              </Pill>
+        <ProjectCardContent>
+          <ProjectCardDescription>
+            <Typography variant="title3">{title}</Typography>
+            <Typography variant="body2" as="p">
+              {description}
+            </Typography>
+            {urls.map((url) => (
+              <PageLink key={url.name} {...url} />
             ))}
-          </PillContainer>
-        </ProjectCardDescription>
-        <ProjectImageContainer>
-          <ProjectImage src={image} position={position} />
-        </ProjectImageContainer>
+            <PillContainer>
+              {technologies.map((technology) => (
+                <Pill key={technology}>
+                  <Typography variant="smallLabel">{technology}</Typography>
+                </Pill>
+              ))}
+            </PillContainer>
+          </ProjectCardDescription>
+          <ProjectImageContainer>
+            <ProjectImage src={image} position={position} />
+          </ProjectImageContainer>
+        </ProjectCardContent>
       </Card>
     </PortfolioLink>
   );
