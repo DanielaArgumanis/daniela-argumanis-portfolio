@@ -5,6 +5,7 @@ import ProjectItem from './ProjectItem';
 import QRGeneratorGif from '@images/QRGenerator.gif';
 import ProjectGif from '@images/project-gif.gif';
 import ActionClaimsGif from '@images/action-claims.gif';
+import CocktailDexGif from '@images/CocktailDex.gif';
 
 // @Styles
 import { CardContainer } from '@commonComponents/Card/Card.styles';
@@ -27,6 +28,24 @@ const PROJECTS_LIST = [
       },
     ],
     position: 'right',
+  },
+  {
+    title: 'CocktailDex',
+    description:
+      'A web app inspired on the pokedex to list my favorite cocktail recipes.',
+    technologies: ['React', 'MUI', 'Firebase'],
+    image: CocktailDexGif,
+    urls: [
+      {
+        name: 'CocktailDex',
+        url: 'https://cocktaildex.onrender.com/',
+      },
+      {
+        name: 'Github',
+        url: 'https://github.com/DanielaArgumanis/cocktail-dex',
+      },
+    ],
+    position: 'left',
   },
   {
     title: 'Action Claims',
