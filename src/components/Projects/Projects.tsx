@@ -2,6 +2,7 @@
 import ProjectItem from './ProjectItem';
 
 // @Gifs
+import BcpGif from '@images/bcp.gif';
 import QRGeneratorGif from '@images/QRGenerator.gif';
 import ProjectGif from '@images/project-gif.gif';
 import ActionClaimsGif from '@images/action-claims.gif';
@@ -46,6 +47,20 @@ const PROJECTS_LIST = [
       },
     ],
     position: 'left',
+  },
+  {
+    title: 'BCP Banca online',
+    description:
+      'Online banking platform for BCP Banca, a most popular peruvian bank.',
+    technologies: ['React', 'Emotion', 'Material-UI', 'webpack'],
+    image: BcpGif,
+    urls: [
+      {
+        name: 'BCP Login',
+        url: 'https://loginunico.viabcp.com/#/tarjeta-sesion',
+      },
+    ],
+    position: 'center',
   },
   {
     title: 'Action Claims',
