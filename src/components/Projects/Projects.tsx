@@ -51,7 +51,7 @@ const PROJECTS_LIST = [
   {
     title: 'BCP Banca online',
     description:
-      'Online banking platform for BCP Banca, a most popular peruvian bank.',
+      'Online banking platform for BCP Banking, a most popular peruvian bank.',
     technologies: ['React', 'Emotion', 'Material-UI', 'webpack'],
     image: BcpGif,
     urls: [
